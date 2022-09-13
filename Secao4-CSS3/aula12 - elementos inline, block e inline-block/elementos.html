@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Elementos inline | block | Inline-block</title>
+    </head>
+
+    <style>
+        .borda{
+            border: 1px solid red;
+            /*display: inline; /*transforma o elementos em inline*/
+            display: inline-block; /*só quebra o proximo elemento para proxima linha se não houver espaço*/
+        }
+    </style>
+
+    <body>
+        <span class="borda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugiat voluptatibus reprehenderit sed totam veritatis, blanditiis eius eos tenetur dolorum iure obcaecati dolor. Sed ipsa rem earum doloribus harum quo!</span>
+        <span class="borda">inline 2</span>
+
+        <!--
+            <h1 class="borda">block 1</h1>
+            <h1 class="borda">block 2</h1>
+        -->
+
+
+    </body>
+</html>

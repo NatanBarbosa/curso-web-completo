@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+<body>
+    timer: <span id="tempo">0</span> <br>
+    Tempo faltante: <span id="faltante">5</span>
+
+    <hr>
+
+    <input type="text" id="digite"> <button>Enviar</button>
+    <script>
+
+        //setTimeout(function () {document.write('teste')}, 2000) //2000ms -> 2s
+
+        //cronômetro crescente
+        var timer = 0;
+        setInterval(
+            function () {
+               timer++;
+               document.getElementById('tempo').innerText = timer;
+            }, 1000)
+
+        //cronômetro decrescente
+        var faltam = 5
+        //armazenar todo esse cronômetro e intervalo dentro de uma variável para poder para-la
+        var intervalo = setInterval(
+            function (){
+                faltam--;
+                document.getElementById('faltante').innerText = faltam;
+
+                if(faltam == 0){
+                    //caso o cronômetro chegue em 0
+                    document.getElementById('faltante').innerHTML = '<h2>EXPLODE CABARÉ... BOOOMM</h2>'
+                    clearInterval(intervalo) //variável que possui todo esse intervalo
+                }
+            }, 1000
+        )
+
+
+        /************Se o tempo acabar antes de vc digitar vc MORRE*************/
+
+    </script>
+</body>
+</html>

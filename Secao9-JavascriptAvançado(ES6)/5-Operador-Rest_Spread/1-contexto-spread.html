@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			/*
+			Rest/Spread -> Seu nome vai se dar dependendo do contexto que ele está sendo ultilizado (juntar ou espalhar)
+			Spread: espalhar estrutura de dados
+			Rest: Juntar estrutura de dados
+			*/
+
+			//contexto spread
+			let tituloArtigo = 'como ultilizar o operador rest/spread'
+
+			//Separando strings
+			console.log(tituloArtigo)
+			console.log(...tituloArtigo) //com os ...(spread) nesse caso ele vai espalhar as strings  
+			console.log([...tituloArtigo]) //fazendo desse jeito você consegue colocar cada caracter dentro de uma posição no array
+
+
+			//Separando arrays
+			let listaCursos1 = ['NodeJS e MongoDb', 'ES6, TypeScript e Angular 4']
+			let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux']
+			let listaCursosCompleto = ['Web Completo', ...listaCursos1,  'Android Completo', ...listaCursos2]
+			//vai pegar aqueles arrays, vai pegar os valores contidos dentro daqueles arrays e espalhar dentro do listaCursosCompleto
+
+			console.log(listaCursosCompleto)
+
+
+			//Separando objetos
+			let pessoa = {
+				nome: 'João',
+				idade: 27
+			}
+
+			let clone = {
+				endereco: 'Rua ABC',
+				...pessoa //pega os atributos do objeto pessoaa e coloca aqui dentro (mesma lógica do 'Separando arrays')
+			}
+
+			console.log(clone)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

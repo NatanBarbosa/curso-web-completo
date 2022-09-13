@@ -1,0 +1,52 @@
+SELECT LIKE com %
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	nome LIKE '%e';
+
+    -- retorna qualquer conjunto de caracteres que finaliza com a letra "e
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	nome LIKE 'c%';
+
+    -- retorna qualquer conjunto de caracteres que inicia com a letra "c"
+
+
+    -- A "%" nesse caso indica que à esqueda ou à direita dessa letra podiam haver qualquer conjunto de caracteres. Ela pode ser inclusive usada assim -> '%a%' (retorna qualquer ocnjunto que caracteres que tenha "a" em algum lugar)
+
+
+
+SELECT LIKE com _
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	nome LIKE '_riel';
+
+-- retorna todos os valores que tenham apenas 1 caracter indefinido no começo + 'riel'
+
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	nome LIKE '_ru_';
+
+-- retorna valores que tenham 1 caracter no início e um no final que são indefinidos + 'ru' no meio
+
+
+    -- O "_" nesse caso indica a posição de apenas 1 caracter indefinido.
+
+
+**é possível combinar os dois
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Capturando eventos com jQuery</title>
+    
+    <!--Style-->
+    <style>
+        .desfocado{
+            border: 1px solid gray;
+            background-color: #afafaf;
+        }
+
+        .focado{
+            border: 1px solid green;
+            background-color: lightgreen;
+        }
+
+
+    </style>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+    $(document).ready( ()=>{
+        
+        //registrador de eventos on('evento', 'elementos filhos que vão sofrer a ação' , ação)   
+        //nesse caso é necessário selecionar o body, para aplicar a ação ao seus elementos filhos (inputs)
+        $('body').on('focus', 'input', e => {
+            $(e.target).removeClass('desfocado').addClass('focado')
+        } )
+ 
+        $('body').on('blur', 'input', e => {
+            $(e.target).removeClass('focado').addClass('desfocado')
+        } )
+
+        //sem o método "on" com seu segundo parâmetro, esse elemento, mesmo que seja um input, não recebe aqueles comandos acima
+        $('body').append('<br> <br> <input type="text" class="desfocado">')
+
+
+        //desregistrador de eventos off('evento', 'elementos filhos que sofreram a ação no on') -> segue a hierarquia atribuída pelo on
+        $('body').off('blur', 'input')
+    } )
+	</script>
+</head>
+
+<body>
+
+    <input type="text" class="desfocado">
+    
+</body>
+
+</html>

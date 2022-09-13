@@ -1,0 +1,30 @@
+SELECT ... ORDER BY
+
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	idade BETWEEN 18 and 59
+ORDER BY
+	nome ASC;
+
+-- com base na coluna nome os valores serão ordenados
+
+-- ASC: ascendente (ordem crescente) -> valor default (pode implicitar)
+-- DESC: descendente (ordem decrescente)
+
+-- O Sql tem a capacidade de identificar o tipo da coluna e ordenar em orbém alfabética, numérica ou de data
+
+
+É possível combinar mais de um resultado
+
+SELECT 
+    * 
+FROM 
+    `tb_alunos` 
+WHERE 
+    id_aluno BETWEEN 1 and 50 
+ORDER BY 
+    nome ASC, id_aluno ASC, estado DESC

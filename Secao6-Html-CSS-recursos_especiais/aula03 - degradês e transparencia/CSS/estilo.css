@@ -1,0 +1,17 @@
+#caixa{
+    width: 300px;
+    height: 300px;
+    /*background: url(../Imagens/camera.png);*/
+    /*background: linear-gradient(120deg,red, green, yellow, green, blue);
+    /*É possivel definir em graus a direção do degradê com 0-360 deg*/
+    background: radial-gradient(red, green, yellow);
+}
+
+#caixa h1{
+    /*background: rgba(255,255,255,0.65);
+    /*O rgba configura as cores red, green, blue e a transparencia (alpha) com valores de 0-1*/
+}
+
+a{
+    color: white;
+}

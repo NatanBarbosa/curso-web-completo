@@ -1,0 +1,3 @@
+4#Tinta da impressora acabou#Impressora#Preciso trocar de tinta imediatamente. Reponha a tinta preta e colorida
+3#Tela azul#Software#Meu computador está dando tela azul toda hora. Talvez tenha a ver com o hd 100%? -trixte
+2#Placa de vídeo queimada#Hardware#Minha placa de vídeo queimou. Troque por uma GeForce GTX 1060 6GB

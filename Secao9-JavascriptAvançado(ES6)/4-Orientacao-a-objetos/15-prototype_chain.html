@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			
+			//Os três objetos apontoam para prototype de object 
+			//Todos são filhos de Object.prototype
+
+			Object.prototype.attr50 = 'z'
+			//como todos objetos são filhos de prototype, é possivel definir atributos ou métodos padrão para eles
+			//CUIDADO: Será um atributo ou método GLOBAL para aplicação
+
+
+			let animal = { attr1: 'a' }
+
+			let vertebrado = {
+				__proto__: animal, //O protótipo de vertebrado é animal. Assim vertebrado vai pegar as características de animal e ave vai pegar as caracteristicas de vertebrado que pegou as caracteristicas de animal (logo as caracteristicas de animal tbm valem pra ave)
+
+			 	attr2: 'b' 
+			}
+
+			let ave = {
+				__proto__: vertebrado, //O protótipo de ave é vertebrado. Assim ave vai pegar as características de vertebrado
+				attr3: 'c' 
+			}
+
+			console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50, animal.attr50)
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

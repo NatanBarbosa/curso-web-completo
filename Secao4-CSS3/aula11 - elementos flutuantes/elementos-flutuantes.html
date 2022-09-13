@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=], initial-scale=1.0">
+        <title>elementos flutuantes</title>
+
+        <style type="text/css">
+
+        #principal{
+            border: 5px solid red;
+            background: #d1d1d1;
+            
+        }
+
+            .conteudo{
+                background: blue;
+                border: 1px solid #646464;
+                width: 150px;
+                height: 150px;
+                float: left; /*left, right, none*/
+                margin: 10px;
+                /*um fica à esquerda do outro*/
+                /*faz com que os conteudos flutuem para esquerda ou direita*/
+                /*Ele sai do fluxo normal do documento e sobrepões as coisas q estão no fluxo normal*/ 
+            }
+
+            
+
+            .clear{
+                clear: both; /*left, right, both, none*/
+                /*O conteudo acima está flutuando à esquerda, então eu quebrei esse fluxo da esquerda para o texto ir para baixo*/
+                /*O clear both quebra o fluxo idependente dos lados*/
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="principal">
+
+            <div class="conteudo">
+                Conteúdo1
+            </div>
+
+            
+            <div class="conteudo">
+                Conteúdo2
+            </div>
+
+            
+            <div class="conteudo">
+                Conteúdo3
+            </div>
+
+            <div class="clear">
+                <!--
+                    Aqui foi criado uma div vazia apenas para limpar o fluxo flutuante daquelas caixar e não dar câncer na div principal. O principal se expande apenas para colocar essa div la em baixo corretamente
+                -->
+                teste
+            </div>
+
+        </div>
+
+        
+    </body>
+</html>

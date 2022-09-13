@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			
+			let pessoa = {
+				nome: 'Maria',
+				idade: 25
+			}
+
+			console.log(pessoa)
+
+			//lógica que faz inclusão de um novo atributo dentro do objeto pessoa
+			//você pode recuperar o objeto, e depois do ponto criar uma nova chave e fazer ela receber seu respectivo atributo. 
+			pessoa.sexo = 'feminino'
+
+			console.log(pessoa)
+
+			//tbm da pra fazer isso para incluir funções
+
+			pessoa.dizerOi = () => console.log('Olá, tudo bem?') //Arrow function
+
+			pessoa.dizerOi()
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,35 @@
+SELECT 
+	estado, COUNT(*) as total_de_registros_por_estado
+FROM 
+	`tb_alunos` 
+GROUP BY 
+	estado
+HAVING
+	total_de_registros_por_estado >= 5;
+
+-- aplica um filtro sobre a coluna agrupada (mesmos filtros do where)
+-- nesse caso só retorna a contagem dos estados cujo count(*) deu >= 5
+
+
+SELECT 
+	estado, COUNT(*) as total_de_registros_por_estado
+FROM 
+	`tb_alunos` 
+GROUP BY 
+	estado
+HAVING
+	estado in('MG', 'SP'); 
+
+-- Nesse caso retorna a contagem dos estados de MG e SP
+
+
+SELECT 
+	estado, COUNT(*) as total_de_registros_por_estado
+FROM 
+	`tb_alunos` 
+GROUP BY 
+	estado
+HAVING
+	estado in('CE', 'SC') AND total_de_registros_por_estado > 4
+
+-- Nesse caso é necessário atender essas duas condições para retornar a contagem

@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+#container {
+    width: 720px;
+    margin: 0 auto;
+    background: white;
+}
+
+#marca {
+    height: 100px;
+    background: #9e9e9e;
+    text-align: center;
+    line-height: 100px;
+}
+
+#conteudo {
+    width: 520px;
+    float: right;
+}
+
+#principal{
+    width: 320px;
+    float: left;
+}
+
+#secundario{
+    width: 180px;
+    float: right;
+    background: #d1d1d1;
+}
+
+#secundario>h2, #secundario>p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao {
+    width: 180px; /*520px + 180px = 700px pq 20px de espaço entre os dois*/
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#rodape {
+    clear: both; /*quebra para baixo, limpando o float*/
+    background: #c4c4c4;
+    padding: 5px;
+}
+
+/*Criando menu vertical*/
+#navegacao ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    display: block;
+    width: 125px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #b1bfc9;
+    color: #3d3d3d; 
+    border-bottom: 2px solid #6a98b9;;
+}
+
+#navegacao ul a:hover{
+    color: white;
+    background: #9e9e9e;
+}
+
+/*-------------------------------*/

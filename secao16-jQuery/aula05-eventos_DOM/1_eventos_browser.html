@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Capturando eventos com jQuery</title>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+		//evento onload -> opera no DOM
+		$(document).ready( () => {
+			$('#onload').html('DOM carregado')
+
+			//evento scroll -> opera no window (janela do navegador) quando há rolagem da página
+			$(window).scroll( () => {
+				$('#scroll').html('Scroll acionado')
+			} )
+
+			//evento resize -> opera no window quando o user redimensiona a janela
+			$(window).resize( ()=>{
+				$('#resize').html('Janela redimensionada').css('background-color', 'red')
+				//lembrando q o jQuery faz a ação e retorna o próprio elemento atualizado, então dá pra ficar fazendo ações em cima desse retorno
+			} )
+
+
+			//realizando esses eventos em elementos que não são "window"
+			//scroll -> pode ser realizado em um elementos que tenha overflow (geralmente o window)
+			$('#divscroll').scroll( evento => {
+				/*
+				Esse parâmetro se refere ao evento que foi executado fora dessa arrow function.
+				Um dos atributos do evento é o "target" que se refere ao elemento que foi capturado
+				*/
+				$(evento.target).css('background', 'lightcoral').css('border', '1px solid red')
+			} )
+
+		} )
+	</script>
+</head>
+
+<body>
+
+	<div id="topo">
+		<h1>Eventos do Browser</h1>
+	</div>
+
+	<div>
+		<h3>Browser</h3>
+		<span>Onload: </span><span id="onload">?</span><br />
+		<span>Scroll: </span><span id="scroll">?</span><br />
+		<span>Window: </span><span id="resize">?</span>
+
+		<div id="divscroll" style="width: 200px; height: 200px; border: 1px solid blue; background-color: lightblue; overflow-y:scroll ;">
+			<!-- Div que possui scroll para poder  -->
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sequi praesentium, perferendis architecto cupiditate distinctio ad? Consequuntur, dolorem. Cupiditate a dicta totam sed at iusto dolorum hic maxime. Asperiores, doloribus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ratione, veniam, modi commodi eaque consequatur officiis consequuntur tempora suscipit tempore natus vitae reprehenderit magnam sunt rem recusandae temporibus explicabo? Soluta.
+		</div>
+	</div>
+
+	<h4>Texto para scrollar a página</h4>
+	<p>
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, velit iste pariatur repudiandae perferendis molestiae dolores minima id laudantium iusto qui placeat ipsa repellendus, error odio tenetur, sed nisi et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi quibusdam nostrum velit dolore tenetur odio consequuntur labore, quam recusandae, dolorum sequi, qui eligendi consequatur. Totam cupiditate recusandae voluptatibus. Quod. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti aliquam harum sit cupiditate hic nam atque magni similique a voluptatum, est quibusdam consequatur modi pariatur rem eveniet minima nostrum ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt repudiandae quia porro fugiat molestias in quasi veritatis tempora laboriosam velit. Corporis, numquam temporibus natus molestiae veniam at labore voluptas voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente ducimus voluptatibus consequatur est culpa maxime vero? Provident, reprehenderit ad earum aspernatur aliquid consectetur neque culpa beatae. Aut iure molestiae quia.
+	</p>
+
+	<p>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente excepturi distinctio perspiciatis quidem minima, incidunt suscipit non culpa quis ut optio? Atque quas quidem, soluta expedita dolorum asperiores necessitatibus ipsum!
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. At, odio! Eaque, officiis. Eligendi explicabo id dicta, quod aliquam voluptate animi distinctio ducimus, mollitia dolore neque ipsam cumque veniam. Fuga, explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eius placeat voluptas quos. Et nihil dolor consectetur rem, quibusdam eius voluptatibus optio quo, vero corporis cumque laudantium ea deserunt velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deserunt, veniam, aut fuga ipsa necessitatibus, fugiat in nam soluta tempore explicabo eum suscipit fugit vitae numquam impedit molestias recusandae ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cumque suscipit reiciendis perspiciatis maxime, fugiat sint officiis, saepe eaque, tenetur unde. Doloribus nesciunt, culpa dolor similique minus accusamus quod unde. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel aliquid mollitia deleniti voluptatibus eligendi sunt dicta illo nostrum ipsa et tenetur molestiae ipsam cumque sed, ad ducimus officiis consectetur nisi.
+	</p>
+
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. At eveniet deserunt soluta autem modi minus consectetur doloremque facilis ipsa veritatis nostrum necessitatibus, velit, quaerat aspernatur. Sapiente eaque optio veritatis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ipsa, sed cum debitis, quos repellendus temporibus molestias soluta aperiam deserunt, voluptatibus quisquam asperiores incidunt quaerat minus ad veniam quibusdam quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro doloribus iure consequatur! Minima, minus unde dolorum ut quo illo hic dolorem maxime rem laborum alias eos exercitationem aliquid recusandae suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque assumenda explicabo aut repellat corporis recusandae dolor libero iusto, autem, molestias nesciunt culpa veniam ullam amet debitis, fugiat deserunt magni! Ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita nostrum repudiandae. Voluptate in similique odio distinctio officia harum quam optio dolorum pariatur consequatur, dolor autem nobis deleniti facere culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio voluptatibus molestiae facere libero tempore est possimus hic nihil. Dolore ab odit natus possimus tenetur vero mollitia voluptas magni voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia vel laborum eos quo repellat corrupti modi! Ullam quasi nisi, corporis, magni dicta porro commodi ut unde reiciendis, harum adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsa hic modi voluptatem corrupti esse nulla autem voluptates necessitatibus ab ullam, provident sint voluptatum nobis omnis explicabo labore magni eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur, voluptatum praesentium nobis laudantium doloremque inventore voluptates accusamus obcaecati alias odit voluptatem deleniti blanditiis tenetur rem quas reiciendis quaerat eos.
+	</p>
+</body>
+
+</html>

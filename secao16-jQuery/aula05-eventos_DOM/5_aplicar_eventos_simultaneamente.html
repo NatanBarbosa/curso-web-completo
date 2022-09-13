@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Capturando eventos com jQuery</title>
+    
+    <!--Style-->
+    <style>
+        .selecionado{
+            border: 1px solid green;
+            background-color: lightgreen;
+        }
+    </style>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+        $(document).ready( ()=>{
+
+            //na hora da seleção, colocar mais de um elemento nela, separados por ,
+            $('#nome, #email').focus( (e)=>{
+                console.log(`esse elemento html (${ $(e.target).attr('id') }) recebeu o foco`);
+                $(e.target).addClass('selecionado')
+            } )
+
+            //evento blur() -> remoção do foco
+            $('#nome, #email').blur( (e) => {
+                console.log(`esse elemento html (${ $(e.target).attr('id') }) perdeu o foco`)
+                $(e.target).removeClass('selecionado')
+            } )
+
+        } )
+	</script>
+</head>
+
+<body>
+
+	<div id="topo">
+		<h1>Eventos do formulário</h1>
+	</div>
+
+    <div>
+		<form id="form">
+			<span>Nome:</span>
+			<input type="text" id="nome" /> <br> <br>
+
+			<span>E-mail:</span>
+			<input type="text" id="email"/> <br> <br>
+
+			<button type="button">Enviar</button>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script>
+        function action(){
+            alert('mouse dentro')
+        }
+
+        function action2(){
+            alert('mouse fora')
+        }
+    </script>
+
+</head>
+<body>
+
+    <div onmouseover="action()" onmouseout="action2()" style="background: gray; height: 150px; width: 150px;color: white;">
+        <!--
+            Primeiro declara o nome do evento e em seguida, dentro de aspas, a função
+            pode ter mais de um evento por elemento
+        -->
+        <h4>Ações do mouse</h4>
+        <ul>
+            <li>onclick</li>
+            <li>ondblclick</li>
+            <li>onmouseup</li>
+            <li>onmouseover</li>
+            <li>onmouseout</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parallax</title>
+        <style>
+
+            /*Configurações padrão da página
+            *************************************************************/
+            body,html{
+                margin: 0;
+                font: 16px "Lato", sans-serif;
+                color: #777;
+                height: 100%; /*assim a imagem que estará em uma outra div irá ocupar TODA tela*/
+            }
+            
+            .conteudo{
+                color: #777;
+                background-color: white;
+                text-align: justify;
+                padding: 50px 80px;
+            }
+
+            h3{
+                text-transform: uppercase;
+                color: #111;
+                text-align: center;
+            }
+
+            /*Efeito Parallax
+            ***********************************************************************/
+            .caixa1, .caixa2, .caixa3, .caixa4{
+                /*Formatação padrão para as caixas que terão as imagens*/
+                height: 100%;
+                opacity: 0.8;
+                background-repeat: no-repeat;
+                background-size: cover; /*faz a imagem cobrir toda a área, dái não fica nenhum espaço em branco por conta do background no repeat*/
+                background-position: center; /*para centralizar a imagem na hora de diminuir ou aumentar aa tela do monitor, por conta do background-size*/
+                background-attachment: fixed;/*Esse é o grande truque: com isso a imagem ficará fixa e não acompanhará o scroll da página*/
+
+                position: relative;
+            }
+
+            .caixa1{
+                background-image: url(imagens/imagem1.jpg) ;
+            }
+
+            .caixa2{
+                background-image: url(imagens/imagem2.jpg);
+            }
+
+            .caixa3{
+                background-image: url(imagens/imagem3.jpg);
+            }
+
+            .caixa4{
+                background-image: url(imagens/imagem4.jpg);
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .conteudo-titulo{
+                position: absolute;
+                left: 0;
+                top: 45%;
+                width: 100%;
+                /*background: red;*/
+                text-align: center; /*centralizando o conteudo dentro do span*/
+            }
+
+            .conteudo-titulo span.titulo{
+                text-transform: uppercase;
+                color: white;
+                background-color: #111;
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 5px; /*espaçamento entre as letras*/
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="caixa1">
+            <!--Aqui vai ter uma imagem para o efeito parallax-->
+            <div class="conteudo-titulo">
+                <span class="titulo">Passeio de balões</span>
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <!--Aqui é só um texto msm-->
+            <h3>Parallax</h3>
+            <p>
+                Esse efeito faz a imagem não descer junto da página, deixando ela fixa em um lugar enquanto o usuário desce a página e ela vai desaparecendo, enquanto outra vai aparecendo
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error architecto quia dolores excepturi, molestiae nesciunt soluta quis maxime aperiam ex ratione dolorem corporis accusantium minima! Dignissimos ipsam voluptatem obcaecati veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit deleniti esse officia odit, voluptatibus neque doloribus, eos assumenda, provident velit. Mollitia aspernatur reiciendis architecto voluptatibus vero porro tempora nostrum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat quisquam, omnis eum vel voluptates voluptatum eos? Necessitatibus maiores, explicabo earum tempora qui expedita iure nulla nemo ipsa ex, fuga in. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur qui consequatur, ipsa aperiam consequuntur in facere quibusdam aut ut cum reiciendis! Culpa suscipit consequuntur molestiae labore harum commodi dolorem consectetur.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo aspernatur deserunt debitis eum dolorem commodi esse neque, doloribus perferendis culpa eius est dicta error adipisci, mollitia expedita ratione! Repudiandae, esse?
+            </p>
+        </div>
+
+        <div class="caixa2">
+            <!--Aqui vai ter uma imagem para o efeito parallax-->
+            <div class="conteudo-titulo">
+                <span class="titulo">Pegando a estrada</span>
+            </div>
+        </div>
+
+        <h3>Parallax</h3>
+            <p>
+                Esse efeito faz a imagem não descer junto da página, deixando ela fixa em um lugar enquanto o usuário desce a página e ela vai desaparecendo, enquanto outra vai aparecendo
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error architecto quia dolores excepturi, molestiae nesciunt soluta quis maxime aperiam ex ratione dolorem corporis accusantium minima! Dignissimos ipsam voluptatem obcaecati veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit deleniti esse officia odit, voluptatibus neque doloribus, eos assumenda, provident velit. Mollitia aspernatur reiciendis architecto voluptatibus vero porro tempora nostrum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat quisquam, omnis eum vel voluptates voluptatum eos? Necessitatibus maiores, explicabo earum tempora qui expedita iure nulla nemo ipsa ex, fuga in. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur qui consequatur, ipsa aperiam consequuntur in facere quibusdam aut ut cum reiciendis! Culpa suscipit consequuntur molestiae labore harum commodi dolorem consectetur.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo aspernatur deserunt debitis eum dolorem commodi esse neque, doloribus perferendis culpa eius est dicta error adipisci, mollitia expedita ratione! Repudiandae, esse?
+            </p>
+
+        <div class="caixa3">
+            <!--Aqui vai ter uma imagem para o efeito parallax-->
+            <div class="conteudo-titulo">
+                <span class="titulo">Por do sol</span>
+            </div>
+        </div>
+
+        <div class="caixa4">
+            <!--Aqui vai ter uma imagem para o efeito parallax-->
+            <div class="conteudo-titulo">
+                <span class="titulo">Montanhas</span>
+            </div>
+        </div>
+
+    </body>
+</html>

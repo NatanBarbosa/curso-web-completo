@@ -1,0 +1,2 @@
+O DOM é a árvore de elementos da página. Esse elementos são as tags html que se organizam em 
+hierarquia como na imagem.

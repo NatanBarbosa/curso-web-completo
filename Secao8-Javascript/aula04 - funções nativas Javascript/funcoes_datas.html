@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas</title>
+
+    <script>
+        //trabalhando com métodos get: pegam valores da data
+       
+        //declarando que uma variávelvai tratar datas
+        var data = new Date() //pega a data do compuitador do usuário
+
+        document.write(data.getDate()) //Ele vai procurar o dia dentro do objeto
+        document.write('/' + (data.getMonth() + 1))//Mês**
+        document.write('/' + data.getFullYear())//Ano
+
+        //Nota**: O mês traz valores de 0-11, então temos que somar +1 para representar o mês normalmente
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

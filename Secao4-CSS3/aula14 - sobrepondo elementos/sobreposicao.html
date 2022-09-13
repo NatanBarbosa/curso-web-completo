@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>sobrepondo elementos</title>
+        <style>
+        
+           .conteudo1{
+               border: 1px solid red;
+               width: 200px;
+               height: 200px;
+               background-color: orange;
+               position: absolute;
+               z-index: 2;
+               /*Quando um conteúdo está sobreposto ao outro é possivel ultilizar o z-index para definir qual aparece primeiro. O que tiver maior número fica em cima*/
+           }
+
+           .conteudo2{
+               border: 1px solid red;
+               width: 200px;
+               height: 200px;
+               background-color: green;
+               position: absolute;
+               top: 80px;
+               left: 80px;/*posicionando os quadrados para que fiquem um na diagonal do outro*/
+               z-index: 0;
+           }
+
+           .conteudo3{
+               border: 1px solid red;
+               width: 200px;
+               height: 200px;
+               background-color: yellow;
+               position: absolute;
+               top: 160px;
+               left: 160px; /*posicionando os quadrados para que fiquem um na diagonal do outro*/
+               z-index: 4;
+           }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="conteudo1">
+            conteudo 1
+        </div>
+
+        <div class="conteudo3">
+            conteudo 3
+        </div>
+
+        <div class="conteudo2">
+            conteudo 2
+        </div>
+        
+
+    </body>
+</html>

@@ -1,0 +1,10 @@
+#noticia{
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+h2{
+    margin: 0px;
+    /*O próprio h2 já tem uma margin padrão, então ao aplicar o padding, fica interessante colocar a margin dele como zero*/
+}

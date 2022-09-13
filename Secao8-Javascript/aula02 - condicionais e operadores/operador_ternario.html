@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador ternário</title>
+
+    <script>
+
+        /*
+            sintaxe
+            var resultado = <condição> ? <verdadeiro> : <falso>
+        */
+
+        var media = 7
+        var faltas_max = 15
+        var nota = Number(prompt('Digite a sua nota: '))
+        var faltas = Number(prompt('Digite a suas faltas: '))
+
+        var resultado = nota>=7 && faltas<=faltas_max ? 'aprovado' : 'reprovado'
+        //Operador bem limitado, porém pode fazer uma verificação em apenas uma linha
+
+        alert(resultado)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

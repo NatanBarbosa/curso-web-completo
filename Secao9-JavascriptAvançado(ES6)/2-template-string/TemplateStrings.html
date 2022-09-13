@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+
+			let nome = 'jorge'
+
+			console.log('Ola ' + nome + 
+				' tudo bem?') //não formata
+
+			console.log(`Ola ${nome} tudo bem?`) //mto melhor
+
+			console.log(
+				`Ola
+				Você é o ${nome}?
+				muito prazer ${nome}`
+				) //Formata as strings com espaços
+
+			console.log(`7 + 7 = ${7+7}`)//aceita expressões
+
+
+			function calcular(x,y){
+				return x * y
+			}
+
+			console.log(`A multiplicação de 8 x 8 é ${calcular(8,8)}`)
+			//também aceita funções
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

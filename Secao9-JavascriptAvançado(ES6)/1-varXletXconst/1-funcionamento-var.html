@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<script>
+			//escopo global
+
+			var serie = 'friends' //decalrada globalmente: disponivel em escopos de bloco e função
+
+			function x(){
+				//escopo função
+				var serie = 'Game of Thrones' // disponivel apenaas em estruturas dentro dessa função
+				console.log('função: ' + serie)
+
+				if (true){
+					//escopo bloco dentro de função
+					console.log('bloco dentro da função: ' + serie)
+				}
+			}
+
+			x()
+
+			if(true){
+				//escopo bloco
+				console.log('Global' + serie)
+				var serie2 = 'The walking dead'
+				console.log('Escopo de bloco: ' + serie2)
+			}
+			console.log('Sofreu uma elevação para o escopo global: ' + serie2)
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

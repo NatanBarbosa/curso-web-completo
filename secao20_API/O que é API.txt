@@ -1,0 +1,26 @@
+NA WEB
+url -> requisição (request) -> resposta (response) -> arquivos
+
+HTTP
+
+Tipos de requisição (Verbos HTTP):
+get: recupera dados do servidor (Select)
+post: dados novos no servidor (Insert)
+put: atualizar dados no servidor (Update)
+delete: deletar dados no servidor (Delete)
+
+Status:
+404: url/recurso inexistente
+200: ok
+501: servidor não respondeu (bad gateway)
+
+Como funciona uma API
+Interface de programação de aplicações
+
+interagir com outras aplicações
+
+passar parâmetros (site.com/clima?cid=sp)
+
+Tipos de retorno
+XML
+JSON

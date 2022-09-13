@@ -1,0 +1,3 @@
+Estrutura do docuemnto xml é similar ao html.
+as tags basicamente vc "inventa"
+o documento sempre precisa começar com <?xml version="1.0" encoding="UTF-8" ?>, sendo o primeiro parâmetro obrigatório (versão do xml; atual = 1.0), e o 2° opcional (tipo de caracter)

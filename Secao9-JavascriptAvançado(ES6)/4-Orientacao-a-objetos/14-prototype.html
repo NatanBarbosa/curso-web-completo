@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			//prototype: sempre quando criamos um objeto ele é um filho de 'Object'(relação de herança)
+			
+			//avião: cor, modelo levantar voo
+
+			//objeto literal
+			let aviao1 = {
+				cor: 'branco',
+				modelo: 'Airbus a380',
+				levantarVoo: function(){ console.log('levantar voo') } 
+			}
+
+			//função construtora
+			let aviaoF = function(){
+				this.cor = 'azul'
+				this.modelo = 'Boeing 787'
+
+				this.levantarVoo = function(){ console.log('levantar voo') }
+			}
+
+			let aviao2 = new aviaoF()
+
+			//Classe
+			class AviaoC{
+				constructor(){
+					this.cor = 'Vermelho'
+					this.modelo = 'Embraer E-jets'
+				}
+
+				levantarVoo(){ console.log('levantar voo') }
+			}
+
+			let aviao3 = new AviaoC()
+
+			console.log(aviao1, aviao2, aviao3)
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

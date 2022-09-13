@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<script>
+			if (true){
+				let serie = 'friends'
+				console.log('let em escopo de bloco: ' + serie)
+				if(true){
+					console.log('let em um nivel mais fundo ' + serie)
+				}
+			}
+
+			//console.log('let fora do escopo de bloco: ' + serie) -> dá erro
+			//Pois o let preserva o escopo, então só pode ser usado dentro do escopo ou em niveis inferiores, mas nunca em niveis superiores
+
+		</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Capturando eventos com jQuery</title>
+
+	<!--Jquery-->
+    <script src="../jQuery.js"></script>
+    
+    <!--Estilo-->
+    <style>
+        #external{
+            background-color: gray;
+            width: 80px;
+            height: 80px;
+            padding: 70px;
+        }
+
+        #internal{
+            background-color: lightblue;
+            height: 80px;
+            width: 80px;
+        }
+
+        #external2{
+            background-color: gray;
+            width: 80px;
+            height: 80px;
+            padding: 70px;
+        }
+
+        #internal2{
+            background-color: lightblue;
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+
+	<!--Script-->
+	<script>
+		$(document).ready( () => {
+
+            //evento mousedown -> pressão do botão principal do mouse
+            $('#btn1').mousedown( ()=>{
+                $('#result').css('background-color', 'green')
+            } )
+
+            //evento mouseup -> libertação do botão principal do mouse
+            $('#btn1').mouseup( ()=>{
+                $('#result').css('background-color', 'red')
+            } )
+
+            //evento click -> conclusão das duas etapas anteriores
+            $('#btn2').click( e => {
+                $(e.target).css({'background': 'transparent', 'border': '1px solid red', 'color': 'red'})
+            } )
+
+            //evento dblclick -> duplo clique
+            $('#btn3').dblclick( () => {
+                $('#result').css('background-color', 'yellow')
+            } )
+
+            //evento mousemove -> movimento do mouse dentro do elemento
+            $('#result').mousemove( e => {
+                $('#position').html(`X: ${e.offsetX} | Y: ${e.offsetY}`)
+                //a partir do parâmetro e, é retornado uma série de atributos, entre eles as posições x e y do mouse (offsetX e offsetY)
+            } )
+
+
+            /*---------------- mouseover / mouseout -> antigos ----------------*/
+            //evento mouseover -> entrada do mouse dentro do elemento
+            $('#external').mouseover( () => {
+                $('#div1Result').html('entrou')
+                console.log('div externa (entrou)')
+            } )
+
+            //evento mouseout -> saida do mouse no elemento
+            $('#external').mouseout( () => {
+                $('#div1Result').html('saiu')
+                console.log('div externa (saiu)')
+            } )
+
+            $('#internal').mouseover( () => {
+                $('#div2Result').html('entrou')
+                console.log('div interna (entrou)')
+            } )
+
+            //evento mouseout -> saida do mouse no elemento
+            $('#internal').mouseout( () => {
+                $('#div2Result').html('saiu')
+                console.log('div interna (saiu)')
+            } )
+
+            /*
+                esse métodos antigos causam um efeito de borbulhento (possível enxergar no console)
+                para entrar na div interna, ele primeiro sai da div externa, entra na interna e dps entra na externa de novo
+                algo parecido ocorre ao sair da div interna tbm.
+                para resolver esse problema, use os métodos novos
+            */
+
+
+            /*---------------- mouseenter / mouseleave -> novos ----------------*/
+            //evento mouseenter -> entrada do mouse dentro do elemento      
+            $('#external2').mouseenter( () => {
+                $('#div1Result2').html('entrou')
+                console.log('div externa (entrou)')
+            } )
+
+            $('#external2').mouseleave( () => {
+                $('#div1Result2').html('saiu')
+                console.log('div externa (saiu)')
+            } )
+
+            $('#internal2').mouseenter( () => {
+                $('#div2Result2').html('entrou')
+                console.log('div interna (entrou)')
+            } )
+
+            $('#internal2').mouseleave( () => {
+                $('#div2Result2').html('saiu')
+                console.log('div interna (saiu)')
+            } )
+            
+        } )
+	</script>
+</head>
+
+<body>
+
+	<div id="topo">
+		<h1>Eventos do Mouse</h1>
+	</div>
+
+	<div>
+        <button id="btn1" type="button">Clique aqui</button>
+        <button id="btn2" type="button">Clique por completo</button>
+		<button id="btn3" type="button">Clique aqui 2x</button>
+		<div id="result" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+        <span> Resultado do evento sobre a div </span> <span id="position"></span>
+        
+        <hr />
+
+        <h3>Efeito borbulha (abra o console)</h3>
+        <div id="external">
+            <div id="internal">
+                <!-- hierarquia de elementos -->
+            </div>
+        </div>
+        <span>Div externa: </span> <span id="div1Result"></span> <br>
+        <span>Div interna: </span> <span id="div2Result"></span>
+
+        <br><br>
+
+        <h3>Efeito borbulha consertado</h3>
+        <div id="external2">
+            <div id="internal2">
+                <!-- hierarquia de elementos -->
+            </div>
+        </div>
+        <span>Div externa: </span> <span id="div1Result2"></span> <br>
+        <span>Div interna: </span> <span id="div2Result2"></span>
+
+	</div>
+</body>
+
+</html>

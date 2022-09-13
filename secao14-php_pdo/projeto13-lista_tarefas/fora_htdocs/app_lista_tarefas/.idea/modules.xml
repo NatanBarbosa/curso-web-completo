@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/app_lista_tarefas.iml" filepath="$PROJECT_DIR$/.idea/app_lista_tarefas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../htdocs/_programacao/curso_php_PDO/projeto13-lista_tarefas/.idea/projeto13-lista_tarefas.iml" filepath="$PROJECT_DIR$/../htdocs/_programacao/curso_php_PDO/projeto13-lista_tarefas/.idea/projeto13-lista_tarefas.iml" />
+    </modules>
+  </component>
+</project>

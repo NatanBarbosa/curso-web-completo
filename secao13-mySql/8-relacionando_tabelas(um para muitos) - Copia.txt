@@ -1,0 +1,19 @@
+RELACIONAMENTO UM PARA MUITOS
+nesse caso um produto(tb_produtos) pode ter muitas imagens(tb_imagens)
+
+
+create table tb_imagens(
+    id_imagem INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_produto INT NOT NULL,
+    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto),
+    url_imagem VARCHAR(200) NOT NULL
+);
+-- NOTA: No caso de imagens apenas o seu PATH é guardado, daí a linguagem de programação vai pegaqr a referencia desse path no proprio sistema operacional do servidor.
+
+
+daí ao inserir as imagens em questão nessa tabela você referencia a chave estrangeira da tb_imagens para se relacionar com a chave primária da tb_produtos uma vez ou mais(caso precisa de uma ou mais imagens para um mesmo produto)
+
+INSERT INTO tb_imagens(id_produto, url_imagem) VALUES(1, 'notebook1.jpg'), (1, 'notebook2.jpg'), (1, 'notebook3.jpg');
+INSERT INTO tb_imagens(id_produto, url_imagem) VALUES(2, 'smarttv1.jpg'), (2, 'smarttv2.jpg');
+INSERT INTO tb_imagens(id_produto, url_imagem) VALUES(3, 'smartphone1.jpg');
+-- inserindo registros de imagens diferentes para um mesmo produto(mesmo id_produto)

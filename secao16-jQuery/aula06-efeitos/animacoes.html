@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animações em jQuery</title>
+
+    <style>
+        div{
+            width: 80px;
+            height: 80px;
+            background: #aaa;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+
+    </style>
+
+    <script src="../jQuery.js"></script>
+
+    <script>
+        $(document).ready( () => {
+            /*
+            Animações podem atuar sobre qualquer propriedade css, que tenham suporte numérico
+            muda o visual de um elemento html para outro
+            animate('propriedade visual', 'opção de transição')
+                - 1º parâmetro: objeto literal com os atributos visuais após a transição
+                - 2º parâmetro: objeto literal com algumas propriedades, ou um valor q represente o tempo da transição
+            */
+
+            let estilo = {
+                'width': '160px',
+                'height': '160px',
+                'margin-left': '200px',
+                'margin-top': '200px',
+                'border-radius': '50px'
+            }
+
+            let opcoes = {
+                duration: 1500,
+
+                //executado no instante q a animação começa
+                start: () => $('#msg').html('Começou'),
+
+                //executada no término da animação
+                complete: () => {
+                    $('#msg').html('Terminou')
+                    $('#div2').animate(estilo,1500)
+                }
+            }
+
+            $('button').on('click', () => {
+                $('#div1').animate(estilo,opcoes)
+            })
+        } )
+    </script>
+</head>
+<body>
+    <button>Iniciar animação</button>
+    <br>
+    <div id="div1">
+        <span id="msg"></span>
+    </div>
+
+    <hr>
+
+    <div id="div2"></div>
+</body>
+</html>

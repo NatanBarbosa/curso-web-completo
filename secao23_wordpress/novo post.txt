@@ -1,0 +1,17 @@
+tags: ajuda buscador, como google, a identificar do que se trata o conteúdo
+
+inseirr imagem no post: dentro da postagem
+
+imagem destaque: aparece no início do post
+
+Categorias e subtageroais:
+- slug: menos coisa na url
+- subcategoria: categoria com outras ascendente
+- Navegar por categorias
+
+página x postagem
+postagem: associada a uma categoria
+Várias postagens podem ser exibidas
+
+Página
+Área específica dentro do site

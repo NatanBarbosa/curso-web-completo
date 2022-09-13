@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de íncice de massa corporal</title>
+
+    <script>
+
+        var nome = prompt('Digite seu nome')
+        var altura = parseFloat(prompt('Digite sua altura (em cm)'))
+        var massa = parseFloat(prompt('Digite sua massa (em kg)'))
+
+        altura /= 100 //convertendo para metros
+        
+        var imc = massa/(altura^2)
+
+
+
+        if(imc<16){
+            var condicao = 'Baixo peso muito grave'
+        } else if(imc<=16.99) {
+            var condicao = 'Baixo peso grave'
+        } else if(imc<=18.49) {
+            var condicao = 'Baixo peso'
+        } else if(imc<=24.99) {
+            var condicao = 'Peso normal'
+        } else if(imc<=29.99) {
+            var condicao = 'Sobrepeso'
+        } else if(imc<=34.99) {
+            var condicao = 'Obesidade grau I'
+        } else if(imc<=39.99) {
+            var condicao = 'Obesidade grau II'
+        } else if(imc > 40) {
+            var condicao = 'Obesidade grau III'
+        }
+
+        alert(`${nome} possui índice de massa corporal igual a ${imc.toFixed(2)}, sendo classificado como: ${condicao}`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

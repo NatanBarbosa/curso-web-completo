@@ -1,0 +1,36 @@
+<!--
+	table: aplicada na <table>, formata a tabela com espaçamentos e linhas
+	table-sm: aplicada na <table>, deixa a tabela menor
+	table-dark: juntocom a formatação da tabela deixa ela com um estilo escuro
+	table-<opcoes>: aplicada na <table>, deixa ela com um dos três estilos
+		opcoes: table-striped, table-bordered, table-borderless (pode aplicar mais de uma)
+
+	thead-dark: aplicada na <thead>, deixa apenas o cabeçalho com o tema escuro
+	table-<opcoes>: aplicado na <tr>, deixa ela com o fundo de uma das opções
+		opcoes: success, secondary, info, danger, warning, etc
+
+	table-responsive: aplicada dentro de uma div contendo a table, cria uma navegação horizontal na falta de espaço
+	
+
+
+	Paginação
+	crie uma estrutura de navegação
+	
+	pagination: aplicado na <ul>, estrutura da paginação, deita os itens
+	page-item: aplicado na <li>, informa que é um item de paginação
+	page-link: aplicado no <a>, informa que é um link de paginação
+	com esses três colocados se formata a estrutura da paginação
+
+	active: aplicado na <li>, deixa com fundo azul e informa a página atual ao usuário
+	disabled: aplicado na <li>, deixa acizentado informando que o link não esta disponível
+
+	justify-content-<alinhamento>(center, end): aplicado na ul, deixa ela no centro ou direita
+	pagination-<tamanho>(sm, lg): aplicado na ul, deixa ela menor ou maior
+
+	&laquo; - dentro do span, seta pra esquerda (no lugar do anterior)
+	&raquo; - dentro do span, seta pra direita (no lugar do proximo)
+
+	sr-only: aplicado no span, esconde o anterior/próximo, caso eu queira usar setas, assim um leitor de tela consiguiria ler as setas
+
+
+-->

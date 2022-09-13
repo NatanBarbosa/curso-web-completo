@@ -1,0 +1,44 @@
+SELECT ... LIMIT OFFSET
+
+LIMIT - limita a quantidade de registros em uma consulta
+OFFSET - A partir de qual registro será limitado
+
+
+SELECT * FROM `tb_alunos` LIMIT 25
+
+-- de 100 registros, ele retorna apenas os primeiros 25. (0 - 24)
+
+SELECT 
+	* 
+FROM 
+	`tb_alunos` 
+ORDER BY
+	id_aluno DESC
+LIMIT 
+	25;
+
+-- de 100 registros, ele retorna apenas os 25 ultimos (100 - 76)
+
+
+
+SELECT 
+	* 
+FROM 
+	`tb_alunos` 
+LIMIT 4
+OFFSEt 0;
+
+-- de 100 registros retorna 4 registros a partir do registro 0
+
+SELECT 
+	* 
+FROM 
+	`tb_alunos` 
+LIMIT 4
+OFFSEt 4;
+
+-- de 100 registros retorna 4 registros a partir do registro 4
+
+SELECT * FROM `tb_alunos` LIMIT 8,4; (OFFSET implicito no primeiro valor)
+
+-- de 100 registros retorna 4 registros a partir do registro 8

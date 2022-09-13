@@ -1,0 +1,23 @@
+/*Criando tabela*/
+
+create table tb_cursos(
+    
+    id_curso int not null,
+    imagem_curso varchar(100) not null,
+    nome_curso char(50) not null, -- valor obrigatório
+    resumo text null, -- valor opcional
+    data_cadastro datetime not null,
+    ativo boolean DEFAULT true, -- informação padrão caso não preenchida
+    investimento float(8,2) -- de 8 digitos, dois são fração: 124753.22, 120.45, etc
+    
+);
+
+drop table tb_cursos -- exclui a tabela
+
+
+# valores boolean
+0 = false
+1 = true
+
+# renomear tabelas
+rename table --nome_atual to --nome_novo

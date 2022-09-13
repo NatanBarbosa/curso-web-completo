@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox - Flexible box layout</title>
+
+        <style type="text/css">
+
+            #conteudo{
+                /*Formatações dentro do container*/
+                background-color: #dcdcdc;
+                height: 600px;
+                display: flex; /*Disponibiliza as formatações abaixo*/
+
+                flex-direction: row;
+                /*
+                    row -> Mostra os itens como linhas
+                    row-reverse -> mostra os itens do final do container como linhas
+                    column -> um item abaixo do outro
+                    column-reverse -> mostra os itens de ordem invertida um abaixo do outro
+                */
+
+                flex-wrap: wrap;
+                /*
+                    nowrap -> mesmo se os itens não caberem no container eles continuarão um ao lado do outro e não quebrarão o layout (achatarão)
+
+                    wrap -> os itens vão quebrar para linha de baixo caso não caibam todos
+
+                    wrap-reverse -> os itens trocam a ordem quando quebram e ficam embaixo
+                */
+
+                justify-content: space-around;
+                /*
+                    flex-start: os itens ficam alinhados no canto superior esquerdo
+                    flex-end: ficam alinhados no canto superior direito
+                    center: centraliza os itens
+                    space-between: distribui os itens com o maior espaçamento possivel
+                    space-arround: distribui os itens mas não deixa eles colados nos cantos
+                */
+
+                align-items: center;
+                /*
+                    stretch: os itens preenchem toda área até completar a sua altura
+                    center: os itens ficam alinhados no centro no container (em relação ao height)
+                    flex-start: os itens ficam alinhados na parte superior
+                    flex-end: os itens ficam alinhados na parte inferior
+                    baseline: alinha os itens baseado na linha do texto
+                */
+
+            }
+
+            .item{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                background: white;
+                border: 1px solid gray;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1>Flexbox</h1>
+        <!--conteudo container-->
+        <div id="conteudo">
+            <div class="item">01</div> <!--flex itens-->
+            <div class="item">02</div>
+            <div class="item">03</div>
+            <div class="item">04</div>
+            
+        </div>
+
+    </body>
+</html>

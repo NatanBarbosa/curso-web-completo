@@ -1,0 +1,81 @@
+/* @for 
+through: 1 2 e 3
+to: 1 e 2
+*/
+
+/*imports*/
+@import 'variaveis'; //permite4 usar a variável do outro arquivo
+//@import '_variaveis.scss';
+
+@for $i from 1 through 3 {
+	.item-#{$i} {
+		background: $cor-principal;
+		margin-bottom: 2px;
+	}
+}
+
+/*while*/
+$contador: 4;
+@while $contador <= 6 {
+	.item-#{$contador} {
+		background: red;
+		padding: 3px;
+	}
+
+	$contador: $contador + 1;
+}
+
+$contador: 7;
+/*each: exibição de listas. Para cada cor, ele roda e aplica cada uma delas*/
+$lista: green, yellow, red;
+@each $cor in $lista{
+	.item-#{$contador} {
+		background: $cor;
+		padding: 3px;
+	}
+
+	$contador: $contador + 1;
+}
+
+
+/****************** Criar um sistema de grid (12 classes) com poucas linhas ******************/
+.row{
+	display: flex;
+}
+
+
+/*funções
+pode passar valor padrão que nem javascript
+*/
+
+$total-colunas: 12;
+
+@function largura-coluna($coluna: 2){
+	/*se passar 6 colunas, cada coluna terá 20% de largura*/
+	$largura: percentage(calc($coluna / $total-colunas));
+	@return $largura;
+}
+
+@for $i from 1 through $total-colunas {
+	.col-#{$i} {
+		width: largura-coluna($i);
+		background: lightblue;
+	}
+}
+
+/*
+***************** outras funções *****************
+mix(cor1, cor2, porcentagem de mistura entre as cores)
+*/
+.mix {
+	background: mix(green, orange, 30);
+	color: yellow;
+}
+
+.darken {
+	background: darken(orange, 20%);
+}
+
+.lighten {
+	background: lighten(orange, 30%);
+}

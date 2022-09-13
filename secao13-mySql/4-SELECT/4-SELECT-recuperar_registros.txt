@@ -1,0 +1,9 @@
+comando SELECT
+
+SELECT <colunas> FROM <tabela>
+
+SELECT ativo, carga_horaria, id_curso, resumo FROM tb_cursos;
+-- ordem e quantidade não importantes
+
+SELECT * FROM tb_cursos;
+-- o * indica todas as colunas

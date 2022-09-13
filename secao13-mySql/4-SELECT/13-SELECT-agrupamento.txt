@@ -1,0 +1,16 @@
+SELECT * FROM `tb_alunos` GROUP BY interesse
+
+-- separa todos os registros por grupos, baseados no interesse
+
+SELECT *, COUNT(*) FROM `tb_alunos` GROUP BY interesse
+
+-- Com os registros separados, e essa função de agregação(também é possivel usar a de soma, média, etc) ele cria uma coluna (*count) e conta quantas chaves há por registro agrupado
+
+
+select estado, COUNT(*) AS alunos_por_estado FROM tb_alunos GROUP BY estado;
+-- separa em grupos (27 nesse caso) e conta quantos alunos tem por estado
+-- é possivel usar o AS para mudar o nome da coluna que vai trazer o resultado da conta
+
+
+
+select estado, avg(*) AS alunos_por_estado FROM tb_alunos GROUP BY estado ORDER BY alunos_por_estado

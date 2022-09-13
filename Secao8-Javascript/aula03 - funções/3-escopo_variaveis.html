@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Escopo de variáveis</title>
+
+    <script>
+
+        /*
+            3 escopos: global, função e o bloco
+
+            global: Escopo do script como um todo
+            função: conteúdo inserido dentro de um bloco de função
+            bloco: instruções contidas dentro de comandos (ex: if, for, switch, etc)
+        */
+
+        var serie = 'Friends'//variável criada em um escopo global
+
+        if(true){
+            var serie2 = 'Game of Thrones' //variável criada em um escopo de bloco
+            document.write(serie  + '<br>')
+            //é possivel acessar a variável dentro de um escopo de bloco
+        }
+
+        document.write(serie2)
+
+        document.write('<br>')
+
+        function x(){
+            document.write(serie + '<br>')
+            //é possivel acessar a variável dentro de um escopo de função
+
+            document.write(serie2)
+
+            var serie3 = 'The Walking Dead'
+            //variável criada no escopo da função, e não estará disponível globalmente
+        }
+
+        x()
+
+        document.write(serie3)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

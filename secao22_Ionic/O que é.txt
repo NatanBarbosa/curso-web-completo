@@ -1,0 +1,25 @@
+framework para desenvolver app moveis hibridos com html, css e js
+
+app hibrido: roda em celular dentro da WebView (tipo browser)
+webview: renderiza a interface do app. Acessa os recursos nativos do celular.
+
+app nativo: roda diretamente no celular, sem precisar da webview.
+
+https://ionicframework.com/docs/
+
+Instalação
+Ionic criará um diretório novo ***
+ionic start nomeApp (blank | tabs | sidemenu)
+
+dev com js vanilla, angular, react ou vue
+
+
+Execução
+ionic serve
+
+Gerar nova página
+ionic generate page nome_pagina
+ionic generate page nome_pagina --spec=false (não gera o arquivo de teste)
+
+/assets
+Coloca as imagens aki

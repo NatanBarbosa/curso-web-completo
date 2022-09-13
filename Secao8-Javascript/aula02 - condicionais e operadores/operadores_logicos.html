@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos</title>
+
+    <script>
+
+        if(2 == 2 && 3 >= 1 && 'a' == 'b'){
+            document.write('Operador &&: verdadeiro')
+            /*Todos resultados tem q ser verdadeiros*/
+        } else{
+            document.write('Operador &&: falso')
+        }
+
+        document.write('<br>')
+
+        if(2 == 2 || 3 >= 1 || 'a' == 'b'){
+            document.write('Operador ||: verdadeiro')
+            /*Um dos resultados tem q ser verdadeiro*/
+        } else{
+            document.write('Operador ||: falso')
+        }
+
+        document.write('<br>')
+
+        if(!(2 == 2 && 3 >= 1 && 'a' == 'b')){
+            document.write('Operador !: verdadeiro')
+            /*Inverte a operação. Logo se isso fosse true agr é false*/
+        } else{
+            document.write('Operador !: falso')
+        }
+
+        /****************** Desafio média falta ******************/
+        
+        var media = 7
+        var faltas_max = 15
+        var nota = Number(prompt('Digite a sua nota: '))
+        var faltas = Number(prompt('Digite a suas faltas: '))
+
+        if(nota >= media && faltas <= faltas_max) {
+            alert('Aprovado')
+        } else {
+            alert('Reprovado')
+        }
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

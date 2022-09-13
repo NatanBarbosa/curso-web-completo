@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Requisições assíncronas</title>
+		
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<script>
+			function requisitarPagina(url){ //esse parâmetro vai receber a página que queremos abrir(pagina_1_conteudo.html, pagina_2_conteudo.html, pagina_3_conteudo.html)
+
+				//Removendo conteúdo do corpo antes de requisitar um novo
+				document.getElementById('conteudo').innerHTML = ''
+
+				
+
+				//O objeto XMLHttpRequest é que vai configurar url e disparar requisições
+
+				//veficiar se o gif ja existe
+				if(!document.getElementById('loading')){
+
+					//incluir gif de loading na página
+					let gif = document.createElement('img')
+					gif.id = 'loading'
+					gif.src = 'loading.gif' 
+					gif.className = 'rounded mx-auto d-block'
+					document.getElementById('conteudo').appendChild(gif)
+				}
+
+
+				
+
+				//instanciar o objeto XMLHttpRequest
+				let ajax = new XMLHttpRequest()
+
+				//método: método (GET ou POST) e configura a url que será requisitada
+				ajax.open('GET', url) 
+
+				ajax.onreadystatechange = () => {
+					//Esse atributo é execultado a cada vez que o ajax muda de estado
+
+					//verificar o estado da requisição
+					console.log(ajax.readyState)
+
+					//Removendo o gif qnd a requisição do ajax for finalizada (estado == 4)
+					if(ajax.readyState == 4 && ajax.status == 200){
+						document.getElementById('loading').remove()
+
+						//colocar o conteúdo html de resposta trazido pelo ajax
+						document.getElementById('conteudo').innerHTML = ajax.responseText
+					} 
+
+					if(ajax.readyState == 4 && ajax.status == 404){
+						console.log('requisição finalizada')
+						document.getElementById('loading').remove()
+
+						//verificando o status da requisição (ajax.status) 200 || 404
+						document.getElementById('conteudo').innerHTML = '<strong style="color:red;">Recurso solicitado não encontrado - erro ' + ajax.status + '</strong>'
+					} 
+
+				} 
+
+				//enviar a requisição do método anterior
+				ajax.send() 
+			}
+
+
+		</script>
+	
+	</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-light bg-light mb-4">
+	      <div class="container">
+	        <div class="navbar-brand mb-0 h1">
+	        	<h3>Requisições síncronas e assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row mb-2">
+	    		<div class="col-md-4 center"></div>
+	    		<div class="col-md-4 center">
+	    			<!-- captura o click desses links para disparar a função que faz o ajax e recebe as páginas desejadas-->
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.php')">Página 1</a> 
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.php')">Página 2</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_4_conteudo.html')">Página 3</a> <!--forçar erro-->
+	    		</div>
+	    		<div class="col-md-4 center"></div>
+	    	</div>
+	    	
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+
+		    	<div class="col-md-10" id="conteudo"> <!-- Nesse elemento vai ficar o gif tbm -->
+		    		
+		    		<!-- 
+		    			Para as requisições assíncronas precisa apenas de uma página, que vai 
+		    			inserir os conteúdos das páginas 1, 2 e 3 dinamicamente dentro dessa div,
+		    			sem ter que requisitar uma nova página toda hora
+		    		-->
+
+		    	</div>
+		    		
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>

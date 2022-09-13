@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script>
+
+        var janela
+
+        function abrirPopUp (){
+            janela = window.open('https://www.w3schools.com/jsref/obj_window.asp', '_blank', 'width=900px, height=600px, top=300px')
+            //atribuindo isso à uma variável para ter o q informar para fechar dps(fecharPopUp)
+            /*
+            parâmetros do open
+            link para uma página interna ou externa
+            specificações: ex.: 'width=600px, height=800px' -> sempre separando as especificações por vírgula e dentro de aspas
+            */
+        }
+
+        function fecharPopUp(){
+            janela.close()
+            //variavel q tem uma janela aberta como valor.close()
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="abrirPopUp()">Abrir janela com mais métodos</button>
+    <button onclick="fecharPopUp()">Fechar janela</button>
+    <button onclick="window.print()">Imprimir página</button> <!--Abre o driver de impressão da página-->
+
+</body>
+</html>
+
+<!--
+    O BOM interage com as ferramentas do navegador, enquando o DOM é apenas com as tags do nosso documento. Subimos um nível.
+-->

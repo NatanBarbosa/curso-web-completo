@@ -1,0 +1,40 @@
+/*Barra de navegação vertical
+ul{
+    
+    list-style-type: none; /*tirando bagulhinho da lista
+    margin: 0;
+    padding: 0; /*removendo o espaçamento interno e externo padrão
+}
+
+li{
+    padding: 6px 20px;
+    background-image: url('imagens/seta.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+*/
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a{
+    width: 200px; /*tamanho da metade imagem(um retangulo)*/
+    height: 40px;
+    display: block; /*mudando para block para definir o width e height*/
+    color: black;
+    text-indent: 40px; /*posicionando o texto dentro da ul*/
+    line-height: 40px; /*altera a altura da linha que está o texto (empurra pra baixo)*/
+    text-decoration: none;
+    background: #f7b600 url('imagens/menu.png') no-repeat left bottom;
+}
+
+a:hover, .selecionado a { /*qnd algum link descendente de 'selecionado' for selecionado ele vai aplicar essas configurações, como se tivesse clicado*/
+    background-position: right bottom;
+    /*qnd você passa o mouse em cima você movimenta o background para a outra metada da imagem, criando um efeito bacanudo*/
+    background-color: #f99200;
+    /*caso a imagem não carregue ainda terá o efeito de alteração de cores ao passar o mouse*/
+    color: white;
+}

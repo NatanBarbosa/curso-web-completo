@@ -1,0 +1,13 @@
+comando INSERT
+
+INSERT INTO <nome da tabela> (coluna, coluna, coluna) VALUES (valor, valor valor);
+
+INSERT INTO tb_cursos (id_curso, nome_curso, duracao, ativo, data_criacao) VALUES (1, 'curso de MySql', 5, 1, 2018-05-15);
+
+-- Os valores tem que ser respectivos à das colunas definidas no comando
+-- Nesse caso a ordem não importa
+
+# notas
+Sempre encapsular strings com 'aspas simples' 
+datas/horas são strings, sempre definidas como 'aaaa-mm-dd hh:mm:ss'
+imagens são strings de textos que apontam para o arquivo em questão. Ex.: 'Imagem_1.jpg'

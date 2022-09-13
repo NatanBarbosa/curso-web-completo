@@ -1,0 +1,25 @@
+-- tabelas sem apelidos
+
+Select * from tb_produtos LEFT JOIN tb_descricoestecnicas on (tb_produtos.id_produto = tb_descricoestecnicas.id_produto);
+
+
+-- tabelas apelidadas
+Select * from tb_produtos as P LEFT JOIN tb_descricoestecnicas as DT on (P.id_produto = DT.id_produto);
+
+-- usa o AS dps da definição da tabela para apelida-la
+-- Ao apelidas, para se referenciar à ela ultilize sempre o apelido
+
+
+Select
+    P.id_produto,
+    P.produto,
+    P.valor,
+    DT.descricaoTecnica
+from 
+    tb_produtos as P 
+LEFT JOIN 
+     tb_descricoestecnicas as DT on (P.id_produto = DT.id_produto);
+WHERE
+    P.valor >= 500;
+
+-- Como a gente apelidou as tabelas dps do FROM, podemos usar os apelidos lá em cima na hora de referenciar as tabelas das colunas que queremos exibir e na hora de aplicar filtros com o WHERE e em todos os outros lugares que precisem referenciar a tabela.

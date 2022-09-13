@@ -1,0 +1,15 @@
+- Compartilhamento de recursos de origens cruzadas (CORS)
+
+- usa cabeçalhos HTTP para garantir a permissão de acesso a recursos de um servidor diferente do da origem da página
+
+- permitir que sites externos acessem nossa API
+
+- O browser bloqueia requisições para terceiros automaticamente como medida de segurança
+
+- Erro: Access control allow origin
+
+- Mas se o outro site permitir (com o CORS), aí é possível
+
+- Troca de cabeçalhos -> requisição options
+
+https://www.slimframework.com/docs/v3/cookbook/enable-cors.html

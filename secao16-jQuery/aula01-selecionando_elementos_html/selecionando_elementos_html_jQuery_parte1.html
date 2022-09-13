@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selecionando elementos parte 1</title>
+	<meta charset="utf-8">
+	<script src="../jQuery.js"></script>
+</head>
+<body>
+
+	<h1 id="titulo">Selecionando elementos parte 1</h1>
+
+	<div> Div 1</div>
+	<div class="diversos"> Div 2</div>
+
+	<ul>
+		<li>Menu 1 - item 1</li>
+		<li class="diversos">Menu 1 - item 2</li>
+		<li>Menu 1 - item 3</li>
+	</ul>
+
+	<ul>
+		<li class="menu2">Menu 2 - item 1</li>
+		<li class="menu2">Menu 2 - item 2</li>
+		<li class="menu2">Menu 2 - item 3</li>
+	</ul>
+
+	<input type="text" placeholder="campo1">
+	
+	<select class="diversos">
+		<option>---Selecione uma opção---</option>
+		<option>Opção 1</option>
+		<option>Opção 2</option>
+	</select>
+
+	<br>
+
+	<img src="carro.jpg" id="carro">
+
+
+<script>
+	//selecionando elementos html por tag
+	console.log($('h1'))	
+	console.log($('div'))
+	console.log($('ul'))
+	console.log($('li'))
+	console.log($('input'))
+	console.log($('select'))
+	console.log($('option'))
+	console.log($('img'))
+
+	console.log(' ')
+
+	//selecionando elementos html por classe
+	console.log($('.menu2'))
+	console.log($('.diversos'))
+	
+	console.log(' ')
+
+	//selecionando elementos html por id
+	console.log($('#titulo'))
+	console.log($('#carro'))
+</script>
+
+</body>
+</html>

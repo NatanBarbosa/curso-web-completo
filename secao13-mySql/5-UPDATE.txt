@@ -1,0 +1,37 @@
+UPDATE
+	<tabela>
+SET
+	<coluna> = <valor>, <coluna> = <valor>, <coluna> = <valor>  -- pode settar um ou mais valores de uma vez
+WHERE
+	<filtros(s)> -- sem o WHERE todas os registros são atualizados. Ele especifíca qual registro da coluna vou alterar
+
+
+
+UPDATE 
+	tb_alunos
+SET
+	nome = 'João'
+WHERE
+	id_aluno = 13;
+
+-- alterar o nome do aluno com id 13 para joão
+
+
+-- Ex.: alterar todo o interesse de todos os velhos para 'Saúde'
+
+UPDATE 
+	tb_alunos
+SET
+	interesse = 'Saúde'
+WHERE
+	idade >= 80;
+
+
+-- Ex.: corrigindo informações erradas (nome, idade e e-mail) no aluno 15
+
+UPDATE 
+	tb_alunos
+SET
+	nome = 'Natan', idade = 16, email = 'alunonate@gmail.com'
+WHERE
+	id_aluno = 15;

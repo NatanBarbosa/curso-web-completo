@@ -1,0 +1,8 @@
+-- prioriza o retorno dos registros em que o relacionamento é estabelecido. Os registros que não se relacionarem seráo desconsiderados
+-- ou seja. Só retornará os registros em que a chave primária da esquerda é igual à chave estrangeira da direita
+
+SELECT * FROM tb_pedidos INNER JOIN tb_pedidos_produtos on (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido) 
+
+SELECT * FROM `tb_pedidos` INNER JOIN tb_pedidos_produtos on (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido) INNER JOIN tb_produtos on (tb_pedidos_produtos.id_produto = tb_produtos.id_produto)
+
+-- Agora ele cria uma relação com o produto. Nesse caso o novo produto registrado que não faz parte de enhum pedido não aparece.

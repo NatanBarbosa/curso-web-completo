@@ -1,0 +1,61 @@
+/*Aninhamento e seletor pai(&)*/
+
+/*Variáveis*/
+$bg-color: #e7e7e7 !global; /*idependente do escopo*/
+$cor-destaque: #abc123;
+$fonte-padrao: sans-serif;
+
+#conteudo{
+    display: flex;
+    gap: 20px;
+    font-family: $fonte-padrao;
+    
+    .exemplo{
+        flex-basis: 250px;
+        padding: 14px;
+    }
+    
+    .exemplo-1{
+    background: #93827F;
+    
+        h1, h2{
+            color: $cor-destaque;
+        }
+        
+        a{
+            color: #E0D2C3;
+            font-weight: bold;
+            text-decoration: none;
+        
+            &:hover{
+                color: black;
+            }
+            
+        }
+    }
+    
+    /*alterar a variável dependendo do escopo*/
+    .exemplo-2{
+        $cor-destaque: #123fda;
+        background-color: $bg-color;
+        
+        h2{
+          color: $cor-destaque;  
+        }
+    }
+    
+    .exemplo-3{
+        background: $cor-destaque;
+    }
+    
+    /*inperpolação (usar var como nome de classe e atributo) #{}*/
+    $attr: color;
+    $classname = exemplo-4;
+    #{$classname} h2{
+        #{$attr}: red;
+    }
+}
+
+
+
+

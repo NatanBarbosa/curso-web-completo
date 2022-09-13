@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			function validacao(){
+				let nome = document.getElementById('nome').value
+				let idade = document.getElementById('idade').value
+				let sexo  = document.getElementById('sexo').value
+				let profissao = document.getElementById('profissao').value
+				
+				/*let objeto = {
+					nome: nome //O javascript tem a inteligência de diferenciar o nome da chave do nome do valor nesse contexto
+					idade: idade,
+					sexo: sexo,
+					profissao: profissao,
+					exibirResumo: function(){
+						console.log(`${this.nome} tem ${this.idade} anos, é do gênero ${this.sexo} e trabalha como ${this.profissao}`)
+					}
+				}*/
+
+				let objeto = {
+					nome, //omitindo a chave o javascript entende que (chave = nome da variável / valor = valor da variável)
+					idade, //seria tipo: recupere esse variável e ultiliza o nome dessa variável como sendo o nome da variável a chave e o valor da variável como o valor dessa chave
+					sexo,
+					profissao,
+					//omitindo a palavra function e os dois pontos para definir esse método tbm funciona
+					exibirResumo(){
+						console.log(`${this.nome} tem ${this.idade} anos, é do gênero ${this.sexo} e trabalha como ${this.profissao}`)
+					}
+				}
+
+				console.log(objeto)
+				objeto.exibirResumo()
+			}
+			
+		</script>
+	</head>
+	<body style="margin: 0 auto; width: 900px; border: 2px outset gray; padding: 10px;">
+		<h1>Preencha seus dados</h1>
+
+		<form>
+			Nome: <input type="text" id="nome"><br>
+			Idade: <input type="number" id="idade"> <br>
+			Sexo: 
+			<select id="sexo">
+				<option readonly>--------Selecione--------</option>
+				<option value="masculino">Masculino</option>
+				<option value="feminino">Feminino</option>
+				<option value="biogênero">biogênero</option>
+				<option value="Trabecokkkk">Trabecokkkk</option>
+			</select> 
+			<br> 
+			Profissão: <input type="text" id="profissao"> <br>
+			<button type="button" onclick="validacao()">Enviar</button>
+		</form>
+	</body>
+</html>

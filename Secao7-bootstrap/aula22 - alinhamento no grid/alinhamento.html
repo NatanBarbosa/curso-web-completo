@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sistema de grid</title>
+
+    <!--Css do Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../bootstrap 4/css/bootstrap.min.css">
+
+    <style type="text/css">
+        .marcador {
+          background: #fe9d9d;
+          border: 1px solid #f94646;
+          height: 120px;
+        }
+    
+        .marcador-container {
+          background: #5bf946;
+          border: 1px solid #36ae26;
+        }
+    
+        .borda {
+          border: 1px solid blue;
+        }
+      </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+  
+        <h2>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h2>
+        <div class="row marcador align-items-start">
+            <div class="col borda">Área 1</div>
+            <div class="col borda">Área 2</div>
+            <div class="col borda">Área 3</div>
+        </div>
+        <!--Alinha todos os itens dentro desse flex-container-->
+
+        <br><br>
+
+        <h2>Alinhamento vertical individual (align-self-ALINHAMENTO: start, center, end)</h2>
+        <div class="row marcador">
+            <div class="col borda align-self-start">Área 1</div>
+            <div class="col borda align-self-center">Área 2</div>
+            <div class="col borda align-self-end">Área 3</div>
+        </div>
+        <!--Alinha cada item individualmente-->
+
+        <br><br>
+    
+        <h2>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end)</h2>
+        <div class="row justify-content-center">
+            <div class="marcador col-2">Área 1</div>
+            <div class="marcador col-2">Área 2</div>
+            <div class="marcador col-2">Área 3</div>
+        </div>
+        <!--justifica o flex-conteiner em si no centro, direita ou esquerda dentro do container principal-->
+
+        <br><br>
+    
+        <h2>Distribuição (justify-content-ALINHAMENTO: around, between)</h2>
+        <div class="row borda justify-content-between">
+            <div class="marcador col-2">Área 1</div>
+            <div class="marcador col-2">Área 2</div>
+            <div class="marcador col-2">Área 3</div>
+            <div class="marcador col-2">Área 4</div>
+        </div>
+        <!--Distribui o espaçamento dos itens dentro do flex container -->
+
+        <br><br>
+    
+        <h2>Removendo espaçamento</h2>
+        <div class="row no-gutters">
+            <div class="borda col-2">Área 1</div>
+            <div class="borda col-2">Área 2</div>
+            <div class="borda col-2">Área 3</div>
+        </div>
+        <!--remove o pequeno espaçamento do texto em relação à caixa-->
+
+        <br><br>
+    
+    </div>
+  
+    <!--Js do Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="../bootstrap 4/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

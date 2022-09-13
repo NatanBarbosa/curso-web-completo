@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selecionando elementos parte 1</title>
+	<meta charset="utf-8">
+	<script src="../jQuery.js"></script>
+</head>
+<body>
+	<input type="text" placeholder="input1" class="exemplo">
+	<input type="text" placeholder="input2">
+	<input type="text" placeholder="input3">
+	<br>
+
+	<div class="exemplo">Div 1</div>
+	<div>Div 2</div>
+	<div>Div 3</div>
+	<br>
+
+	<ul class="lista1">
+		<li class="item">Opção 1</li>
+		<li class="item">Opção 2</li>
+		<li class="item">Opção 3</li>
+	</ul>
+
+	<ul class="lista2">
+		<li>Opção 1</li>
+		<li class="item">Opção 2</li>
+		<li class="item">Opção 3</li>
+	</ul>
+
+<script>
+	
+	//combinação de seletores
+		//selecionar elementos por classe apenas de tag específica
+		console.log($('div.exemplo'))//tag.classe
+
+		//selecionar os elementos por classe de classe específica
+		console.log($('.lista1 .item'))
+		console.log($('ul.lista2 .item'))
+
+		console.log('\n -------------------- \n')
+
+	//atuação sobre o array de retorno dos elementos selecionados -> retorna um array dos elementos selecionados (de 0 a n)
+		//pegando apenas o primeiro elemento com :first
+		console.log($('.lista1 .item:first'))
+
+		//pegando apenas o ultimo elemento com :last
+		console.log($('.lista1 .item:last'))
+
+		//pegando apenas elementos impares com :even
+		console.log($('.lista1 .item:even'))
+
+		//pegando apenas elementos pares com :odd
+		console.log($('.lista1 .item:odd'))
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* @for 
+through: 1 2 e 3
+to: 1 e 2
+*/
+/*imports*/
+/*esse arquivo será improtado em estilo.scss, mas não é compilado para a pasta css por causa do _ (partials)*/
+.item-1 {
+  background: lightgreen;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: lightgreen;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: lightgreen;
+  margin-bottom: 2px;
+}
+
+/*while*/
+.item-4 {
+  background: red;
+  padding: 3px;
+}
+
+.item-5 {
+  background: red;
+  padding: 3px;
+}
+
+.item-6 {
+  background: red;
+  padding: 3px;
+}
+
+/*each: exibição de listas. Para cada cor, ele roda e aplica cada uma delas*/
+.item-7 {
+  background: green;
+  padding: 3px;
+}
+
+.item-8 {
+  background: yellow;
+  padding: 3px;
+}
+
+.item-9 {
+  background: red;
+  padding: 3px;
+}
+
+/****************** Criar um sistema de grid (12 classes) com poucas linhas ******************/
+.row {
+  display: flex;
+}
+
+/*funções
+pode passar valor padrão que nem javascript
+*/
+.col-1 {
+  width: 8.3333333333%;
+  background: lightblue;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  background: lightblue;
+}
+
+.col-3 {
+  width: 25%;
+  background: lightblue;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  background: lightblue;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  background: lightblue;
+}
+
+.col-6 {
+  width: 50%;
+  background: lightblue;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  background: lightblue;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  background: lightblue;
+}
+
+.col-9 {
+  width: 75%;
+  background: lightblue;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  background: lightblue;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  background: lightblue;
+}
+
+.col-12 {
+  width: 100%;
+  background: lightblue;
+}
+
+/*
+***************** outras funções *****************
+mix(cor1, cor2, porcentagem de mistura entre as cores)
+*/
+.mix {
+  background: #b39a00;
+  color: yellow;
+}
+
+.darken {
+  background: #996300;
+}
+
+.lighten {
+  background: #ffdb99;
+}
+
+/*# sourceMappingURL=estilo.css.map */

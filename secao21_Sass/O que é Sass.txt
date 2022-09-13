@@ -1,0 +1,13 @@
+Systactically awesome style sheet (SASS)
+
+- escrever código em css. Como se fosse programar em css 
+
+- O sass é um arquivo que será processado na versão final do seu arquivo css
+
+É um pré processador css
+
+Sass -> processado -> arquivo final
+
+.scss (sassy css) -> aceita css no mesmo arquivo Sass
+
+Vantagens: velocidade, facilidade de manutenção, separação de arquivos.

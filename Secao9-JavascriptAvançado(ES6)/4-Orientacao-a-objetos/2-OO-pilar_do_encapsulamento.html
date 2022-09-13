@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>OO - pilar do encapsulamento</title>
+
+		<script>
+			
+			class Tv {
+				constructor(){
+					this._relacaoCanais = [2,4,5,7,10]
+					this._canalAtivo = 5
+					this._volume = 5
+					//o underline na frente do atributo indica pro brouser uma relção de atributo que não é suposto ser visivel(atributo privado)
+				}	
+
+				//getters e setters -> usados para retornarem e modificarem atributos privados(com _) (É conveniente que os dois tenham o mesmo nome)
+				get canalAtivo(){
+					//através de um método get ele retorna um atributo privado como público
+					return this._canalAtivo
+				}
+
+				set canalAtivo(canal){
+					//função que tem o mesmo nome do atributo que vai ser modificado
+					//com base no parâmetro vai ser por aqui que se atualizará o atributo em questão
+					//Dentro desse método é possivel trababalhar com segurança.
+					//Tendo em vista que o canal ativo é privado. Aí pode ter um controle de segurança para ver se aquele canal que quer ser ativo está ou não disponivel na relação de canais da Tv
+					if(this._relacaoCanais.indexOf(canal) != -1){
+						this._canalAtivo = canal
+					} else{
+						console.log('Esse canal não está na relação de canais')
+					}
+				}
+			}
+
+			let tv = new Tv()
+
+			tv.canalAtivo = 7 //Não abre e fecha parenteses pois o método set funciona como uma pseudo variável e o que ele recebe(3) é o parâmetro(canal) (o js reconhece automaticamente ela como um método)
+			console.log(tv.canalAtivo) //Não abre e fecha parenteses pois o método get funciona como uma pseudo variável
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <!--
+        Cuidado com a precedência de execução
+        Se o script estuver aqui no head significa que ele vai rodar antes dos elemntos html abaixo, ou seja, se tentarmos fazer alguma interação com eles não vai ser possível pois por enquanto eles não existem
+    -->
+    <script>
+        /*
+        var nome = prompt('digite seu nome');
+        var idade = Number(prompt('digite sua idade'));
+        document.write('<h1>tá sério pq '+ nome +'kkk?</h1> vc tem ' + idade + ' anos');
+
+        
+            Null x Undefined
+
+            Null: ausência inteincional de um valor, qnd vc cancela um prompt por exemplo
+
+            Undefined: Variável sem nenhum valor ou inexistente, qnd por exemplo, qnd ela não recebe nada, ou qnd tentamos recuperar uma variável que não existe
+        
+
+        var teste = null;
+        var teste2
+
+        //console.log(teste)
+        console.log(teste2)
+
+        teste = 'value modified'
+        //console.log(teste)
+
+        teste = 2777
+        console.log(teste)
+        */
+    </script>
+</head>
+
+<body>
+    
+    <h2>Curso de Javasca - variáveis</h2>
+
+    <script>
+        var string = 'Curso da javaskkkk';
+        var numInt = 2;
+        var numFloat = 777.77; //float, ponto flutuante
+        var booblean = true //false
+
+        alert(string) //recurso pra debug
+        document.write(numFloat)
+
+        console.log(numInt) //recurso fodão pra debug
+
+    </script>
+    
+    <br>
+    <button onclick="pelo()">Desafio</button>
+    <script src="teste.js"></script>
+
+
+</body>
+</html>

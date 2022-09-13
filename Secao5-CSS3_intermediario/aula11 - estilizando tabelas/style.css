@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 600px;
+    border-collapse: collapse; /*callapse: deixa as bordas juntinhas*/
+
+}
+
+th, td{ /*formatando títulos e dados*/
+    padding: 7px;
+}
+
+th{ /*formatando títulos*/
+    text-transform: uppercase; /*Deixar todas as letras maiusculas*/
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #111;
+    text-align: left;
+    font-size: 90%; /*90% do seu tamanho original*/
+    letter-spacing: 0.1em;
+}
+
+tr.alterna{
+    background-color: #efefef;
+    /*craindo um efeito de cor em que um item está mais escuro e outro mais claro(diferença de cores pequena ok? só os tr com essa classe vão receber essa formatação)*/
+}
+
+/*alinhando números que podem ter valores grandes à direita*/
+.numero {
+    text-align: right;
+}
+
+tr:hover{
+    background-color: #c3e6e5;
+}

@@ -1,0 +1,90 @@
+/*
+Reaproveitar estruturas que se repetem diversas vezes
+*/
+
+@mixin titulo($font-size, $width: 100%) {
+	background: black;
+	padding: 5px;
+	font-size: $font-size;
+	width: $width;
+}
+
+h1{
+	color: yellow;
+	@include titulo (20px);
+}
+
+h2{
+	color: white;
+	@include titulo (16px, 40%);
+}
+
+/* Herança
+Uma classe css pode herdar propriedades de outras classes (multiplas diretivas -> herdar 2+ classes) */
+.classe1{
+	color: red;
+}
+
+.classe2{
+	background: black;
+}
+
+.vermelho{
+	@extend .classe1;
+	@extend .classe2;
+}
+
+/*Encadeamento de diretivas: classe herdando classe herdando classe
+placeholders: classes que não são compiladas para o css (apenas para fins de herança)
+*/
+%pai{
+	color: blue;
+}
+
+%filho{
+	@extend %pai;
+	background: lightblue;
+}
+
+.erro{
+	@extend %filho; /*Herda pai e filho*/
+	border: 1px solid red;
+}
+
+/*diretivas de controle (if else)*/
+$cor: green;
+
+@if($cor == green){
+	.condicao{
+		color: $cor;
+	}
+}@else if($cor == red){
+	.condicao{
+		color: $cor;
+	}
+}@else{
+	.condicao{
+		color: black;
+	}
+}
+
+/*diretivas de controle e mixins
+exemplo: temas do ano
+*/
+
+@mixin tema($tema: padrao){
+	@if($tema == natal){
+		background: red;
+		color: white	
+	}@else if($tema == blackfriday){
+		background: black;
+		color: white;
+	}@else{
+		background: white;
+		color: black
+	}
+}
+
+body{
+	@include tema(blackfriday)
+}

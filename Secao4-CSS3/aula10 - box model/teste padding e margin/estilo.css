@@ -1,0 +1,36 @@
+/* Modelo de Caixa */
+.conteudo{
+    border: 1px solid red;
+    width: 150px;
+
+    /*
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    */
+    /*perceba que o padding altera o tamanho final da caixa (150px + 20px(right) + 20px(left)*/
+
+    /*padding: 20px 15px 10px 5px;*/
+    /*ordcem de definição: sentido horário começando do top*/
+
+    padding: 20px;
+
+    /*
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    */
+
+    margin: 10px;
+    
+}
+
+.conteudo2{
+    border: 1px solid red;
+    width: 150px;
+
+    margin: 50px;
+    /*a margin do conteudo2 sobrepõe a definida no conteúdo pois ela é maior */
+}

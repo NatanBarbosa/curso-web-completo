@@ -1,0 +1,4 @@
+SELECT * FROM `tb_clientes` RIGHT JOIN tb_pedidos on (tb_clientes.id_cliente = tb_pedidos.id_cliente)
+
+-- a tabela à direita é prioritária
+-- retorna todos os registros de tb_pedidos e onde houver vai trazer também os registros de tb_clientes

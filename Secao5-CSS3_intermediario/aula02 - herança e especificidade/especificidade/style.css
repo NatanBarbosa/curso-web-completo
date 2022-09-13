@@ -1,0 +1,40 @@
+/*********************************
+Especificidade
+p{
+    color: red !important; /*Nesse caso o vermelho será prioridade
+}
+
+p{
+    color: blue;
+}
+No caso de dois seletores iguais sempre o ultiumo que será aplicado
+*/
+
+/*
+Se um seletor for mais específico que outro a regra mais específica será aplicada
+*/
+h2{
+    color: blue;
+    /*'h2' + específico que '*' */
+}
+
+* {
+    color: red;
+}
+
+h2#amarelo{
+    color: yellow;
+    /*Um ID é mais específico que uma class, então ao invez de verde ele será amarelo*/
+}
+
+h2.verde{
+    color: green;
+    /*Ele é mais específico ainda que o 'h2' e '*', então ignora aa formtação deles e coloca esta*/
+}
+
+
+
+
+
+
+

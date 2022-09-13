@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Media queries</title>
+
+        <!--Css do Bootstrap-->
+        <link rel="stylesheet" href="bootstrap 4/css/bootstrap.min.css">
+
+        <!--definindo tamanhos -->
+        <style type="text/css">
+
+            /******************************************************************************
+            Ultilizando o min-width*/
+        
+            /*Small devices (landscape phones)
+            @media (/*Condição min-width:576px) {
+                Formatação específica para dispositivos com uma largura mínima de 576px
+                body{
+                    background: red;
+                }
+            } Pontos de interrupção (breakpoints) */
+    
+            /*Medium devices (tablets, 768px e superior)
+            @media (min-width:768px) {
+                body{
+                    background: blue;
+                }
+            } Pontos de interrupção (breakpoints)
+    
+            /*Large devices (desktops, 992px e superior)
+            @media (min-width:992px) {
+                body{
+                    background: yellow;
+                }
+            } /*Pontos de interrupção (breakpoints)
+    
+            /*Extra large devices (large desktops, 1200px e superior)
+            @media (min-width:1200px) {
+                body{
+                    background: gray;
+                }
+            } /*Pontos de interrupção (breakpoints)
+    
+    
+    
+             /******************************************************************************
+            Ultilizando o max-width*/
+
+            /* Extra small devices (portraint phones) 
+            @media (max-width:575.98px /*até chegar nos 576px(small devices), que tem outra formatação) {
+                body{
+                    background: #870000;
+                }
+            }
+    
+            /* Small devices (Landscape Phones) 
+            @media (max-width:767.98px /*até chegar nos 768px(medium devices), que tem outra formatação) {}
+    
+            /* Medium devices (Tablets) 
+            @media (max-width:991.98px /*idem) {}
+    
+            /* Large devices (Desktops) 
+            @media (max-width:1199.98px) {}
+    
+    
+    
+            /******************************************************************************
+            Ultilizando min width junto com max width (RECOMENDADO)*/
+
+            /* Extra small devices (portrait phones, less than 576px)*/
+            @media (max-width: 575.98px) {
+                body{
+                    background: #870000;
+                }
+            }
+
+            /* Small devices (landscape phones, 576px and up)*/
+            @media (min-width: 576px) and (max-width: 767.98px) {
+                body{
+                    background: red;
+                }
+            }
+
+            /* Medium devices (tablets, 768px and up*/
+            @media (min-width: 768px) and (max-width: 991.98px) {
+                body{
+                    background: blue;
+                }
+            }
+
+            /* Large devices (desktops, 992px and up*/
+            @media (min-width: 992px) and (max-width: 1199.98px) {
+                body{
+                    background: yellow;
+                }
+            }
+
+            /* Extra large devices (large desktops, 1200px and up*/
+            @media (min-width: 1200px) {
+                body{
+                    background: gray;
+                }
+            }
+        </style>
+
+    </head>
+    <body style="margin-bottom: 200px; width: 600px; margin: 0 auto;">
+
+        <!-- Media queries -->
+
+        <!--Js do Bootstrap-->   
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="../bootstrap 4/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

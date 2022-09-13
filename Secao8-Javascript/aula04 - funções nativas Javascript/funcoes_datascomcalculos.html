@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas com calculos</title>
+
+    <script>
+        //trabalhando com métodos set: modificam valores da data
+
+        var data = new Date()
+
+        //adicionar ou remover dias da data
+        document.write(data.toString()) //comvertendo a data para string para vizualisarmos sua informação completa
+
+        document.write('<hr>')
+
+        data.setDate(data.getDate() +366)
+        /*o método set date modifica o dia do mês, o getDate vai pegar o dia do m~es e depois será adicionado +1 para esse valor pego
+        Ele também tem a inteligência para atuar sobre o ano e o mês se você adicionar um valor maior
+        */
+
+        document.write(data.toString())
+
+
+        document.write('<br><br><br><br>')
+
+
+        //Adicionar ou remover meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth() -1)
+        document.write('<hr>')
+        document.write(data.toString())
+
+
+        document.write('<br><br><br><br>')
+        
+
+        //Adicionar ou remover anos
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() +1)
+        document.write('<hr>')
+        document.write(data.toString())
+        
+
+
+
+    </script>
+
+</head>
+<body>
+    
+
+
+</body>
+</html>

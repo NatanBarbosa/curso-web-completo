@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient( #efa1f7, #851685) no-repeat;
+    background-attachment: fixed;
+}
+
+#container{
+    width: 400px;
+    height: 300px;
+    background-color:rgba(255, 255, 255, 0.3) ;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 120px;
+    text-align: center; /*centralizando a imagem no meio do container(top center)*/
+}
+
+#container img{
+    width: 120px;
+    height: 120px;
+    margin-top: -60px; /*Centralizando a imagem acima do container*/
+    margin-bottom: 30px;
+}
+
+input {
+    height: 40px;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding-left: 40px; /*criando um espaçamento lateral para colocar os PNGs*/
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 10px; /*posição em relação a x*/
+}
+
+input.email {
+    background-image: url(imagens/icone-usuario.png); 
+}
+
+input.senha {
+    background-image: url(imagens/icone-cadeado.png); 
+}
+
+input.submit {
+    color: white;
+    background-color: #f79300;
+    border: 2px solid #db7d00;
+    padding: 5px 20px;
+    height: 45px;
+    width: 90%;
+
+    background: linear-gradient(to bottom, #faa600, #f68a00);
+    /*Caso esse degradê não carregue ele preencherá com uma cor sólida lá acima*/
+    cursor: pointer;
+}
+
+input.submit:hover{
+    background: linear-gradient(to bottom, #fa9600, #faa22f);
+}

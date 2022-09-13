@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Laços encadeados</title>
+
+    <script>
+
+        for(var y=1; y<=10; y++){
+
+            for (var x = 1; x<=10; x++) {
+            document.write(`${y} x ${x} = ${y*x} <br>`)
+            }
+
+            document.write('<hr>') //a cada vez que acaba uma tabuada é adicionado uma linha(qnd o x repetir dez vezes e o y uma)
+        }
+
+        /*
+            Explicação: o laço interno irá rodar 10 vezes e o conteudo dentro do laço interno
+            vai rodar 100 vezes. na primeira vez que o laço interno rodar o y será 1, e com o y 
+            valendo 1 o x vai de 1 até 10 fazendo calculos com y = 1, fazendo a tabuada do 1 certo, dps o y 
+            vai valer 2 e o x vai de 1 até 10, porém agr fazendo calculos com y = 2 e assim por diante
+        */
+
+        
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

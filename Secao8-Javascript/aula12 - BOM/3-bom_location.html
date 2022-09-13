@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script>
+        //Através do objeto location podemos controlar os atributos relativos a url atual, podendo execultar alguns métodos
+        function acessarW3S() {
+            window.location.hash='https://www.w3schools.com/jsref/obj_location.asp'
+            //script redireciona para o site
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="acessarW3S()">Acessar documentação</button>
+    <button onclick="window.location.replace('https://www.w3schools.com/jsref/obj_location.asp')">teste</button>
+
+    <!--assign(url): carrega um novo documento em uma nova guia
+        replace(url): carrega um novo documento na mesma guia-->
+</body>
+</html>

@@ -1,0 +1,35 @@
+/*Sombra na caixa*/
+#caixa{
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #009670;
+    box-shadow: 2px 10px 5px 5px outset rgba(0, 0, 0, 0.521);
+    /*
+    box-shadow: 
+    'movimentação horizontal'
+    'movimentação vertical' 
+    'blure(borrado)' 
+    'espalhamento' 
+    'Cor (pode ser rgba com pouca opacidade)' 
+    'inset(sombra dentro da caixa) ou outset';
+    */
+}
+
+/*Sombra no texto*/
+#caixa h1{
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.582);
+    /*
+    text-shadow: 
+    'movimentação horizontal' 
+    'movimentação vertical' 
+    'blure(borrado)' 
+    'Cor (pode ser rgba com pouca opacidade)';
+    */
+}
+
+a{
+    color: #ffffff;
+}

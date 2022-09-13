@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			
+			let Carro = function() { //função construtora
+				this.cor = 'Amarelo'
+				this.modelo = 'Chavette'
+				this.velocidadeAtual = 0
+				this.velocidadeMaxima = 180
+
+				this.acelerar = function (){ //atributo que recebe como valor uma função, tornando-o um método
+ 					//this.velocidadeAtual += +10
+ 					//vou chamando o método acelerar e ele vai acelerando de 10 em 10
+
+ 					let velocidade = this.getVelocidadeAtual() + 10//recuperar o retorno daquela função que retorna a velocidade e soma 10
+
+ 					//encaminhar essa velocidade como parâmetro para setVelocidadeAtual
+ 					this.setVelocidadeAtual(velocidade)
+
+				}
+
+				this.getVelocidadeAtual = function(){
+					//se quiser pegar a velocidade atual precisa usar o método get
+					return this.velocidadeAtual
+				}
+
+				this.setVelocidadeAtual = function(velocidadeAtual){
+					//vai receber como parâmetro e colocar na propriedade do objeto
+					this.velocidadeAtual = velocidadeAtual
+				}	
+			}
+
+			let carro = new Carro() //construindo um objeto com base em uma função
+
+			console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`)
+
+			carro.acelerar()
+			carro.acelerar()
+			carro.acelerar()
+			carro.acelerar()
+			carro.acelerar()
+
+			console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`)
+				
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

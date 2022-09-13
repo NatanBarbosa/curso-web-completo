@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cores e imagens de fundo</title>
+        <style type="text/css">
+
+           /*.fundo{
+                background-color: blue;
+                color: aliceblue;
+           }*/
+               
+            body{
+                /*background-image: url('imagens/yoshi.png');*/
+                background-repeat: no-repeat;
+
+                background-attachment: fixed; 
+                /*
+                attachments:
+                fixed: essa imagem fica fixa como plano de fundo. Se você rolar a página ela continuará lá (desce junto à página)
+                scroll: ela companha a rolagem e não fica fixa(não desce junta à página)
+                */
+
+                background-position: center;
+                /*o primeiro valor é o alinhamento horizontal, e o segundo valor é o alinhamento vertical → top, right, bottom, left*/
+                
+            }
+
+            h1 {
+                background-image: url('imagens/yoshi.png');
+                background-position: center;
+                background-attachment: scroll;
+                padding: 20px;
+            }
+
+            .fundo{
+                background: blue url('imagens/yoshi.png') no-repeat fixed center;
+                /*ordem de definição: cor → imagem → repetição → attachment → posição*/
+            }
+        </style>
+    </head>
+    <body class="fundo">
+        
+       <h1>Conteúdo de título 1</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem omnis voluptatibus impedit non culpa ducimus unde aut iure reprehenderit maxime magni labore temporibus, quam rerum vero quae vel minus. Atque.
+        </p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem omnis voluptatibus impedit non culpa ducimus unde aut iure reprehenderit maxime magni labore temporibus, quam rerum vero quae vel minus. Atque.
+        </p>
+
+
+    </body>
+</html>

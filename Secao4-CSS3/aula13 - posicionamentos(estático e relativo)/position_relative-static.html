@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>posionamentos - static, relative, absolute, fixed</title>
+        <style>
+        
+            body{
+                background: #007fc7;
+            }
+
+            #container{
+                background: #ffffff;
+                width: 700px;
+                margin: 10px auto; /*colocando 'auto' para esquerda e direita centraliza o container*/
+                padding: 10px;
+
+            }
+
+            p{
+                width: 300px;
+            }
+
+            .relative{
+                border: 1px solid red;
+                position: relative;
+                /*
+                ao usar o position realtive é necessário agr definir 4 valores:
+                top, right, bottom e left
+                O ponto zero dessas movimentações seria onde ele está posicionado por padrão. Ex.: ao usar top 20px ele vai deslocar 20 px de cima (lógica reversa) em relação de onde ele está agr
+                */
+                left: 399px;
+                bottom: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="container">
+            <h1>Posicionamentos</h1>
+            <p>
+                P1 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis voluptates commodi sunt dolores. Dignissimos facilis dolor pariatur ipsam, accusantium nobis provident laboriosam, impedit commodi et accusamus veniam atque error quam?
+            </p>
+
+            <p class="relative">
+                P2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum eum, totam ullam molestias nam quos itaque tempore unde qui nostrum praesentium, corrupti inventore, ipsam cumque asperiores illo alias iste?
+            </p>
+
+            <p>
+                P3 - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quasi similique quisquam alias tempora omnis nobis rem nam voluptates, illo corporis ratione quam laboriosam expedita natus placeat ad reiciendis doloremque.
+            </p>
+        </div>
+
+    </body>
+</html>

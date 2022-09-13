@@ -1,0 +1,291 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>
+			Meu app
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+	<h1>Modelos</h1>
+	<ion-grid>
+		<ion-row class="ion-align-items-end">
+			<ion-col size="9">
+				<ion-item>
+					<ion-label position="floating">Digite sua pesquisa: </ion-label>
+					<ion-input type="text" [(ngModel)]="pesquisa"></ion-input>
+				</ion-item>
+			</ion-col>
+			<ion-col size="3">
+				<ion-button (click)="recuperar()"><ion-icon name="search-outline"></ion-icon></ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	
+	<br>
+
+	<h4>Pesquisa: {{resultado}}</h4>
+	
+
+	<h1>Navegação</h1>
+	<!--<ion-button [href]="'/botoes/'" routerDirection="forward" expand="full">Botões</ion-button> -->
+	<ion-button (click)="abrirBotoes()" expand="full">Botões</ion-button> <!-- <- esse método é mais performático e clean -->
+	<ion-button (click)="abrirLista()" expand="full">Lista</ion-button> <!-- <- esse método é mais performático e clean -->
+	
+	<!--
+	<h4>{{titulo}}</h4>
+
+	<h1>Data Binding (ligação de dados)</h1>
+
+	<h4>Event biding</h4>
+	<ion-button (click)="acao()">Botão</ion-button>
+	<ion-item>
+		<ion-label position="floating">Seu nome: </ion-label>
+		<ion-input (input)="atualiza()"></ion-input>
+	</ion-item>
+	<small>eventos: input, click, focus, etc</small>
+
+	<h4>Property Biding</h4>
+	<small>Pode ser usado apeans em propriedades de tags</small>
+
+	<ion-img [src]="imagemLocal"></ion-img>
+
+	<h4>String interpolation</h4>
+	<small>Pode ser usado em qualquer lugar</small>
+
+	<ion-img src="{{imagemRandomica}}"></ion-img>
+	
+	<h1>Sistema de Grid Ionic</h1>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col size="3">Conteúdo 1</ion-col>
+			<ion-col size="9">Conteúdo 2</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col size="4">Conteúdo 3</ion-col>
+			<ion-col size="4">Conteúdo 4</ion-col>
+			<ion-col size="4">Conteúdo 5</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<h4>Grid offset</h4>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col size="6">Conteúdo 1</ion-col>
+			<ion-col size="3" offset="2">Conteúdo 1</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<h4>Grid - alinhamento de textos (ion-text-start, ion-text-end, ion-text-center)</h4>
+	<ion-grid>
+		<ion-row class="ion-text-center">
+			<ion-col size="4">1</ion-col>
+			<ion-col size="4">2</ion-col>
+			<ion-col size="4" class="ion-text-end">3</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<h4>Grid - alinhamento vertical</h4>
+	<ion-grid>
+		<ion-row class="ion-align-items-start">
+			<ion-col size="4">1</ion-col>
+			<ion-col size="4">2</ion-col>
+			<ion-col size="4">3 <br/> + <br/> + </ion-col>
+		</ion-row>
+		<ion-row class="ion-align-items-center">
+			<ion-col size="4">1</ion-col>
+			<ion-col size="4">2</ion-col>
+			<ion-col size="4">3 <br/> + <br/> + </ion-col>
+		</ion-row>
+		<ion-row class="ion-align-items-end">
+			<ion-col size="4">1</ion-col>
+			<ion-col size="4">2</ion-col>
+			<ion-col size="4">3 <br/> + <br/> + </ion-col>
+		</ion-row>
+		
+	</ion-grid>
+	
+	<h1>Configurando entrada (floating, fixed, stacked)</h1>
+
+	<ion-item>
+		<ion-label position="floating">Seu nome: </ion-label>
+		<ion-input></ion-input>
+	</ion-item>
+
+	<h4>Entrada de dados (value, placeholder, clearinput)</h4>
+	<ion-item>
+		<ion-input placeholder="Digite seu nome" clearInput></ion-input>
+	</ion-item>
+
+	<h4>Tipos de entradas de dados (text, number, password, email, tel, url, search)</h4>
+	<ion-item>
+		<ion-label position="floating">Seu email</ion-label>
+		<ion-input type="email"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Sua senha</ion-label>
+		<ion-input type="password"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Seu telefone</ion-label>
+		<ion-input type="tel"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">pesquisa</ion-label>
+		<ion-input type="search"></ion-input>
+	</ion-item>
+
+	<h1>Listas</h1>
+	<ion-list>
+		<ion-item>
+			<ion-icon name="star" slot="start"></ion-icon>
+			<ion-label>1. lorem ipslum sit</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-icon name="star" slot="start"></ion-icon>
+			<ion-label>2. lorem ipslum sit</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-icon name="star" slot="start"></ion-icon>
+			<ion-label>3. lorem ipslum sit</ion-label>
+		</ion-item>
+	</ion-list>
+
+	<h4>Listas com avatar</h4>
+	<ion-list>
+		<ion-item>
+			<ion-avatar slot="start">
+				<ion-img src="https://source.unsplash.com/random/200x200"></ion-img>
+			</ion-avatar>
+			<ion-label>Claudia roberta</ion-label>
+		</ion-item>
+
+		<ion-item>
+			<ion-avatar slot="start">
+				<ion-img src="https://source.unsplash.com/random/200x200"></ion-img>
+			</ion-avatar>
+			<ion-label>Maria Paula</ion-label>
+		</ion-item>
+	</ion-list>
+
+	<h4>Listas com slides</h4>
+
+	<ion-list>
+		<ion-item-sliding>
+			<ion-item>
+				<ion-label>Natan Barbosa</ion-label>
+			</ion-item>
+
+			<ion-item-options side="start">
+				<ion-item-option color="danger">
+					<ion-icon name="trash" slot="start"></ion-icon>
+					Excluir
+				</ion-item-option>
+			</ion-item-options>
+		</ion-item-sliding>
+
+		<ion-item-sliding>
+			<ion-item>
+				<ion-label>Edson José</ion-label>
+			</ion-item>
+
+			<ion-item-options side="start">
+				<ion-item-option color="danger">
+					<ion-icon name="trash" slot="start"></ion-icon>
+					Excluir
+				</ion-item-option>
+			</ion-item-options>
+		</ion-item-sliding>
+	</ion-list>
+
+	<h1>Cartões</h1>
+
+	
+	mode="md": material design (android) / mode="ios"
+	<ion-card color="secondary" mode="ios">
+		<ion-img src="https://source.unsplash.com/random/800x600"></ion-img>
+		<ion-card-content>
+			<ion-card-title>Meu primeiro card</ion-card-title>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quae labore dignissimos dolores consequatur minus hic nobis. Dignissimos necessitatibus iste iure ullam porro iusto nobis velit, sunt libero odio ipsa.</p>
+		</ion-card-content>
+	</ion-card>
+
+
+	<h4>Cartões com cabeçalho</h4>
+
+	<ion-card>
+		<ion-card-header>
+			<ion-card-title>título</ion-card-title>
+			<ion-card-subtitle>Cabeçalho no card com ionic</ion-card-subtitle>
+		</ion-card-header>
+		<ion-img src="https://source.unsplash.com/random/800x600"></ion-img>
+		<ion-card-content>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quae labore dignissimos dolores consequatur minus hic nobis. Dignissimos necessitatibus iste iure ullam porro iusto nobis velit, sunt libero odio ipsa.</p>
+		</ion-card-content>
+	</ion-card>
+
+	<h4>Cartões com listagem de itens</h4>
+	<ion-card>
+		<ion-item>
+			<ion-label><p>1. Lorem, ipsum dolor sit amet</p></ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-icon name="add" slot="start"></ion-icon>
+			<ion-label><p>2. Lorem, ipsum dolor sit amet Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem optio repudiandae quod doloribus veniam dolor molestias assumenda ad laborum cum? Esse in odit mollitia eligendi? Nulla provident consequatur non facere.</p></ion-label>
+		</ion-item>
+		<ion-item href="https://google.com.br">
+			<ion-icon name="link-outline" slot="start"></ion-icon>
+			<ion-label>3. item com link</ion-label>
+		</ion-item>
+	</ion-card>
+
+	<h1>Botões</h1>
+	<ion-button>Padrão</ion-button>
+	<ion-button href="https://google.com">link</ion-button>
+
+	<h4>Cores de botões</h4>
+	<ion-button color="primary">primary</ion-button>
+	<ion-button color="secondary">secondary</ion-button>
+	<ion-button color="tertiary">tertiary</ion-button>
+
+	<ion-button color="success">success</ion-button>
+	<ion-button color="warning">warning</ion-button>
+	<ion-button color="danger">danger</ion-button>
+	<ion-button color="light">light</ion-button>
+	<ion-button color="medium">medium</ion-button>
+	<ion-button color="dark">dark</ion-button>
+
+	<h4>Botões expandidos</h4>
+	<ion-button expand="full" color="primary">Espaço completo (full)</ion-button>
+	<ion-button expand="block" >Arredondado (block)</ion-button>
+	
+	<h4>Arredondamentos</h4>
+	<ion-button shape="round">Arredondado</ion-button>
+
+	<h4>Preenchimento</h4>
+	<ion-button fill="outline" color="danger">Preenchimento</ion-button>
+
+	<h4>Ícones nos botçoes</h4>
+	<ion-button href="https://ionic.io/ionicons" target="_blank">
+		<ion-icon name="star" slot="end"></ion-icon> 
+		Ícone
+	</ion-button>
+	<ion-button href="https://ionic.io/ionicons" target="_blank">
+		<ion-icon name="bulb-outline" slot="start"></ion-icon>
+		Ícone
+	</ion-button>
+	<ion-button href="https://ionic.io/ionicons" target="_blank">
+		<ion-icon name="game-controller-outline" slot="icon-only"></ion-icon>
+	</ion-button>
+
+	<ion-icon name="logo-javascript"></ion-icon>
+
+	<h4>Tamanhos de botões</h4>
+	<ion-button size="small">pequeno</ion-button>
+	<ion-button>médio</ion-button>
+	<ion-button size="large">grande</ion-button>
+-->
+	
+</ion-content>

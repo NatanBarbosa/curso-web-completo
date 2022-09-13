@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			//objeto
+			let produto = {
+				categoria: 'Eletrodoméstico',
+				descricao: 'Geladeira',
+				preco: 1999.99
+			}
+
+			//JSON
+			let produtoJSON = '{"categoria": "Eletrodoméstico", "descricao": "Geladeira", "preco": 1999.99}'
+			/*
+				Arquivos json tem que estar dentro de aspas(são strings) e chaves. São tipo um objeto
+				os nomes e valores do  'objeto' também devem estar em ""
+				os : e , não precisam estar entre aspas
+				valores numéricos não recebem ""
+			*/
+
+
+
+			/*
+				Pq tenho q usar os dois?
+				A instancia de um objeto existe apenas na instancia de uma aplicação e não podem ser transitados para aplicações externas
+				O localStorage é uma aplicação externa à nossa aplicação web
+				Por isso para se comunicar com o LocalStorage(Aplicação interna para externa) vc converte o objeto para um notação de texto (notação Json)
+				Esse texto será anexado com a aplicação do localStorage que poderá ser convertido para um objeto mais tarde
+
+				Por isso encaminhamos um JSON como parâmetro para o setItem
+
+				A biblioteca JSON tem um método chamado stringify que converte um objeto para uma string json
+				sintaxe: JSON.stringify(objeto)
+				tbm tem um método chamado parse, que faz a operação inversa
+				sintaxe: JSON.parse(json)
+			*/
+
+			console.log(JSON.stringify(produto))
+			console.log(JSON.parse(produtoJSON))
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

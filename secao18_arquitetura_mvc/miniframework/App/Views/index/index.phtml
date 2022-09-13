@@ -1,0 +1,8 @@
+<h1>Homes</h1>
+<hr/>
+
+<?php
+	foreach($this->view->dados as $produto){
+		echo $produto['id'] . ' - ' . $produto['descricao'] . ' - ' . $produto['preco'] . '<br/>';
+	}
+?>

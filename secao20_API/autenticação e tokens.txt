@@ -1,0 +1,7 @@
+Vc cria um site para sua API
+
+A pessoa se cadastra no seu site com um email e senha
+
+Vc gera um token para a pessoa
+
+Para a pessoa acessar sua api, ela precisa enviar o token para a API

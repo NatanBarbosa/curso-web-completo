@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ajax com jQuery</title>
+
+		<!-- estilos -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<!--Script aula-->
+		<script src="script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<!-- menu -->
+		<div class="nav-side-menu">
+		    <div class="brand">SEU LOGO AQUI</div>
+		    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+		  
+		        <div class="menu-list">
+		  
+		            <ul id="menu-content" class="menu-content collapse out">
+		                <li>
+		                  <a href="#" id="index"><i class="fa fa-tachometer-alt sidebar-icon"></i> Dashboard</a>
+		                </li>
+		                
+		                <li  data-toggle="collapse" data-target="#ajuda" class="collapsed">
+		                    <a href="#"><i class="fa fa-life-ring sidebar-icon"></i> Ajuda <span class="arrow"><i class="fa fa-angle-down"></i></span></a>
+		                </li>
+		                <ul class="sub-menu collapse" id="ajuda">
+		                    <li><a href="#" id="documentacao"><i class="fa fa-angle-right"></i> Documentação</a></li>
+		                    <li><a href="#" id="suporte"><i class="fa fa-angle-right"></i> Suporte <small><i class="fa fa-external-link"></i></small></a></li>
+		                </ul>
+		            </ul>
+		     </div>
+		</div>
+
+		<!-- paginas -->
+		<div class="main" id="pagina">
+		    
+		    <div class="container">	
+				<div class="row">
+					<div class="col">
+						<h3>Página principal</h3>
+						<hr />
+						<p>
+							Lorem ipsum commodo eget neque class cubilia etiam libero ultrices condimentum fusce, taciti cubilia urna auctor accumsan tristique fringilla himenaeos ac rhoncus dictumst, erat proin ullamcorper cras augue curabitur ultricies aenean aliquam sed. id fames purus ut vel eleifend consequat in, nulla eu vivamus ut a risus amet duis, lorem ac tellus primis cras potenti. egestas leo himenaeos aliquam in faucibus eros donec ad curabitur potenti, morbi justo semper volutpat elit pulvinar risus curabitur mollis tempus, luctus sociosqu vehicula magna duis eu lectus est enim. mollis rutrum etiam urna lorem netus augue aenean consectetur enim quis, tellus inceptos luctus cursus et laoreet sapien hac justo quam eget, fames in sagittis porttitor iaculis consequat vivamus donec quis. 
+
+							Sapien vel morbi neque ut per quisque id nunc fusce feugiat suscipit torquent nisl cubilia, quis donec massa eu convallis erat integer felis diam per scelerisque velit iaculis. pretium maecenas eros cursus dapibus ut sapien lacus et potenti, sollicitudin sagittis bibendum at venenatis hendrerit vestibulum lorem, lobortis blandit eget morbi fringilla enim platea convallis. bibendum egestas litora iaculis turpis urna fermentum pellentesque, cubilia sollicitudin laoreet vestibulum consequat urna commodo curabitur, leo bibendum molestie volutpat primis tempor. proin inceptos interdum a aliquet mattis aliquet orci donec, eget praesent donec torquent quis vestibulum nam praesent ut, condimentum elit aptent dapibus curabitur vitae nec. 
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

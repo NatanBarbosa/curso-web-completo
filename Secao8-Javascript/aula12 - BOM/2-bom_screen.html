@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script>
+        //Retorna o tamanho máximo da tela do usuário excluindo a barra de ferramentas
+        var altura = window.screen.availHeight
+        var largura = window.screen.availWidth
+
+        document.write('<h2>Altura do documento</h2> <br>')
+        document.write(`a altura do navegador é ${altura}px <br>`)
+        document.write(`a largura do navegador é ${largura}px <hr>`)
+
+        //Retorna o tamanho máximo da tela do usuário incluindo a barra de ferramentas
+        var altura = window.screen.height
+        var largura = window.screen.width
+
+        document.write('<h2>Altura do browser total</h2> <br>')
+        document.write(`a altura do navegador é ${altura}px <br>`)
+        document.write(`a largura do navegador é ${largura}px <hr>`)
+
+        if(largura<=500){
+            document.write('Imprimir menu hamburguer')
+        } else {
+            document.write('Imprimir menu versão web')
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

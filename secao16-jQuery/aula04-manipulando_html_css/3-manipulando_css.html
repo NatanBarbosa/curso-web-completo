@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Manipulando classes e estilos css</title>
+
+	<!--Estilo-->
+	<style>
+		.input{
+			background-color: #cacaca;
+			padding: 10px;
+			border: none;
+		}
+
+		.textarea{
+			background-color: aquamarine;
+			border: 1px solid blue;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.padrao{
+			border-radius: 3px;
+		}
+	</style>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+		$(document).ready( ()=>{
+			/*
+			método css() -> define os estilos inline do elemento.
+			- 1º parâmetro: atributo de estilo manipulado
+			- 2º parâmetro: Valor que será associado ao atributo
+			- obs: é possível ir passando várias configurações pelo método css apenas adicionando +1
+			*/
+			$('#topo').css('background-color','#155661')
+			$('#topo h1').css('font-family', 'Arial').css('padding', '3px').css('color', 'white')
+
+			//é possível tbm passar objetos literais que contenham essas configurações css como parâmetro para esse método
+			let estilo = {
+				'background': 'transparent',
+				'color': 'green',
+				'border': '1px solid green',
+				'border-radius': '5px',
+				'padding': '5px 10px',
+				'cursor': 'pointer'
+			}
+
+			$('button').css(estilo)
+
+
+			/*
+			método addClass() -> adiciona classes predefinidas (no style do seu app) em elementos
+			- parâmetro: nome da classe que será aplicada
+			- obs: ao colocar várias classes, separe-as por espaço
+			*/
+			$('input').addClass('input padrao') //aplica nos 2 inputs
+			$('textarea').addClass('textarea padrao')
+
+
+			/*
+			método hasClass() -> verifica se um determinado elemento tem determinada classe
+			- parâmetro: define a classe que será verificada
+			- retorna true ou false
+			*/
+			console.log( $('input').hasClass('padrao') )
+			console.log( $('textarea').hasClass('input') )
+
+			if( $('input').hasClass('input') ){
+				console.log('é um input')
+			}
+
+
+			/*
+			método removeClass() -> Remove uma determinada classe de um elemento
+			- parâmetro: classe que será removida
+			*/
+
+			$('textarea').removeClass('padrao')
+
+
+		} )
+	</script>
+</head>
+
+<body>
+
+	<div id="topo">
+		<h1>Barra de navegação da aplicação</h1>
+	</div>
+
+	<div>
+		<h3>Contato</h3>
+		<hr />
+
+		<p>Nome:</p>
+		<input type="text" />
+		<br />
+
+		<p>Email:</p>
+		<input type="text" />
+		<br />
+
+		<p>Mensagem:</p>
+		<textarea></textarea>
+		<br />
+
+		<button type="button">Enviar</button>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			//Contexto rest (muito ultilizado em funçções)
+			//Esse operador tem mesma função que o operador 'arguments' , porém é mais comum se usar o rest/spread
+
+			function soma(...param){
+				//Vai receber todos os parâmetros de uma vez só e juntar na estrutura de array. Seria tipo: param = [3,8,5,7]
+				let result = 0
+				/*for(i in param){
+					result += param[i]
+				}*/
+
+				param.forEach(valor => result += valor) //vai percorrer todos os indices do array e vai adicionando seu valor à variavel result a cadfa indice com valor percorrido
+				console.log(param) //param(nome do parâmetro) seria como se fosse o nome da array
+				return result
+			}
+
+			console.log(soma(3,8,5,7,4,5,25,254))
+
+			function multiplicacao(multiplicador, ...valores){
+				console.log(multiplicador, valores)
+				let result = 0
+				valores.forEach(valor => result += multiplicador * valor) //mesma lógica do anterior
+				//cada um dos parâmetros serão multiplicados por 5 e somados ao 'result'
+
+				return result
+			}
+
+			console.log(multiplicacao(5,7,12,3,49))
+			//aqui o primeiro parâmetro será o multiplicador e os demais serão recebidos e juntados em um único parâmetro(valores) como array
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

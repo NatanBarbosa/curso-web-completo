@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Capturando eventos com jQuery</title>
+    
+    <!--Style-->
+    <style>
+        div{
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+        }
+
+        .destaque{
+            background-color: lightcoral;
+        }
+    </style>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+    $(document).ready( ()=>{
+        
+        //trigger() -> aciona o evento de modo programático
+        $('#btn2').on('click', e => {
+            $(e.target).css('background', 'lightgreen')
+            alert('botão 2 clicado')
+        })
+
+        $('#btn1').on('click', ()=>{
+            $('#btn2').trigger('click')
+            //isso vai acionar a ação acima
+        })
+
+        $('#btn1').trigger('click') //aciona o clique do botão 1
+
+
+        /*hover(função1, função2) -> função auxiliar para captura de eventos "mouseenter/mouseover" e "mouseleave/mouseout"
+        função1 -> referente ao que fazer no mouseenter
+        função2 -> referente ao que fazer no mouseleave
+        se parar apenas uma função ela será usada como mouseenter e mouseleave
+        $('#div1').on('mouseenter', e => {
+            $(e.target).addClass('destaque')
+        })
+
+        $('#div1').on('mouseleave', e => {
+            $(e.target).removeClass('destaque')
+        })
+        em vez de criar esse duas funções para fazer isso, vamos usar o hover ebaaa
+        */
+
+        $('#div1').hover( 
+            e => $(e.target).addClass('destaque'),
+            e => $(e.target).removeClass('destaque') 
+        )
+
+
+        //toggleClass() -> função auxiliar para adição/remoção de classe
+        /*
+        caso a classe existe -> removida
+        caso a classe não exista -> adicionada
+        */
+
+        $('#div2').hover( e => $(e.target).toggleClass('destaque') )
+        //mesma coisa que o comando de cima, porém feito com apenas 1 função
+    } )
+	</script>
+</head>
+
+<body>
+
+<button id="btn1" type="button"> btn1 </button> <br>
+<button id="btn2" type="button"> btn2 </button>
+
+<hr>
+<h3>div1</h3>
+<div id="div1"></div>
+
+<hr>
+
+<h3>div2</h3>
+<div id="div2"></div>
+    
+</body>
+
+</html>

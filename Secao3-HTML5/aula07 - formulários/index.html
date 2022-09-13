@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Componentes de formulários</title>
+</head>
+
+<body>
+    <h2>login</h2>
+
+    <form>
+
+        login:<br>
+        <input type="text" name="login"><br>
+
+        senha:<br>
+        <input type="password" name="senha"><br>
+
+        <input type="button" value="logar">
+
+
+        <h2>cadastre-se</h2>
+        <form>
+            login:<br>
+            <input type="text" name="login"><br><br>
+
+            sexo: <br>
+            <input type="radio" name="sexo" value="M">Masculino<br>
+            <input type="radio" name="sexo" value="F">Feminino<br><br>
+            <!--Eles precisam ter o mesmo name para só poder escolher um-->
+            <!--Esse "value" é o valor que vai ser passado via linguagem de programação caso selecionado-->
+
+            Interesses<br>
+            <input type="checkbox" name="interesses">Futebol<br>
+            <input type="checkbox" name="interesses">Cursos<br>
+            <input type="checkbox" name="interesses">Moda<br><br>
+            <!--Use checkbox para que o usuário consiga escolher mais de uma opção-->
+
+            Estado<br>
+            <select name="estado">
+                <option value="sp">SP</option>
+                <option value="mg">MG</option>
+                <option value="rj">RJ</option>
+                <option value="rs">RS</option>
+                <!--Esse "value" é o valor que vai ser passado via linguagem de programação-->
+            </select> <br><br>
+            <!--Use o select quando tiver muitas opções para o usuário escolher-->
+
+            Observações:<br>
+            <textarea></textarea> <br><br>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+
+    </form>
+</body>
+</html>

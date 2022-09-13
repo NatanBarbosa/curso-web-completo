@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>página principal</title>
+</head>
+<body>
+    <h2>Produtos</h2>
+    <table border="2" width="100%"> <!--a largura de 100% ocupara toda a largura do navegador-->
+
+        <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+
+        <tr>
+            <td>001</td>
+            <td>Notebook</td>
+            <td>2500,99</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>tablet</td>
+            <td>999,99</td>
+        </tr>
+        <tr>
+            <td>pelé</td>
+            <td><img src="https://abrilveja.files.wordpress.com/2018/01/pelecc81-andador-20180115-0006.jpg?quality=70&strip=info&resize=680,453" width="200px"></td>
+            <td>999999,99</td>
+        </tr>
+        <tr>
+            <td>googri</td>
+            <td><a href="https://ww.google.com">crica</a></td>
+            <td>1,99</td>
+        </tr>
+        <tr>
+            <td rowspan="2"> desconto </td> <!--rowspan = quantas linhas↓ ele ocupa-->
+            <td colspan="2">cupom1 R$ -9,99</td> <!--colspan = quantas colunas→ ele ocupa-->
+        </tr>
+        <tr>
+             <!--Esse "desconto" deve ser apagado pq o outro ja ocupa 2 linhas-->
+            <td colspan="2">cupom2 R$ -19,99</td> 
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td colspan="2">R$muitokkkkk,99</td>
+        </tr>
+
+    </table>
+
+    <h2>Especificações de computadores</h2>
+    <table border="1" width="600px">
+        <tr>
+            <th>CPU </th>
+            <th>Placa de vídeo </th>
+            <th>Qnt de RAM </th>
+            <th>Qnt de armazenamento </th>
+        </tr>
+        <tr>
+            <td>Intel core i5</td>
+            <td>Gtx 1050 6gb</td>
+            <td>16GB</td>
+            <td>1 TB</td>
+        </tr>
+        <tr>
+            <td>AMD ryzen 5</td>
+            <td>AMD radeon 6040</td>
+            <td>8 GB</td>
+            <td>1TB</td>
+        </tr>
+        <tr>
+            <td>Intel pentium</td>
+            <td>Não tem</td>
+            <td>2GB</td>
+            <td>500GB</td>
+        </tr>
+
+    </table>
+    <!--
+        os <tr> são as linhas → da tabela 
+        os <td> são as colunas ↓ da tabela
+        os <th> são basicamente os <td> porém com um destque por ser um título
+        
+    -->
+</body>
+</html>

@@ -1,0 +1,5 @@
+https://www.php-fig.org
+
+miniframework: usava o psr-4, com o esquemade autoload
+
+API: usa psr-7 com requisições http

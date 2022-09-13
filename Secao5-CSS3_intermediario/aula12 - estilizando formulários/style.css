@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset {
+    padding: 1em;
+    border: 1px solid#ccc; /*borda discreta*/
+    background: #f8f8f8;
+    margin: 1em 0;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label{
+    display: block; /*Assim o Label fica acima da caixa de texto*/
+    width: 65px;
+    cursor: pointer;
+}
+
+input{
+    width: 20em;
+}
+
+textarea {
+    width: 20em;
+    height: 10em;
+}
+
+input.radio, input.checkbox, input.submit{
+    width: auto;
+}
+
+.radio{
+    margin-right: 1em;
+}

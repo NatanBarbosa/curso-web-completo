@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>botoes</title>
+
+        <!--Css do Bootstrap-->
+        <link rel="stylesheet" type="text/css" href="../bootstrap 4/css/bootstrap.min.css">
+
+    </head>
+    <body style="margin-bottom: 200px; padding: 16px; width: 600px; margin: 0 auto;">
+
+        <!--O Bootstrap já possui classes com formtatações já definidas-->
+
+            <!-- Botoes 
+        formatação padrao: btn
+        formatação específicas:
+        btn-primary, btn-secondary, btn-success, btn-info,
+        btn-warning, btn-danger, btn-light, btn-dark, btn-link
+        -->
+        <h3>Botões</h3>
+        <button class="btn btn-info">Clique</button>
+
+        <h3>Botões com diferentes tags</h3>
+        <a class="btn btn-primary" href="#">Link</a>
+        <button class="btn btn-info" type="submit">Submit</button>
+        <input class="btn btn-secondary" type="button" value="Button">
+        <input class="btn btn-warning" type="submit" value="Input Submit">
+        <input class="btn btn-danger" type="reset" value="Reset">
+
+        <!-- Botoes com contorno
+        btn-outline-<cor bootstrap>
+        -->
+        <h3>Botões com contorno</h3>
+        <button class="btn btn-outline-warning" type="button">Clique</button>
+
+        <!-- Tamanhos de botões
+        opções: btn-lg, btn-sm, btn-block
+        -->
+        <h3>Tamanhos dos botões</h3>
+        <button class="btn btn-outline-success btn-lg" type="button">Grande</button>
+        <button class="btn btn-dark">Normal</button>
+        <button class="btn btn-info btn-sm" type="button">Pequeno</button>
+        <br><br>
+        <button class="btn btn-outline-primary btn-block" type="button">Bloco</button>
+
+        <!-- Estados dos botões
+        opções: active, disabled
+        -->
+        <h3>Estados de botões</h3>
+        <button class="btn btn-success" type="button">Normal</button>
+        <button class="btn btn-success active" type="button">Ativo</button>
+        <button class="btn btn-danger disabled" type="button">Inativo</button>
+        <br><br>
+        <button class="btn btn-success" data-toggle="button" type="button">Alternar</button> <!-- Você altera do estado normal para o estado ativo quado clica usando o data-toggle -->
+
+        <h3>Grupos de botões - horizontal</h3>
+        <div class="btn-group">
+            <button class="btn btn-secondary" type="button">Esquerda</button>
+            <button class="btn btn-secondary" type="button">Centro</button>
+            <button class="btn btn-secondary" type="button">Direita</button>
+        </div>
+
+        <h3>Grupos de botões - vertical</h3>
+        <div class="btn-group-vertical">
+            <button class="btn btn-outline-dark" type="button">Topo</button>
+            <button class="btn btn-outline-dark" type="button">Meio</button>
+            <button class="btn btn-outline-dark" type="button">Fundo</button>
+        </div>
+
+        <h3>Toolbar de botões</h3>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+            <button class="btn btn-info" type="button">1</button>
+            <button class="btn btn-info" type="button">2</button>
+            <button class="btn btn-info" type="button">3</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-info" type="button">4</button>
+                <button class="btn btn-info" type="button">5</button>
+            </div>
+        </div>
+
+        <h3>Botões dropdown</h3> <!--Quando você clica aparece links como se fossem menus-->
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"  type="button">
+                Clique
+            </button>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <!--Opcional, add um divisor-->
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Link 2</a>
+                <a href="#" class="dropdown-item">Link 3</a>
+            </div>
+        </div>
+
+        <!--Cria uma div contendo tudo com a classe "dropdown" -> dentro da div crie um botão com as formtações do bootstrap na classe e dentro da mesma adicione "dropdown menu" -> ainda dentro da tag button adicione um data-toggle="dropdown" -> em seguida, dentro da div pai adicione uma div filha com a classe "dropdown-menu" e nela coloque os links (a) -> em cada link coloca a classe "dropdown item" -->
+
+
+        <!--Js do Bootstrap-->   
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="../bootstrap 4/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Início funções</title>
+</head>
+
+    <script>
+
+        /*
+        tipos
+        void: realizam tipos de processamento mas não fornecem retorno
+        return: retornam um parâmetro, nesse caso ela pode ser usada várias vezes para fornecer um retorno
+        */
+
+
+        //associar o retorno à uma variavel
+
+        var area = calcularAreaTerreno(prompt('digite a largura (em metros)'),prompt('digite o comprimento (em metros)')) //sempre delcarando os valores na ordem dos parâmetros da função
+
+        document.write(`o terreno possui ${area} metros quadrados`)
+
+        function calcularAreaTerreno (largura, comprimento){
+            /*palavra reservada fuction + nome da função + parâmetros (se comportam como variaveis)*/
+
+
+            //lógica
+            var area = largura * comprimento
+            
+            //retorno -> pode ser uma string, número, booblean ou vairaveis
+            return area
+        }
+
+    </script>
+
+<body>
+    
+</body>
+</html>

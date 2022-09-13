@@ -1,0 +1,49 @@
+/*-------------Seletor universal---------------
+* {
+    border: 1px solid red;
+}*/
+
+/*-------------Seletor de texto---------------
+h1{
+    color: rgb(158, 0, 132);
+}*/
+
+/*-------------Seletor de classe---------------
+.verde{
+    color: green;
+}
+
+p.verde{
+    color: rgb(51, 9, 240);
+}*/
+
+/*-------------Seletor de ID---------------
+#cabecalho{
+    border: 1px solid blue;
+}*/
+
+/*-------------Seletor de filho---------------*/
+li>a {
+    /*todo a que for filho de li receberá foratação (tem q ser direto)*/
+    color: red;
+    text-decoration: none;
+}
+
+/*-------------Seletor de descendente---------------*/
+div a{
+    /*todo a que for descendente de div receberá essa formatação (não tem q ser direto) */
+    color: rgb(251, 255, 0);
+    text-decoration: none;
+}
+
+
+/*-------------Seletor de irmão adjacente---------------*/
+h1+p{
+    /*seleciona o parágrafo que é irmão de h1, ou seja, parágrafos que estão seguidos(próximo) de h1*/
+    color: red;
+}
+
+/*-------------Seletor de irmão geral---------------*/
+h1~p{
+    color: pink;
+}

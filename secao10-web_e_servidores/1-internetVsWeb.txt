@@ -1,0 +1,3 @@
+internet é o nome que se dá à rede que conecta os computadores ao redor do mundo. Ela é a estrutura pela qual são transferidos milhões de terabytes de dados todos os dias entre servidores e computadores pessoais, smartphones, tablets, consoles, televisores e vários outros dispositivos interconectados.
+
+A World Wide Web, também conhecida pela siga WWW ou apenas pelo termo Web nada mais é do que o caminho que permite a você usufruir do conteúdo transferido pela internet. É aonde se acessa os hipertextos(links) para navegaçõ de diversos sites. Esses hipertextos são lidos por navegadores

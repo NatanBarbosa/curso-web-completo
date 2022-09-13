@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			class Animal{ 
+				//atributos
+				constructor(cor, tamanho, peso){
+					this.cor = cor
+					this.tamanho = tamanho //cm
+					this.peso = peso //g
+				}
+
+				//métodos
+				dormir(){
+					console.log('dormir')
+				}
+			}
+
+
+			class Passaro extends Animal{
+				//atributos
+				constructor(bico, cor, tamanho, peso){
+					super(cor, tamanho, peso) //Esse super aponta para o construtor de animal
+					this.bico = bico
+				}
+
+				//métodos
+				voar(){
+					console.log('Voar')
+				}
+			}
+
+			class Papagaio extends Passaro {
+				//atributos
+				constructor(sabeFalar, cor, tamanho, peso){
+					super('Médio', cor, tamanho, peso) //fornece acesso ao construtor da classe pai. O parâmetro vai ser passado pra o constructor da classe pai(Passaro)
+					this.sabeFalar = sabeFalar
+				}
+
+				falar(){
+					console.log('falar')
+				}
+			}
+
+			let papagaios = Array()
+			papagaios['papagaio1'] = new Papagaio(true, 'verde', 25, 350)
+			papagaios['papagaio2'] = new Papagaio(false, 'branco', 10, 80)
+			
+			console.log(papagaios)
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

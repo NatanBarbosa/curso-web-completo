@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			
+			
+			let assinatura = {
+				idCliente: 1000,
+				descricao: 'Acesso a internet',
+				status(){
+				console.log('ativo')
+				}
+			}
+
+			console.log(assinatura.descricao)
+
+			let y = assinatura //y pega a referência(objeto em si) contida dentro da variável assinatura que aponta para a chave descrição
+
+			console.log(y.descricao)
+
+			y.descricao = 'Internet + TV + telefone' //mudou o valor da chave através da variável. A referência (objeto em si) tbm muda
+
+			console.log(assinatura.descricao)
+			console.log(y.descricao)
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

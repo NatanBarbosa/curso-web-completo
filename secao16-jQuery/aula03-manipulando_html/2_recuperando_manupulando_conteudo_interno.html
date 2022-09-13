@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando e recuperando conteúdos internos html</title>
+
+    <script src="../jQuery.js"></script>
+
+    <script>
+        $(document).ready( () => {
+
+            /*
+            método jQuery "html" para recuperar conteúdo encapsulado em div
+            - parâmetro opcional: define o conteúdo que será escrito
+            - caso omitido, ela apenas retorna o que está escrito
+            */
+
+            //recuperando conteúdo
+            console.log( $('#div1').html(), $('#div2').html() )
+
+            //alterando conteúdo html
+            $('#div2').html('Valor alterado com <strong style="color: yellow; background: black;">jQuery<strong>')
+
+            //alterando apenas texto html
+            $('#div3').text('Valor alterado com <strong style="color: yellow; background: black;">jQuery<strong>')
+
+        } )
+    </script>
+</head>
+<body>
+    
+    <div id="div1" style="border: 1px solid black; width: 150px; height: 150px">
+        div 1 <br>
+        <a href="https://www.google.com"> Google </a> 
+        <hr>
+        <p>
+            O site google é o maior buscador do mundo
+        </p>
+    </div>
+
+    <br>
+
+    <div id="div2" style="border: 1px solid red; width: 150px; height: 150px">
+        div 2
+    </div>
+
+    <br>
+
+    <div id="div3" style="border: 1px solid green; width: 150px; height: 150px">
+        div 3
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modficando inputs</title>
+
+    <script>
+        function mudaCor(){
+            //mudando cor
+            document.getElementById('campo').style.background = 'yellow'  
+        }
+
+        function deixaFoco(){
+            //Vendo a quantidade de letras
+            var qntletras = document.getElementById('campo').value
+            console.log(qntletras)
+
+            //modificando a cor
+            var cor = document.getElementById('campo')
+            if(qntletras.length < 3){
+                cor.style.background = 'red'
+            }else{
+                cor.style.background = 'green'
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+    <input type="text" id="campo" placeholder="digite algo" onclick="mudaCor()" onblur="deixaFoco()" onkeyup="deixafoco()">
+
+</body>
+</html>

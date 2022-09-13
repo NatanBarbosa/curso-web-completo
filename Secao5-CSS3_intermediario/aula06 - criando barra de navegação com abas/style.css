@@ -1,0 +1,40 @@
+/*Barra de navegação com abas*/
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 720px; 
+    /*aqui se zera os valores padrão e define uma largura pra lista*/
+}
+
+ul li{ /*config dentro da lista (aba direita)*/
+    float: left;
+    /*aki faz os itens ficarem um ao lado do outro*/
+    background: url('imagens/aba-direita.png') no-repeat top right;
+}
+
+li a{ /*config dentro o link (aba esquerda)*/
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    text-decoration: none;
+    /*aki transforma em bloco, da espaçamento e tira o underline*/
+    background: url('imagens/aba-esquerda.png') no-repeat top left;
+    color: white;
+}
+
+ul a:hover{
+    color: #894a1f;
+}
+
+ul #atual{
+    background: url('imagens/aba-direita-atual.png') no-repeat top right;
+}
+
+ul #atual a{
+    background: url('imagens/aba-esquerda-atual.png') no-repeat top left 
+}

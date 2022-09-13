@@ -1,0 +1,15 @@
+Algumas versões mais antigas do internet explorer podem não interpretar as novas tags
+semanticas do html5, e para isso usamos o html5 shiv. Para usar:
+
+vai nesse site: https://github.com/aFarkas/html5shiv -> nas pastas cloque em:
+dist -> html5shiv.min.js -> copia o código
+
+depois na pasta do seu projeto cria um arquivo com esse nome: html5shiv.js
+e cole o código ai
+
+para aplicar, no head do seu html coloque
+
+<!--[if lt IE 9]>
+	<script src="diretório do arquivo/html5shiv.js"></script>
+<![endif]-->
+

@@ -1,0 +1,31 @@
+SELECT 
+	MIN(<coluna>)
+FROM 
+	`tb_cursos`;
+
+-- vai trazer o dado que tem o menor valor relacionado aquela coluna
+
+
+SELECT 
+	MIN(investimento)
+FROM
+	`tb_cursos`;
+
+-- traz o dado com menor valor da coluna investimento
+
+
+SELECT 
+	MAX(investimento)
+FROM `tb_cursos`;
+
+-- traz o dado com maior valor da coluna investimento
+
+
+SELECT 
+	AVG(investimento)
+FROM 
+	`tb_cursos`
+WHERE
+	ativo = true;
+
+-- traz a média de todos os valores da coluna investimente desde que a coluna ativo seja true

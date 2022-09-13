@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de strings</title>
+
+    <script>
+        document.write('Jorge Sant Ana <br><br>')
+
+
+        //propriedade length -> retorna a quantidade de caracteres de uma string
+        document.write('Quantidade de letras: ' + 'Jorge Sant Ana'.length) //0 - 13, contando com os espaços tbm
+
+
+        document.write('<br>')
+
+
+        //Método charAt() -> retorna a string contida em uma posição numeral 
+        document.write('Letra na posição 7: ' + 'Jorge Sant Ana'.charAt(12))
+
+
+        document.write('<br>')
+
+
+        //Método indexOf() -> retona a posição de uma string
+        var nome = 'Jorge Sant Ana'
+        document.write('Posição da letra a: ' + nome.indexOf('a')) //pega a primeira letra do nome
+        document.write(' | Posição da letra inexistente: ' + nome.indexOf('w')) //retorna -1 caso não ache nada
+
+
+        document.write('<br>')
+
+
+        //Método repleace
+        document.write('Trocando sobrenome: ' + nome.replace('Sant Ana', 'Silva'))//No primeiro parâmetro ele vai procurar a cadeia de caracteres identica à colocada e vai trocar pelo 2º parâmetro
+
+
+        document.write('<br>')
+
+
+        //Método substr() 
+        document.write('recortando sobrenome: ' + nome.substr(6,4)) //A partir da posição 6(S) quantos caractéres eu quero recuperar, no caso, 4 -> Sant 
+
+
+        document.write('<br>')
+
+
+        //toLowerCase/toUpperCase -> converter para caracteres minusculos ou maiusculos
+        document.write('Apenas minusculos: ' + nome.toLowerCase()) //pega a primeira letra do nome
+        document.write(' | Apenas maiusculas: ' + nome.toUpperCase())
+
+
+        document.write('<br>')
+
+
+        //Método Trim -> remove espaços em branco no início e final da string
+        var nome = ' Jorge Sant Ana '
+        document.write('-' + nome.trim() + '-') //string ficou colada nos -
+
+        document.write('<br><a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">Para mais Métodos</a>')
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

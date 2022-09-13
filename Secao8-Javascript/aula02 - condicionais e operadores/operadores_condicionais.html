@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var media = 7
+        var nota = prompt('digite a nota')
+        /*
+            Por mais que o valor retornado seja uma string o javascript converte ele para um número (menos para o operador ===)
+        
+
+        if (nota >= media) {
+            alert('aprovado')
+        } e10lse {
+            alert('reprvado')
+        }
+        */
+
+        var var1 = prompt('digite um número')
+        var var2 = prompt('digite outro número') //vai trazer uma string
+
+        var1 = parseInt(var1) //não preserva a fração
+        var2 = parseFloat(var2) //preserva a fração
+
+        alert(var1.toString() + var2.toString()) // transforma o número em uma string
+    </script>
+</body>
+</html>

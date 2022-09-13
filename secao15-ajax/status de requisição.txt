@@ -1,0 +1,10 @@
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+Grupos de status de requisição
+- Respostas informativas: range 100
+- Respostas de sucesso: range 200
+- Mensagens de redirecionamento: range 300
+- Respostas de erro do lado do cliente: range 400
+- Respostas de erro do lado do servidor: range 500
+
+importantes: 200(resposta bem sucedida), 404(recurso solicitado não existe no server)

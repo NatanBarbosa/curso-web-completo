@@ -1,0 +1,22 @@
+
+a.navbar-brand{
+    width: 142px;
+    height: 68px;
+    text-indent: -9999px;
+    background: url("img/logo.png") no-repeat left center;
+    background-size: 142px;
+}
+
+#home{
+    background: #ffc107;
+    color: white;
+}
+
+.caixa{
+    padding: 60px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+footer p a{
+    margin: 5px 15px;
+}

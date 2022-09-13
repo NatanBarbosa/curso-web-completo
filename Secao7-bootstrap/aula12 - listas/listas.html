@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Listas</title>
+
+        <!--Css do Bootstrap-->
+        <link rel="stylesheet" type="text/css" href="../bootstrap 4/css/bootstrap.min.css">
+
+    </head>
+    <body style="margin-bottom: 200px; padding: 16px;">
+
+        <!--O Bootstrap já possui classes com formtatações já definidas-->
+
+        <!-- Listas -->
+        <ul class="list-group">
+            <li class="list-group-item active">Meu item de lista 1</li>
+            <li class="list-group-item">Meu item de lista 2</li>
+            <li class="list-group-item">Meu item de lista 3</li>
+            <li class="list-group-item">Meu item de lista 4</li>
+        </ul>
+        <br><br>
+
+        <!-- Listas com classe flush -->
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Meu item de lista 1</li>
+            <li class="list-group-item">Meu item de lista 2</li>
+            <li class="list-group-item active">Meu item de lista 3</li>
+            <li class="list-group-item">Meu item de lista 4</li>
+
+            <!--
+                list-group: definida na ul, grupo de itens
+                list-group-flush: definida na ul, apeas borda em baixo
+                list-group-item: definida na li, cada item da lista
+                active: definida na li, item da lista ativo(destcado)
+            -->
+        </ul>
+        <br><br>
+
+        <!-- Listas com links -->
+        <ul class="list-group">
+            <a href="#" class="list-group-item">Meu item de lista 1</a>
+            <a href="#" class="list-group-item">Meu item de lista 2</a>
+            <a href="#" class="list-group-item">Meu item de lista 3</a>
+            <a href="#" class="list-group-item active">Meu item de lista 4</a>
+            <!--
+                list-group-item: tbm pode ser definida no link direto, cada item da lista
+
+            -->
+
+        </ul>
+        <br><br>
+
+        <!-- Listas com classes contextuais 
+            classe: list-group-item-<opcoes>
+            opções: primary, secondary, success, info,
+                    warning, danger, light, dark
+        -->
+        <ul class="list-group">
+            <li class="list-group-item">Lista normal</li>
+            <li class="list-group-item list-group-item-primary">Lista primary</li>
+            <li class="list-group-item list-group-item-secondary">Lista secondary</li>
+            <li class="list-group-item list-group-item-success">Lista success</li>
+            <li class="list-group-item list-group-item-info">Lista info</li>
+            <li class="list-group-item list-group-item-warning">Lista warning</li>
+            <li class="list-group-item list-group-item-danger">Lista danger</li>
+            <li class="list-group-item list-group-item-light">Lista light</li>
+            <li class="list-group-item list-group-item-dark">Lista dark</li>
+        </ul>
+        <br><br>
+
+        <!-- Badge 
+            classe: badge-<opcoes>
+            opções: primary, secondary, success, info,
+                    warning, danger, light, dark
+        -->
+        <ul class="list-group">
+            <li class="list-group-item">Meu item de lista 1</li>
+            <li class="list-group-item">Meu item de lista 2</li>
+            <li class="list-group-item">
+                Mansagens: <span class="badge badge-warning">120</span>
+            </li>
+            <li class="list-group-item">
+                Enviados
+                <span class="badge badge-info">5</span>
+            </li>
+        </ul>
+
+        <!--
+            badge + badge-<opção>
+            (define que é uma badge) + estilo da badge
+        -->
+        <br><br>
+
+        <!-- Breadcrumb (como se fosse níveis de pastas) --> 
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Home</li>
+        </ol>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Notícias</li>
+        </ol>
+
+        <ol class="breadcrumb  bg-warning">
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Usuários</a>
+            </li>
+            <li class="breadcrumb-item active">Jamilton Damasceno</li>
+        </ol>
+
+        <!--
+            breadcrumb: definido na ol, define que os itens abaixo serão os "níveis"
+            breadcrumb-item: definido na li, esse é um dos itens da lista de "níveis"
+            active: definido na li, nesse caso é colocado no ultimo item da lista, o "local" atual do usuário
+
+        -->
+        <br><br>
+
+        <!--Js do Bootstrap-->   
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="../bootstrap 4/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,101 @@
+/*********************************************************
+Animações*/
+
+@keyframes animacao-caixa { /*inicia a animação com o keyframes e da um nome para ela*/
+    form{ /*Estado inicial*/
+        background: red;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    }
+
+    to { /*Estado final*/
+        background: yellow;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+/***********************************************************
+Colocando os prefixos para funcionar nos outros navegadores*/
+@-webkit-keyframes animacao-caixa { /*inicia a animação com o keyframes e da um nome para ela*/
+    from{ /*Estado inicial*/
+        background: red;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    }
+
+    to { /*Estado final*/
+        background: yellow;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+@-moz-keyframes animacao-caixa { /*inicia a animação com o keyframes e da um nome para ela*/
+    from{ /*Estado inicial*/
+        background: red;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    }
+
+    to { /*Estado final*/
+        background: yellow;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+@-o-keyframes animacao-caixa { /*inicia a animação com o keyframes e da um nome para ela*/
+    from{ /*Estado inicial*/
+        background: red;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    }
+
+    to { /*Estado final*/
+        background: yellow;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+/* Aplicando as animações
+*********************************************************************/
+
+
+#caixa{
+    width: 300px;
+    height: 300px;
+    background: red;
+    animation-name: animacao-caixa; /*Para aplicar a animação você precisa colocar o nome dela (ja definido anteriormente)*/
+    animation-duration: 5s;/*e depois colocar a duração dela*/
+    animation-delay: 1s; /*Quanto tempo ela vai esperar para iniciar*/
+    animation-iteration-count: 2; /*Quantas vezes ele vai execultar essa animação*/
+    animation-direction: alternate; /*alternate: Volta para a animação inicial de forma animada | reverse: começa do fim da animação até o começo*/
+
+    /*animation: animacao-caixa 5s 3s 2 alternate;*/
+    /*Fazer esses comandos em uma unica linha*/
+
+    position: relative; /*Com isso da pra definir posições nos @keyframes*/
+
+
+    /*Deixando Compativel*/
+    /*coloca os bagui de -webkit- -moz- e -o-
+    animation-name: animacao-caixa;
+    animation-duration: 5s;
+    animation-delay: 1s; 
+    animation-iteration-count: 2; 
+    animation-direction: alternate;*/
+}
+
+a{
+    color: white;
+}

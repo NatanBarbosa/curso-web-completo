@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<script>
+
+			const SERIE = 'Friends' //pertence ao escopo global
+			/*
+			Alguns detalhes;
+			- É uma boa prática colocar nome de constantes em uppercase
+			- É necessário, na hora da declaração, definir um valor para a constante
+			- Não pode ser declarado um novo valor para essa constante
+			// SERIE = 'The Walking dead' -> erro
+			- Ela não sofre roinsting(assim como o let)
+			*/
+
+			function x(){
+				const SERIE = 'The Walking dead' //pertence ao escopo da função
+				console.log('Dentro da função: ' + SERIE)
+				//O escopo global não interfere no escopo da função
+			}
+
+			x()
+
+			console.log('Escopo global: ' + SERIE)
+
+
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,4 @@
+Esse é o diretório de arquivos e scripts sigilosos
+ao contrário do htdocks, esse diretório não é público/acessível para os browsers clientes
+
+para incorporar os scripts daqui basta usar o include ou o require

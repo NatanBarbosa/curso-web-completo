@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*Aninhamento e seletor pai(&)*/
+/*Variáveis*/
+/*idependente do escopo*/
+#conteudo {
+  display: flex;
+  gap: 20px;
+  font-family: sans-serif;
+  /*alterar a variável dependendo do escopo*/
+  /*inperpolação (usar var como nome de classe e atributo)*/
+}
+#conteudo .exemplo {
+  flex-basis: 250px;
+  padding: 14px;
+}
+#conteudo .exemplo-1 {
+  background: #93827F;
+}
+#conteudo .exemplo-1 h1, #conteudo .exemplo-1 h2 {
+  color: #abc123;
+}
+#conteudo .exemplo-1 a {
+  color: #E0D2C3;
+  font-weight: bold;
+  text-decoration: none;
+}
+#conteudo .exemplo-1 a:hover {
+  color: black;
+}
+#conteudo .exemplo-2 {
+  background-color: #e7e7e7;
+}
+#conteudo .exemplo-2 h2 {
+  color: #123fda;
+}
+#conteudo .exemplo-3 {
+  background: #abc123;
+}
+#conteudo .exemplo-4 h2 {
+  color: red;
+}

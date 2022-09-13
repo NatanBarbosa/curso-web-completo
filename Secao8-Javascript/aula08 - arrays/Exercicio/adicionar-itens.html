@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionando itens no carrinho</title>
+    <style>
+        body {
+            background: #f9f9f9;
+            font-family: sans-serif;
+        }
+
+        #container {
+            background: #d2eaf9;
+            margin: 0 auto;
+            width: 700px;
+            border: 2px outset #b5d1f9;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 5px;
+            width: 100px;
+            height: 40px;
+            font-size: 1.05em;
+            background-image: linear-gradient(to bottom, #b5d1f9, #d2eaf9);
+            border: 1px outset #b5d1f9;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, #d5d1f9, #e2eaf9);
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 105%;
+        }
+
+        input:focus, button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h2>Adicionando compras ao carrinho</h2>
+    <p>
+        Digite o item desejado no campo de texto e ele será adicionado na sua lista
+    </p>
+
+    <p>
+        Digite o item aqui → <input type="text" id="produto" placeholder="Teclado"> <br>
+        <button onclick="adicionar()">Adicionar</button>
+        <button onclick="ordenar()">Ordenar</button>
+    </p>
+
+    <p>Seus items:<strong id="carrinho"> cadeira, impressora, garfo </strong></p>
+</div>
+
+<script>
+    var objetos = ['cadeira', 'impressora', 'garfo'];
+    var exibir_produtos = document.getElementById('carrinho');
+
+
+    function adicionar() {
+        //Pegando valor e colocando na variável
+        var adicionador = (document.getElementById('produto')).value;
+
+        //Fazendo validações
+        if (adicionador.length === 0) {
+            //Verificar se o valor é vazio
+            alert('Informe um valor válido');
+        } else if (objetos.indexOf(adicionador) !== -1) {
+            //verificar valores repetidos (nesse caso se um valor não existir na array o indexOf() retorna -1)
+            alert('Produto já adicionado');
+        } else {
+            //adicionar o item na string e exibi-lo para o usuário
+            objetos.push(adicionador);
+            document.getElementById('produto').value = '';
+            exibir_produtos.innerHTML = ' ' + objetos;
+        }
+    }
+    
+    function ordenar() {
+        objetos.sort();
+        exibir_produtos.innerHTML = ' ' + objetos;
+    }
+</script>
+</body>
+</html>

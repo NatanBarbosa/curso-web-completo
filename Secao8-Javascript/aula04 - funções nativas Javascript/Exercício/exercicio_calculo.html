@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        var num1 = Number(prompt('Digite o primeiro número'));
+        var opcao = prompt('calculo de soma ou subtração?').toLocaleLowerCase();
+        var num2 = Number(prompt('Digite o segundo número'));
+        var result = 0;
+
+        function calculo(numero1, numero2, operacao){
+            if(operacao === 'soma'){
+                result = numero1 + numero2;
+            } else if(operacao === 'subtração'){
+                result = numero1 - numero2;
+            } else{
+                result = 'você não digitou uma opção válida';
+            }
+
+            return result;
+        }
+
+        var resultado_final = calculo(num1,num2, opcao);
+        alert('O resultado é: ' + resultado_final);
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

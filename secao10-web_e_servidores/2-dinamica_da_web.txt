@@ -1,0 +1,17 @@
+Alguns conceitos e siglas da WEB
+
+WWW --> World wide web --> serviço que roda na internet e fornece conteúdos de hipertexto e hipermídia, que são acessados através de browsers
+
+Hipertexto --> documentos eletrônicos textuais que se conectam por links
+
+Hipermídea --> imagens, sons, e vídeos associados à hipertextos
+
+Uniform resource locator (localizador padrão de recurso)(URL) --> um link para um site. A URL se encarrega de montar uma requisição feita com base em um protocolo de comunicação pré-definido, o Hiper Text Transfer Protocol(HTTP)
+
+HTTP --> Visa estabelecer algumas regras de comunicação. Precisa saber quem está fazendo a solicitação(browser cliente) e o que está sendo slicitado(URL) e quem proverá o resultado do que está sendo requisitado (Servidor web daquele conteúdo) Tudo isso ocorre quado digitamos uma URL e teclamos Enter
+
+Processo de identificação de URL por um sevidor web --> Ele recebe uma requisição de um browser cliente ele identifica o que está sendo requisitado, processa o necessário e retorna para o browser cliente uma resposta (dinâmica da web = requisição e resposta) 
+
+HTML --> São regras para marcação desses hipertextos que seráo requisitados
+
+Páginas estáticas X dinâmicas --> paginas estáticas são escritas em html com o conteúdo fixo. Páginas dinâmicas são escritas em html criadas em tempo de requisição (parte do conteúdo html é produzido através de alguma linguagem de programação)

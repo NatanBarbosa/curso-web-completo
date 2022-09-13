@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Navegação</title>
+
+        <!--Css do Bootstrap-->
+        <link rel="stylesheet" type="text/css" href="../bootstrap 4/css/bootstrap.min.css">
+
+    </head>
+    <body style="margin-bottom: 200px; padding: 16px;">
+
+        <!--O Bootstrap já possui classes com formtatações já definidas-->
+
+            <!-- Navegação
+        Tipos de navegação:
+            nav-pills -> aplica um arredondamento nos itens
+            nav-tabs -> navegação por abas
+        opções de alinhamento: 
+            justify-content-center -> menu fica centralizado
+            justify-content-end -> menu fica colado no canto direito na tela
+            flex-column -> 
+        -->
+        <h2>Navegação simples / abas</h2>
+        <ul class="nav nav-tabs justify-content-center">
+        <!--define que é navegação + estilo da navegação + alinhamento-->
+            <li class="nav-item"><a href="" class="nav-link ">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link ">Sobre</a></li>
+            <li class="nav-item"><a href="" class="nav-link active">Serviços</a></li> <!--O link com a classe active seria a página atual que recebe um destaque-->
+        </ul>
+
+        <br><br>
+
+        <h2>Barra de navegação simples</h2>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <!--define navbar + tamanho do expand + cor do texto + fundo-->
+
+            <!--Logo-->
+            <a href="" class="navbar-brand">Logo do Site</a>
+
+            <!--Navegação-->
+            <ul class="navbar-nav ml-auto"> <!--ml-auto: a margem esquerda automática empurra o conteúdo para direita-->
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Serviços</a></li> <!--O link com a classe active seria a página atual que recebe um destaque-->
+            </ul>
+        </nav>
+        
+        <br><br>
+
+        <h2>Barra de navegação com menu responsivo</h2>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> 
+            <!--
+                navbar: define que é um cabeçalho de navegação
+                Esse navbar-expand-sm vai definir qnd o menu hamburguer vai aparecer (sm < 768px)
+            -->
+
+            <!--**************Logo**************-->
+            <a href="" class="navbar-brand">Logo do Site</a>
+            <!--navbar-brand: define que é um logo-->
+
+            <!--**************Menu hamburguer (só aparece qnd a tela for sm(<768px))**************-->
+            <button class="navbar-toggler"  data-toggle="collapse" data-target="#menu-hamburguer"> 
+                <!--data-toggle: botão pressionado | data-target: o que vai abrir qnd for pressinado, no caso ele pega por id -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!--**************Navegação**************-->
+            <div class="collapse navbar-collapse" id="menu-hamburguer">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Serviços</a></li>
+                </ul>
+
+                <!--
+                    collapse: desaparece o menu
+                    navbar-collapse: formata a navegação para aparecer embaixo
+                    id="..." identificador da seu menu para dps o data-target identificar ele
+                -->
+            </div>
+
+            <!--Com isso qnd o menu chegar em tamanho sm o menu vira um hamburguer-->
+        </nav>
+        
+        <br><br>
+
+        <h2>Barra de navegação com formulário</h2>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
+
+            <!--**************Logo**************-->
+            <a href="" class="navbar-brand">Logo do Site</a>
+
+            <!--**************Menu hamburguer**************-->
+            <button class="navbar-toggler"  data-toggle="collapse" data-target="#navegacao"> 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!--**************Navegação**************-->
+            <div class="collapse navbar-collapse" id="navegacao">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Serviços</a></li>
+                </ul>
+
+                    <!--**************Formulário**************-->
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="pesquisar...">
+                    <button class="btn btn-outline-success ml-1" >ok</button>
+                </form>
+                <!--Tem que estar dentro dessa div, pois quando a tela form sm o formulário vai aparecer no menu hamburguer-->
+            </div>
+
+        </nav>
+        
+        <br><br>
+        
+        <h2>Barra de navegação com menu dropdown</h2>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> 
+
+            <!--**************Logo**************-->
+            <a href="" class="navbar-brand">Logo do Site</a>
+
+            <!--**************Menu hamburguer**************-->
+            <button class="navbar-toggler"  data-toggle="collapse" data-target="#navegacao3"> 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!--**************Navegação**************-->
+            <div class="collapse navbar-collapse" id="navegacao3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+
+                    <!--**************Menu dropdown**************-->
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços</a>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">Serviço 1</a>
+                            <a href="" class="dropdown-item">Serviço 2</a>
+                            <a href="" class="dropdown-item">Serviço 3</a>
+                        </div>
+
+                        <!--
+                            dropdown: define que essa li será um item dropdown(qnd clica aparece mais itens embaixo)
+                            dropdown-toggle: esse link dentro da li que vai abrir os outros links
+                            data-toggle="dropdown": qnd clicar vai aparecer o dropdown
+                            dropdown-menu: div contendo esses links
+                            dropdown-item: cada link é um item
+                        -->
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        
+        <br><br>
+        <!--Cores
+        opções: bg-primary, bg-secondary, bg-success, bg-info,
+        bg-warning, bg-danger, bg-light, bg-dark
+        -->
+        <h2>Cores</h2>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-info">
+            
+                <!--Logo-->
+                <a href="" class="navbar-brand">Logo do Site</a>
+    
+                <!--Navegação-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre</a>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">História</a>
+                            <a href="" class="dropdown-item">atualmente</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">Serviços</a></li>
+                </ul>
+            </nav>
+        
+
+        <!--Alinhamentos
+        opções: fixed-top, fixed-bottom, sticky-top, sticky-bottom
+        -->
+        <h2>Alinhamentos</h2>
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-success">
+            
+            <!--Logo-->
+            <a href="" class="navbar-brand">Logo do Site</a>
+
+            <!--Navegação-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre</a>
+                    <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">História</a>
+                        <a href="" class="dropdown-item">atualmente</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="" class="nav-link">Serviços</a></li>
+            </ul>
+        </nav>
+        
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+        <!--Js do Bootstrap-->   
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="../bootstrap 4/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script>
+
+        function modificaEstilo(corDeFundo, largura, altura){
+            document.getElementById('quadrado').style.background = corDeFundo 
+            /*O atributo 'style' define que o estilo será alterado. O que vem dps do style é a
+            propriedade css que será alterada(width, border, height, background, color, etc...)*/
+
+            /**nota: para selecionar uma propriedade css separada por hifen
+            (background-color, font-size, etc..) é necessário tirar o hífen e captalizar a próxima
+            palavra(backgroundColor, fontSize)
+            
+            **nota2: o recebimento tem que ser como se você tivesse definindo a propriedade no css, colocando px por exemplo*/
+
+            document.getElementById('quadrado').style.width = largura
+            document.getElementById('quadrado').style.height = altura
+        }
+
+    </script>
+</head>
+<body>
+    
+    <h3>Manipulando estilos</h3>
+
+    <button type="button" onclick="modificaEstilo('#ff0000','50px','50px')">Vermelho</button>
+    <button type="button" onclick="modificaEstilo('#00ff00','100px','100px')">Verde</button>
+    <button type="button" onclick="modificaEstilo('#0000ff','150px','150px')">Azul</button>
+    <!--Cada botão tem como parâmetro o código hexadecimal da sua respectiva cor-->
+
+    <hr>
+
+    <div id="quadrado" style="border: 1px solid black; width: 100px; height: 100px;"></div>
+
+
+</body>
+</html>

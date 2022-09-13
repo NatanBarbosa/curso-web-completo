@@ -1,0 +1,9 @@
+Web service: API que roda na web
+Nem toda API roda na web (Ex.: API integração entre Word e excel)
+
+Rest API: 
+- REpresentational State Transfer / Transferência de Estado Representacional
+- conjunto de melhores práticas para criar webservices (constraints)
+- O próprio slim já utiliza o Rest
+
+RESTful: Seu Sistema API usa essa melhores práticas. Seu webservice é Restful

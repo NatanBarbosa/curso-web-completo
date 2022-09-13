@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			//uma outra forma de escrever funções anônimas
+
+			//função anônima comum
+			let quadrado = function (x){
+				return x * x
+			}
+
+			//Arrow function verbosa
+			let quadrado2 = (x) => {
+				return x*x
+			}
+
+			//arrow function simplificada (para comandos mais simples)
+			let quadrado3 = x => x*x //return implicito
+			//essa variável é uma função que recebe o parâmetro x e vai retornar o quadrado dele
+
+			/*
+				Declara uma variaavel que recebe:
+				os parenteses () contém os parâmetros da função
+				se a função tiver só um parâmetro não precisa dos parenteses
+				se a função não tiver parâmetro é necessário os parenteses ()
+				=> formato de flecha(arrow) indica que vai ter uma execução da função;
+				{} escopo da função onde entra os códigos
+				se só tiver uma linha de comando (como um simples return) não precisa das chaves
+				o resultado é o mesmo da função anônima comum
+				*/
+
+			document.write(quadrado3(8))
+
+			document.write('<hr>')
+
+			//Arrow function um pouco mais complexa
+
+			//Função anônima normal
+			let parImpar_no = function(numero){
+				if(numero % 2 === 0){
+					return 'par'
+				} else {
+					return 'impar'
+				}
+			}
+
+			//Arrow function
+			let parImpar_noo = numero => {
+				if(numero % 2 === 0){
+					return 'par'
+				} else {
+					return 'impar'
+				}
+			}
+
+			//Arrow function com código mais enxuto
+			let parImpar = numero => numero%2===0 ? 'Par' : 'Impar' 
+
+			document.write(parImpar(8))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

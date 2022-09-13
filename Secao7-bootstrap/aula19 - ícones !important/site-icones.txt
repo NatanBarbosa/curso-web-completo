@@ -1,0 +1,21 @@
+https://useiconic.com/open/
+
+para usar: copia e cola a pasta do iconic no projeto
+cola o código de link css no head: <link href="iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+ -> vê se o caminho e nome da pasta do arquivo ta certa
+
+para aplicar: <span class="oi oi-(nome do ícone)"></span>
+nome dos ícones: https://useiconic.com/open#icons
+esses ícones são fromataveis com css e bootstrap
+
+
+https://fontawesome.com/icons?d=gallery&m=free
+para usar: copia e cola a pasta do font awesome no projeto
+cola o código de link css no head: <link href="fontawesome/css/all.css" rel="stylesheet">
+ -> vê se o caminho e nome da pasta do arquivo ta certa
+
+para aplicar: <span class="das fa-(nome do ícone)"></span>
+nome dos ícones: https://fontawesome.com/icons?d=gallery&q=text&m=free
+esses ícones são fromataveis com css e bootstrap
+
+

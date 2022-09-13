@@ -1,0 +1,44 @@
+SELECT
+	sum(investimento)
+FROM
+	`tb_cursos`;
+
+-- retorna a soma dos valores da coluna de investimento
+
+
+SELECT 
+	sum(carga_horaria) 
+FROM 
+	`tb_cursos`
+Where 
+	ativo = true;
+
+-- retorna a soma dos valores das colunas carga_horaria em que ativo = 1
+
+
+SELECT 
+	COUNT(*) 
+FROM 
+	`tb_cursos`
+
+-- Conta quantos registros existem na tabela
+
+SELECT 
+	COUNT(*) 
+FROM 
+	`tb_cursos`
+Where 
+	ativo = true;
+
+-- Conta quantos registros existem com a condição ativo = true
+
+
+SELECT
+	COUNT(*) 
+FROM 
+	`tb_cursos` 
+Where 
+	carga_horaria > 30
+
+-- conta quantos registros existem com a garga horária maior que 30
+

@@ -1,0 +1,40 @@
+PRIMARY KEY
+é uma chave que terá um identificador único para cada elemento
+
+CREATE table tb_produtos(
+    id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT, -- <- Essa coluna é a chave primária dessa tabela
+    produto VARCHAR(200) NOT NULL,
+    VALOR FLOAT(8,2) NOT NULL
+);
+
+*PRIMARY KEY: define explicitamente a chave primária
+*AUTO INCREMENT: faz com que comforme a inserção de dados a primary key aumente de 1 em 1. Ou seja, na inserção de dados, inserir o Id manualmete pelo insert é desnecessário
+
+
+
+FOREIGN KEY E RELAÇÃO DE TABELAS(um para um)
+Uma chave primária da primeira tabela será definida na criação de uma segunda tabela. Com isso passará a ser uma chave estrangeira para a segunda tabela. Ela tem que ter o mesmo tipo da primeira e ser NOT NULL
+
+create table tb_descricoesTecnicas(
+    id_descricaoTecnica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_produto INT NOT NULL,
+    descricaoTecnica TEXT NOT NULL,
+    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)*
+);
+
+*Aqui será definido a chave estrangeira
+*SINTAXE: FOREIGN KEY(chave dessa tabela) REFERENCES <tabela relacionada>(chave primaria da tabela relacionada)
+
+na hora de inserir valores nas colunas, para relacionar essa tabela com a primeira é necessário que os valores da chave estrangeira e da chave primária batam. Ex.:
+
+-----------------inserindo dado na tb_produtos---------------------------
+INSERT INTO tb_produtos(produto, valor) VALUES ('Notebook Dell Inspiron Ultrafino Intel Core i7, 16GB RAM e 240GB SSD', 3500.00); 
+-- id_produto = 1 pois foi o primeiro item criado
+
+-----------------inserindo dado na tb_descricoesTecnicas---------------------------
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (1, 'O novo Inspiron Dell oferece um design elegante e tela infinita que amplia seus sentidos, mantendo a sofisticação e medidas compactas...');
+-- id_produto definido com 1 para se relacionar com o primeiro registro criado
+
+
+
+com isso essas duas tabelas estão criadas e relacionadas. Ou seja, é necessário um produto com id válido para ser criado uma tabela de descrição

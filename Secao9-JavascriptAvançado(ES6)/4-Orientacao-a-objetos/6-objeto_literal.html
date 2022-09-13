@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			
+			//Notação de classe -> atributos e métodos dentro de uma classe
+			//Você usa a notação de classe qundo há vários objetos do mesmo tipo em um contexto maior e mais complexo
+
+			class Produto{
+				constructor(descricao, preco){
+					this.descricao = descricao
+					this.preco = preco
+				}
+
+				verDescricao(){
+					console.log(`${this.descricao} por apenas R$${this.preco}`)
+				}
+			}
+
+			let produto = new Produto('notebook', 2200)
+			produto.verDescricao()
+
+			//Objeto literal -> objeto descritivo que combina pares de chaves/nomes e valores
+			//usa o objeto literal quando se quer definir um objeto único
+
+			let produtoLiteral = {
+					descricao: 'Geladeira',
+					preco: 1800,
+					verDescricao: function() {
+						console.log(`${this.descricao} por apenas R$${this.preco}`) //this === produtoLiteral (ajustou o contexto)
+					}
+			}
+
+			produtoLiteral.verDescricao()//Execultar o método
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

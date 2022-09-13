@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando e recuperando atributos html</title>
+
+    <script src="../jQuery.js"></script>
+
+    <script>
+        $(document).ready( () => {
+
+            /*
+                método jquery "attr" para manipulação de atributos
+                - primeiro parâmetro seleciona o atributo que vamos controlar
+                - segundo parâmetro (opcional) corresponde ao valor de será atribuído
+                - se o segundo atributo for omitido, será retornado dessa função o valor do atributo selecionado
+            */
+
+            //recuperando atributo
+            let img = $('img').attr('src')
+            console.log(img)
+
+            //settando atributo
+            $('img').attr('border', "2")
+            $('input').attr('value', 'Valor modificado pelo jquery')
+
+            //criando novo atributo
+            $('div').attr('style', 'background-color: red;')
+
+        } )
+
+        let num = 2
+        let img = 2
+        function mudaImagem() {
+            if(num%2 == 0){
+                img = 2
+            } else {
+                img = 1
+            }
+
+            $('img').attr('src', `imagens/esfera_${img}.png`)
+            num++
+        }
+    </script>
+</head>
+<body>
+    
+    <!-- elemento html com 2 atributos -->
+    <img src="imagens/esfera_1.png" border="5">
+    <button onclick="mudaImagem()"> Mudar imagem </button>
+
+    <hr>
+
+    <div> Div Exemplo</div>
+
+    <hr>
+
+    <input type="text" value="Eu dou um input">
+
+</body>
+</html>

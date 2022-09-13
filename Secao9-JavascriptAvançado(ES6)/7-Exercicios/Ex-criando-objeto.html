@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Exercício Video</title>
+	<style type="text/css">
+		body{
+			background: linear-gradient(to bottom, #00c3ff, #0091bd) no-repeat fixed;
+
+		}
+		section{
+			width: 500px;
+			margin: 0 auto;
+			background: white;
+			border-radius: 10px;
+			text-align: justify;
+			padding: 10px;
+		}
+
+		li{
+			margin: 7px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h2>Exercise: Creating Objects</h2>
+
+		<p>In this exercise, you will use object oriented programming concepts to define and use a custom object in JavaScript.</p>
+
+		<ol>
+			<li>Create the constructor function for a Video object. The function should take in arguments of title (a string), uploader (a string, the person who uploaded it), and seconds (a number, the duration), and it should save them as properties of the object.</li>
+			<li>Create a method on the Video object called watch(). When that method is called, it should use console.log to output a string like "You watched all 60 seconds of Otters Holding Hands!"</li>
+			<li>Instantiate a new Video object and call the watch() method on it.</li>
+			<li>Instantiate another Video object with different constructor arguments.</li>
+			<li>Bonus: Use an array of data and a for loop to instantiate 5 Video objects.</li>
+			<li>Bonus: Make the watch method accept amounts of seconds to watch for, and call it with different amounts of seconds.</li>
+		</ol>
+	</section>
+
+
+	<script>
+		
+		let Video = function(title, uploader, seconds){
+			//propriedades
+			this.title = title
+			this.uploader = uploader
+			this.seconds = seconds
+
+			//métodos
+			this.watch = function(seconds_watched){
+				console.log(`You watched ${seconds_watched} of all ${this.getseconds()} seconds of ${this.gettitle()}`)
+			}
+
+			//métodos que retornam as propriedades para outros métodos
+			this.getseconds = function(){
+				return this.seconds
+			}
+
+			this.gettitle = function(){
+				return this.title
+			}
+
+		}
+
+		/*let video1 = new Video('Mostrando mansão dos irmãos neto', 'Felipe Neto', 1547)
+		video1.watch()
+		let video2 = new Video('Vale a pena programar?', 'Filipe Deschamps', 2000)*/
+
+		let videos = Array()
+
+		for(i = 0; i < 5; i++){
+			alert(`${i+1}º video`)
+			videos[i] = new Video(prompt('title'), prompt('uploader'), parseInt(prompt('seconds')))
+		}
+
+		console.log(videos)
+
+		videos[0].watch(100)
+
+	</script>
+
+</body>
+
+</html>

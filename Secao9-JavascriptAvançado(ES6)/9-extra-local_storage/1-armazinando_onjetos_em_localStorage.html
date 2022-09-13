@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			
+			//Criando a classe que vai criar objetos de despesa
+			class Despesa{
+					constructor(ano, mes, dia, tipo, descricao, valor){
+						this.ano = ano
+						this.mes = mes
+						this.dia = dia
+						this.tipo = tipo
+						this.descricao = descricao
+						this.valor = valor
+					}
+				}
+
+			
+			let despesa = new Despesa(2020,12,12,'escola', 'mensalidade da escola',1249.99)
+				
+			gravar(despesa)//função que armazenará os dados no local-storage
+
+			/*
+			Trabalhando com local-storage
+			É um recurso dos nvegadores web modernos que permite armazenar informações do usuário de forma persistente.
+			Ao contrário do Session-storage, ele armazena esses dados localmente no navegador
+			*/
+
+			function gravar(d){
+				localStorage.setItem('despesa', JSON.stringify(d))
+				/*
+					setItem -> método do 'localStorage' para armazenar novos itens.
+					parâmetros do setItem -> indetificação do objeto armazenado, dado.json q vamos encaminhar
+					objeto nativo do javascript JSON. método: JSON.stringify(objeto q vai virar json)
+					Para armazenar +1 item é necessário mudar o nome do índice(1º parâmetro)
+
+					ctrol + f5 para atualizar e eliminar o cache
+					para vizualizar -> inspecionar -> application -> storage -> local Storage -> file:// -> 
+					Em 'Key' fica o primeiro parâmetro com a identificação do objeto
+					em 'value' fica o segundo parâmetro .json onde fica armazenado o objeto em si
+				*/
+			}
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

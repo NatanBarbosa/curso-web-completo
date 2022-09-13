@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mate o mosquito!</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onresize="ajustaTamanho()"> <!--quando o body for redimensionado abre aquela função pra recapturar o tamanho da
+ tela-->
+
+    <div class="painel">
+        <div class="vidas">
+            <img src="imagens/coracao_cheio.png" id="v1">
+            <img src="imagens/coracao_cheio.png" id="v2">
+            <img src="imagens/coracao_cheio.png" id="v3">
+        </div>
+
+        <div class="cronometro">
+            tempo restante: <span id="timer"></span>
+        </div>
+    </div>
+
+<script src="logica-jogo.js"></script>
+</body>
+</html>

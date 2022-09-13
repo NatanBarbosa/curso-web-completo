@@ -1,0 +1,20 @@
+/*
+instruções ALTER TABLE
+ADD - inclui nova coluna na tabela
+CHANGE - pode alterar o nome de uma coluna ou sua respectiva propriedade
+DROP - remove uma coluna da tabela
+*/
+
+ALTER TABLE <nome da tabela> ADD COLUMN <nome da coluna> <tipo>  <atributos(not null, default, essas paradas)>;
+
+ALTER TABLE <nome_tabela> CHANGE <nome_coluna>  /* >>>>>>>> */ <nome coluna(pode mudar ou deixar igual)> <tipo(pode mudar ou deixar igual)>  <atributos >;
+ex.: ALTER TABLE tb_cursos CHANGE carga_horaria carga_hora int(5) null;
+
+ALTER TABLE <nome_tabela> DROP <nome coluna>;
+ex.: alter table tb_cursos drop carga_horaria;
+
+
+comando TRUNCATE
+
+TRUNCATE tb_cursos;
+limpa todos as colunas e seus valores da tabela indicada

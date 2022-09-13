@@ -1,0 +1,14 @@
+Administrador: todosos privilégios. Pode editar o site
+
+Autor: Não tem acesso a paginas, plugins aparência, usuários, configurações
+Pode fazer posts e adicionar mídias e gerenciar comentários
+Só pode excluir/editar seus próprios posts
+
+Editor: Tem acesso as páginas e pode editar qualquer postagem
+
+Colaborador:Não pode editar/excluir nem o próprio post e não pode adicionar mídia
+
+Assinante:Não pode nada
+
+carlos.damasco
+senha: GUouMLK9RYnHbQOYT&&g@qrF

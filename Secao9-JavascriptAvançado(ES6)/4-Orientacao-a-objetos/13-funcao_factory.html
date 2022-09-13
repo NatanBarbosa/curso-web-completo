@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			/*
+			Através do padrão de projeto Factory nós podemos implementar uma
+			"fábrica" para criação dos nossos objetos em tempo de execução
+			*/
+			
+			
+			let bike1 = {
+				cor: 'branca',
+				marcha: 'única',
+				aro: 12,
+				pedalar(){console.log('Pedalou')}
+			}
+
+			let bike2 = {
+				cor: 'vermelha',
+				marcha: 18,
+				aro: 26,
+				pedalar(){console.log('Pedalou')}
+			}
+
+			let bikeFactory = function(cor, marcha, aro){
+				// requisição http
+				// resposta http para montagem do objeto apartir do factory (cor, marcha, aro)
+				return{
+					cor, //cor: cor,
+					marcha, //marcha: marcha,
+					aro, //aro: aro,
+					pedalar(){ console.log('Pedalou') }
+				}
+			}
+
+			//criação da bicicleta
+			let bike3 = bikeFactory('vermelha', '18', 16) //assim ele vai receber o retorno do bike factory que é a criação de um objeto
+			let bike4 = bikeFactory('azul', 'única', 8)
+
+			console.log(bike4)
+			console.log(bike3)
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

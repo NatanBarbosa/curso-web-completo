@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - flexibilidade dos parâmetros</title>
+</head>
+
+    <script>
+
+        function soma (a, b) {
+            b = b === undefined ? 0 : b
+            a = a === undefined ? 0 : a
+            //Se o parâmetro for passado ele vai valer o parâmetro, senão ele vai valer 0
+            return a + b 
+        }
+
+        console.log(soma(7, 7))
+
+        console.log(soma(7, 7, 9, 15))
+        //Desconsidera os parâmetros adicionais
+
+        console.log(soma(7))
+        //ficaria tipo: 7 + undefined = Not a number(NaN), isso da pra ser tratado usando a lógica
+
+        console.log(soma())
+        //ficaria tipo: undefined + undefined = Not a number(NaN), isso da pra ser tratado usando a lógica
+
+    </script>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+			function validacao(){
+				let pessoa = {
+					nome: document.getElementById('nome').value,
+					idade: document.getElementById('idade').value,
+					sexo: document.getElementById('sexo').value,
+					profissao: document.getElementById('profissao').value
+				}
+
+				console.log(pessoa.nome)
+
+				// Referênciando o objeto e seu atributo é possivel alteraar seus valores da seguinte forma:
+				pessoa.nome = 'Fernanda'
+				pessoa.idade =  50
+
+				console.log(pessoa.nome)
+				console.log(pessoa.idade)
+			}
+			
+		</script>
+	</head>
+	<body style="margin: 0 auto; width: 900px; border: 2px outset gray; padding: 10px;">
+		<h1>Preencha seus dados</h1>
+
+		<form>
+			Nome: <input type="text" id="nome"><br>
+			Idade: <input type="number" id="idade"> <br>
+			Sexo: 
+			<select id="sexo">
+				<option readonly>--------Selecione--------</option>
+				<option value="masculino">Masculino</option>
+				<option value="feminino">Feminino</option>
+				<option value="biogênero">biogênero</option>
+				<option value="Trabecokkkk">Trabecokkkk</option>
+			</select> 
+			<br> 
+			Profissão: <input type="text" id="profissao"> <br>
+			<button type="button" onclick="validacao()">Enviar</button>
+		</form>
+	</body>
+</html>

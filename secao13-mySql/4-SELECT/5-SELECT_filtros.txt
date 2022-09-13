@@ -1,0 +1,54 @@
+Exemplos SELECT .. WHERE com operadores de comparação
+
+SELECT 
+	nome, id_aluno, idade, interesse 
+from 
+	`tb_alunos` 
+WHERE 
+	interesse = 'jogos';
+
+
+
+SELECT 
+	*
+from 
+	`tb_alunos` 
+WHERE 
+	idade < 25;
+
+
+
+SELECT 
+	nome
+from 
+	`tb_alunos` 
+WHERE 
+	idade >= 30;
+
+
+Exemplos SELECT .. WHERE com operadores de comparação e lógicos
+
+SELECT 
+	nome, idade, estado
+from 
+	`tb_alunos` 
+WHERE 
+	interesse  = 'jogos' AND idade > 45;
+
+
+SELECT 
+	*
+from 
+	`tb_alunos` 
+WHERE 
+	interesse  = 'jogos' AND idade > 45 AND estado = 'RN';
+
+
+SELECT 
+	*
+from 
+	`tb_alunos` 
+WHERE 
+	interesse  = 'jogos' OR idade > 45;
+
+

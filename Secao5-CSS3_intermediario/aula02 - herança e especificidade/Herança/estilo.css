@@ -1,0 +1,12 @@
+/*********************************************************
+herança*/
+
+body {
+    color: red;
+    font-size: 16px;
+    /*Ao aplicar essas formatação no body ela é herdada pelos outros elementos*/
+    /*O ideal aqui no body é definir formatações genéricas para todo o documento*/
+    border: 1px solid blue;
+    background-color: #d8d8d8;
+    /*Essas duas formatações acima não são herdadas */
+}

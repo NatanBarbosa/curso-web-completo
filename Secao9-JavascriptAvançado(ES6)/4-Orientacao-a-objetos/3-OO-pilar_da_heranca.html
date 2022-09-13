@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>OO - pilar da herança</title>
+
+		<script>
+			//Coloca o cachorro e o passaro como subclasses dentro do grupo animais como superclasses
+			class Animal{ //Superclasse
+				constructor(){
+					this.cor = ''
+					this.tamanho = null
+					this.peso = null
+					//deixa os atributos vazio por enquanto, pq eles vão ser aplicados a cada subclasse
+				}
+
+				dormir(){
+					console.log('dormir')
+				}
+			}
+
+			//Essas duas subclasses herdarão os atributos comuns do pai com o comando extends (nome da superclasse)
+			class Cachorro extends Animal { //subclasse
+				//atributos
+				constructor(){
+					super() //tbm é necessário usar esse método(q faz fererencia a superclasse) antes de declarar os atributos das subclasses
+					this.orelhas = 'grandes e caídas'
+				}
+
+				//métodos
+				correr(){
+					console.log('Correr')
+				}
+
+				rosnar(){
+					console.log('rosnar')
+				}
+			}
+
+			class Passaro extends Animal{ //subclasse
+				//atributos
+				constructor(){
+					super()
+					this.bico = 'Curto'
+				}
+
+				//métodos
+				voar(){
+					console.log('Voar')
+				}
+			}
+
+			class Papagaio extends Passaro { //subclasse da subclasse
+			//como passaro extende a classe animal ele recebe os atributos e métodos de Animal, e assim o Papagaio recebe os atributos e métos de Passaro e Animal(cascata)
+				//atributos
+				constructor(){
+					super()
+					this.sabeFalar = true
+				}
+
+				falar(){
+					console.log('falar')
+				}
+			}
+
+			let animal = Array()
+			animal['cachorro'] = new Cachorro()
+			animal['passaro'] = new Passaro()
+			animal['papagaio'] = new Papagaio()
+			
+			console.log(animal)
+
+			animal['papagaio'].falar()
+			animal['papagaio'].dormir()
+			animal['papagaio'].voar()
+
+
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

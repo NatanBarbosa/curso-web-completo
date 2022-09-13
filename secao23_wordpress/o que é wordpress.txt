@@ -1,0 +1,12 @@
+É um sistema de gerenciamento de conteúdos
+
+Gerenciador de conteúdos
+
+- Conteúdos adicionados dinamicamente por meio de um painel
+
+- Temas e plugins
+
+Instalação local:
+descompactar pasta -> jogar no htdocs -> servidor localhost
+Criar banco de daos para o wordpress e passar as informações
+nota: manter prefixo wp_ (nome adicionado antes de cada tabela adicionada pelo wordpress)

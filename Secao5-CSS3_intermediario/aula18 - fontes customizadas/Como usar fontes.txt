@@ -1,0 +1,5 @@
+Usando uma fonte customizada:
+site dafont.com -> escolhe uma fonte -> ela tem que ser formato .woff -> senão:
+
+convertendo font .otf, .ttf, etc para .woff
+site transfonter.org -> add font -> escolhe a fonte -> convert -> download

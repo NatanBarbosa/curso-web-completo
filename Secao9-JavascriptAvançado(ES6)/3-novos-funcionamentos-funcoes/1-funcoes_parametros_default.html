@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+
+			function contarHistoria(personagem='Fubá', atividade='correr no parque', nome_dono='João') {
+				document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono} e eles viveram felizes para sempre`)
+			}
+
+			//se não declarada nenhum valor de parâmetro vai dar undefined, mas é possivel declarar valores default ali em cima
+
+			contarHistoria('Repoplho', undefined, 'Pelé')
+			//ao passar parâmetros os valores default são substituidos por esses parâmetros
+			//ao passar o valor undefined ele substitui pelo valor default
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

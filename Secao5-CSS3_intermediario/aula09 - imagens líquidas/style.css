@@ -1,0 +1,101 @@
+/*Layout líquido -> Ultiliza porcentagens para definir os tamanhos*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+#container {
+    width: 85%; /*720px*/
+    margin: 0 auto;
+    background: white;
+    min-width: 720px; /*define o tamanho mínimo em um layout líquido, para o texto e os outros elementos não ficarem quebrando e saindo do lugar*/
+    max-width: 1250px; /*define o a largira máxima, para o conteúdo não ficar muito achatado*/
+
+    /*esses dois valores são interessantes de se ter em um container*/
+}
+
+#marca {
+    /*Nesse caso o width ja está 100%, pq a div ocupa todo espaçamento disponível*/
+    height: 200px;
+    background: #225992 url(imagens/cabecalho2.jpg) no-repeat center; /*Nesse caso é interessante criar um imagem que se misture com uma cor sólida definida com um background no css*/
+    text-align: center;
+    line-height: 200px;
+}
+/*
+div#img{
+    width: 90%;
+    overflow: hidden; /*Esconde o conteúdo caso ele passe do width limite
+}
+*/
+
+img.img-noticia{
+    width: 96%;
+    padding: 2%;
+    /*Ele tem o tamanho de 96% em relação ao "conteudo" e mais 2% + 2% (lado esquerdo e direito) de padding, totalizando 100%*/
+    max-width: 600px; /*Caso a imagem tenha um tamanho máximo de, por exemplo 600px, você define a largura máxima para que não prejuduque a vizualização*/
+}
+
+#conteudo {
+    width: 73%; /*520px -> 74%*/
+    float: right;
+
+}
+
+#principal{
+    width: 62%; /*320px -> 64%*/
+    float: left;
+    text-align: justify;
+}
+
+#secundario{
+    width: 34%;  /*180px -> 36%*/
+    float: right;
+    background: #d1d1d1;
+    text-align: justify;
+}
+
+#secundario>h2, #secundario>p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao {
+    width: 24%; /*180px -> 25%*/
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#rodape {
+    clear: both; /*quebra para baixo, limpando o float*/
+    background: #c4c4c4;
+    padding: 5px;
+}
+
+/*Criando menu vertical*/
+#navegacao ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #b1bfc9;
+    color: #3d3d3d; 
+    border-bottom: 2px solid #6a98b9;;
+}
+
+#navegacao ul a:hover{
+    color: white;
+    background: #9e9e9e;
+}
+
+/*-------------------------------*/

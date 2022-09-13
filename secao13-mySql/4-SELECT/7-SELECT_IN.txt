@@ -1,0 +1,10 @@
+Também é possível fazer o oposto da imagem
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	interesse NOT IN('jogos', 'esportes', 'música');
+
+Retorna todos os registros que tem o interesse diferente desse 3

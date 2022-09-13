@@ -1,0 +1,2 @@
+Tags como <meta> e <br> não possuem fechamento pois
+não precisam de nunhum conteúdo dentro delas 

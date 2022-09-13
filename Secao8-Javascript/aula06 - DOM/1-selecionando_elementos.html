@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <input
+    type="text"
+    placeholder="Digite seu nome"
+    id="nome_usuario"
+    class="campo_texto"
+    name="nome"
+    >
+
+    <script>
+        /*
+        Nesse caso é importante que o script esteja dentro do body para que primeiro o 
+        html carregue o elemento que vai ser capturado e depois nós possamos seleciona-lo, 
+        pois caso contrário se o script for colocado no head, ele vai ser processado antes
+        e o elemento não vai existir, retornando o valor "null"
+        */
+
+        console.log(document.getElementById('nome_usuario')) //retorna UM elemento com um id único
+        console.log(document.getElementsByTagName('input')) //retorna elementos com a mesma tag
+        console.log(document.getElementsByClassName('campo_texto')) //retorna elementos com a mesma tag
+        console.log(document.getElementsByName('nome')) //retorna elementos com o mesmo nome
+
+    </script>
+</body>
+</html>

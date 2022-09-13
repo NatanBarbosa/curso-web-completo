@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<script>
+
+			/*
+			var serie = 'friends'
+
+			if(true){
+				var serie = 'The walking dead'
+				//aqui é feito um roisting do escopo de bloco para o escopo global e esse roisting sobrescreve o valor das variaveis (assim a ultima informação é que vale)
+
+				console.log('Dentro do bloco ' + serie)
+			}
+
+			console.log('Fora do bloco ' + serie)
+			*/
+
+			let serie = 'friends'
+
+			if(true){
+				let serie = 'The walking dead'
+				/*aqui essa variavel série existe somente dentro desse escopo e não sofre o roisting.
+				Por mais que tenham o memso nome a variavel do escopo global é diferente da desse bloco*/
+
+				console.log('Dentro do bloco ' + serie)
+			}
+
+			console.log('Fora do bloco ' + serie)
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

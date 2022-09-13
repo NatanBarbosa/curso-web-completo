@@ -1,0 +1,37 @@
+<!--
+    card: aplicado na div principal, borda e arredondamento
+    text-center/right: aplicado em qualquer div do cartão, alinhamento
+    card-img-top/bottom: aplicado na imagem do cartão. formata ela responsivamente
+    é possivel aplicar cores de fundo no cartão usando bg-<opcoes>, border usando border-<opcoes>
+
+    card-body: aplicado na div secundária, add um padding
+    card-title: aplicado no 1º cabeçalho h1,h2, etc
+    card-subtitle: aplicado no 2º cabeçalho
+    card-text: aplicado no parágrafo
+
+    card-header: definido em uma div acima do card-body
+
+    card-footer: definido em uma div a baixo do card-body
+    link -> botão
+
+    card-img: aplicada na imagem quando se quer fazer um card-overlay-img(fora da div secundária)
+    card-overlay-img: aplicada no lugar do card-body, faz a imagem ficar por baixo dos textos
+
+    Exemplo de navegação no header
+    <div class="card-header">
+    <!--Com isso a navegação ficará dentro do header-->
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a href=""class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Link 2</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Link 3</a>
+            </li>
+        </ul>
+    </div>
+
+    card-columns: div principal que contém vários cartões e os organiza em colunas. Comforma vai colocando mais cartões ele vai organizando
+--> 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - pegadinha kkk</title>
+    <style>
+        body{
+        background-color: rgb(0, 195, 255);
+        }
+
+        #container{
+            width: 500px;
+            margin: 100px auto; 
+            border: 1px outset rgb(0, 174, 255); 
+            border-radius: 10px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        p.inline{
+            display: inline;
+        }
+
+        span{
+            color: red; 
+            font-size: 18px; 
+            font-weight: 700;
+        }
+
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div>
+            <h1 id="alerta">Digite sua resposta à tempo</h1>
+            <p class="inline">Cronômetro: </p><span id="tempo">10</span> 
+        </div>
+
+        <input type="text" id="resposta" placeholder="RÁPIDO"><button onclick="comfirmaResposta(document.getElementById('resposta').value)">Confirmar!</button> <br>
+        <strong>digite: 'bolsonaro comunista' antes de 10 segudos</strong>
+    </section>
+    
+    <script>
+        /************Se o tempo acabar antes de vc digitar vc MORRE*************/
+        var timer = 10
+        let resp = ''
+        function comfirmaResposta(resposta){
+            resp = resposta
+        }
+        var perder = setTimeout(
+            function(){
+                if(resp == 'bolsonaro comunista'){
+                    clearTimeout(perder)
+                } else{
+                    document.getElementById('alerta').innerHTML = 'Perdeu! Burro😡🤬'
+                    var explicacao = document.createElement("p")
+                    if(resp.length===0){
+                        resp = 'nada'
+                    }
+                    explicacao.innerHTML = `Ao invez de você digitar <strong>bolsonaro cominusta</strong> você digitou <strong>${resp}</strong>`
+                    document.getElementById("container").appendChild(explicacao)
+                }
+            },10000
+        )
+        var intervalo = setInterval(
+            function(){
+                timer--
+                document.getElementById('tempo').innerHTML = timer
+                
+                if(timer===0){
+                    clearInterval(intervalo)
+                }
+                if(resp == 'bolsonaro comunista'){
+                    clearInterval(intervalo)
+                    document.getElementById('alerta').innerHTML = 'Venceu!'
+                } 
+            },1000
+        )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas com calculos - parte 2</title>
+
+    <script>
+        
+        //Calculos entre datas
+        //ordem de definição var d = new Date(year, month, day, hours, minutes, seconds, milliseconds) //Alguns parâmetros podem ser omitidos;
+
+        //15/01/2017
+        var data1 = new Date(2017, 0, 15)
+
+        //23/02/2017
+        var data2 = new Date(2017, 1, 23)
+
+        document.write(data1.toString())
+        document.write('<hr>')
+        document.write(data2.toString())
+
+        document.write('<br><br><hr>')
+        //converter as datas para algo que possamos calcular
+        document.write(data1.getTime())
+        document.write('<hr>')
+        document.write(data2.getTime())
+
+        //getTime() -> qnt de milisecundos passados de 01/01/1970 até a data definida na var
+
+        //encontrar a quantidade de milisecundos entre data1 e data2
+
+        document.write('<br><br><hr>')
+
+        var milisecundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milisecundos_entre_datas + ' -> milisegundos de diferença entre essas datas')
+        //math.abs(numero) -> deixa o número com seu valor absoluto, no caso, negativo -> positivo
+
+        /*
+        1 dia tem 24h 
+        cada hora tem 60 minutos
+        cada minuto tem 60 segundos
+        cada segundo tem 1000 milisegundos
+        quantos milisegundos existe em um dia?
+        */
+
+        var milisegundos_por_dia = (1*24*60*60*1000)
+
+        document.write('<br> 1 dia tem: ' + milisegundos_por_dia + ' milisegundos')
+
+        document.write('<br>')
+
+        //dividir os milisegundos das datas pelos milisegundos de um dia
+
+        var diferença_de_dias = Math.ceil(milisecundos_entre_datas / milisegundos_por_dia)
+        //arredonda para sima pois esse número quebrado represeta o início do proximo dia
+        document.write(diferença_de_dias + ': Diferenças de dias entre as datas')
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    
+
+</body>
+</html>

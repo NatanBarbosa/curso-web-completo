@@ -1,0 +1,39 @@
+1º: Instala o composer
+
+2º php composer.phar create-project slim/slim-skeleton --prefer-dist
+
+3º php composer.phar require illuminate/database
+
+4º
+app/settings.php -> dps do array de configuração do logger -> cria uma chave
+'db' => [
+                    'driver' => 'mysql',
+                    'host' => 'localhost',
+                    'database' => 'minhaapi',
+                    'username' => 'root',
+                    'password' => '',
+                    'charset' => 'utf8',
+                    'collation' => 'utf8_unicode_ci',
+                    'prefix' => '',
+                ],
+
+5º app/dependencies.php -> dps da chave que recebe a função de configuração de dependência do logger, cria uma chave db => function(){//codigos de configuração do iluminate}
+
+6º adquirir dependencia: $container->get('nome q vc deu em dependencies.php')
+
+7º criar uma pasta app/routes e colocar as rotas lá
+
+8º apagar as outras rotas e dar require na sua rota
+
+9º exemplo de rota com grupo
+
+$app->group('/api/v1', function (Group $group) {
+    $group->get('/produtos', function(Request $request, Response $response, array $args){
+        $dados = ['nome' => 'Moto G'];
+        $dados = json_encode($dados);
+
+        $response->getBody()->write($dados);
+
+        return $response->withHeader('Content-Type', 'application/json');
+    });
+});

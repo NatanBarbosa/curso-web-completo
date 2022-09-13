@@ -1,0 +1,3 @@
+Requisições síncronas: o usuário/browser faz uma requisição pro servidor, que recebe essa requisição e devolve uma resposta. Porém nesse tempo em que a resposta não é devolvida, o browser fica travado
+
+Requisições assíncronas: o usuário/browser faz uma requisição pro servidor, que recebe essa requisição e devolve uma resposta. Enquanto o servidor não devolve a resposta o usuário consegue ir navegando pela aplicação, e quando a resposta é devolvida ela é renderizada e mostrada por JavaScript. Com isso o usuário consegue fazer várias requisições ao mesmo tempo

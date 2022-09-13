@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo e removendo elementos html</title>
+
+    <!--Jquery-->
+    <script src="../jQuery.js"></script>
+
+    <!--Script-->
+    <!--Script-->
+    <script>
+        $(document).ready( () => {
+            //métodos de inserção e onde eles inserem -> na imagem
+
+            //inserindo elementos como nó filho
+            $('#lista1').append('<li>item 4</li>')
+            $('#lista2').prepend('<div>item novo</div>')
+
+            //inserindo elementos como irmãos
+            $('hr').after('<img src="1-inserindo_removendo_elementos.png" width="700"> <br> <small>Imagem inserida com jQuery</small>')
+            $('#lista1').before('<h2> Título inserido com jQuery </h2>')
+
+            //obs: o método html, em vez de anexar um conteúdo novo, substitui todo o conteúdo anterior.
+
+            //removendo itens
+            $('p').remove()
+
+        } )
+    </script>
+</head>
+
+<body>
+            
+    <ul id="lista1">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <div id="lista2">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </div>
+
+    <p>Item que será removido</p>
+
+    <hr>
+
+</body>        
+        
+</html>

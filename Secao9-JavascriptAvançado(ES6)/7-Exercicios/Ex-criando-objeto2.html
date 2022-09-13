@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Exercício Video</title>
+	<style type="text/css">
+		body{
+			background: linear-gradient(to bottom, #00c3ff, #0091bd) no-repeat fixed;
+
+		}
+		section{
+			width: 500px;
+			margin: 0 auto;
+			background: white;
+			border-radius: 10px;
+			text-align: justify;
+			padding: 10px;
+		}
+
+		li{
+			margin: 7px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h2>Exercise: Creating Objects</h2>
+
+		<p>In this exercise, you will use object oriented programming concepts to define and use a custom object in JavaScript.</p>
+
+		<ol>
+			<li>Create an object called <em>shape</em> that has the type <em>property</em> and a <em>getType()</em> method.</li>
+			<li>Define a <em>Triangle()</em> constructor function whose prototype is <em>shape</em>. Objects created with <em>Triangle()</em> should have three own properties: <em>a</em>, <em>b</em>, and <em>c</em>, representing the lengths of the sides of a triangle.</li>
+			<li>Add a new method to the prototype called <em>getPerimeter()</em>.</li>
+			<li>
+				Test your implementation with the following code:<br>
+				<code>
+					var t = new Triangle(1, 2, 3);<br>
+					> t.constructor === Triangle;<br>
+					<br>
+					true<br>
+					> shape.isPrototypeOf(t);<br>
+					        true<br>
+					> t.getPerimeter();<br>
+					       6<br>
+					> t.getType();<br>
+					<br>
+					"triangle"<br>
+				</code>
+			</li>
+			<li>Loop over <em>t</em> showing only own properties and methods (none of the prototype's).</li>
+		</ol>
+	</section>
+
+
+	<script>
+		
+		let shape = {
+			type: 'property',
+			getType(){
+				return this.type
+			},
+
+			getPerimeter(){
+				
+			}
+		}
+
+		let Triangle = function(a, b, b){
+			this.__proto__ = shape
+			this.a = a
+			this.b = b
+			this.c = c
+		}
+
+	</script>
+
+</body>
+
+</html>

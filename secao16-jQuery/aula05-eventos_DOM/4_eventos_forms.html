@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Capturando eventos com jQuery</title>
+    
+    <!--Style-->
+    <style>
+        .selecionado{
+            border: 1px solid green;
+            background-color: lightgreen;
+        }
+    </style>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+        $(document).ready( ()=>{
+
+            //evento focus() -> elemento em foco (selecionado)
+            $('#nome').focus( (e)=>{
+                console.log(`esse elemento html (nome) recebeu o foco`);
+                $(e.target).addClass('selecionado')
+            } )
+
+            $('#email').focus( (e)=>{
+                console.log(`esse elemento html (email) recebeu o foco`);
+                $(e.target).addClass('selecionado')
+            } )
+
+            //evento blur() -> remoção do foco
+            $('#nome').blur( (e) => {
+                console.log('esse elemento html (nome) perdeu o foco')
+                $(e.target).removeClass('selecionado')
+            } )
+
+            $('#email').blur( (e) => {
+                console.log('esse elemento html (email) perdeu o foco')
+                $(e.target).removeClass('selecionado')
+            } )
+
+            //evento change() -> quando um elemento tem seu valor mudado (radio, checkboxes ou selects)
+            $('#opcao').change( (e)=>{
+                console.log(`Opção modificada para ${$(e.target).val()}`)
+            } )
+
+            //evento submit() -> quando um <form> é submetido
+            $('#form').submit( (e)=>{
+                //método para evitar o comportamento padrão de um evento (no caso do submit -> recarregar a página)
+                e.preventDefault()
+                console.log('Formulário enviado');
+            } )
+
+        } )
+	</script>
+</head>
+
+<body>
+
+	<div id="topo">
+		<h1>Eventos do formulário</h1>
+	</div>
+
+    <div>
+		<form id="form">
+			<span>Nome:</span>
+			<input type="text" id="nome" /> <br> <br>
+
+			<span>E-mail:</span>
+			<input type="text" id="email"/> <br> <br>
+
+			<span>Motivo do contato:</span>
+			<select id="opcao">
+				<option value="">-- Selecione --</option>
+				<option value="duvida">Dúvida</option>
+				<option value="sugestao">Sugestão</option>
+            </select>
+            
+            <br> <br>
+
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+DELETE FROM
+	<tabela>
+WHERE
+	<filtros> -- selecionar 1 ou mais registros para deletar
+-- caso o where seja omitido todos os registros da tabela são excluidos
+
+
+-- Ex.: deletar o registro do aluno 5
+
+DELETE from 
+	tb_alunos
+WHERE
+	id_aluno = 5;
+
+
+--Ex.: deletar registro dos véio que gosta de esporteskkk
+
+DELETE FROM
+	tb_alunos
+WHERE
+	idade > 70 and interesse = 'esporte';
+
+
+*nota* -> geralmente, ao invez de se excluir um registro, é mais comum, em uma certa coluna, identificar se o registro está ativo ou inativo
+	

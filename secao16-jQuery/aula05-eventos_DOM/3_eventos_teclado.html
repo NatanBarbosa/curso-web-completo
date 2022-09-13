@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Capturando eventos com jQuery</title>
+
+	<!--Jquery-->
+	<script src="../jQuery.js"></script>
+
+	<!--Script-->
+	<script>
+        $(document).ready( ()=>{
+
+            //evento keydown -> pressionar da tecla (pra baixo) (ocorre várias vezes enquanto a tecla estiver pressionada)
+            $('#tecla').keydown( (e)=>{
+
+                $('#resultTecla').html('Tecla pressionada')
+                    console.log('tecla pressionada')
+
+            } )
+
+            //evento keyup -> soltar a tecla (para cima) (só ocorre após a liberação da tecla)
+            $('#tecla').keyup( (e) => {
+                $('#resultTecla').html('Tecla liberada')
+                console.log('Tecla liberada')
+
+                //código da tecla que foi pressionada
+                console.log(e.keyCode) 
+
+                //interações interessantes paara fazer com o e.keycode
+                if( (e.keyCode >= 48 && e.keyCode <= 57)){
+                    //teclas de números
+                    $('#resultTecla').html('não são permitidos números ;--;')
+
+                    //removendo a tecla
+                    let txt = $('#tecla').val()
+                    txt = txt.slice(0, -1) //retorna a string com o ultimo caracter removido
+                    $(e.target).val(txt)
+                }
+
+                if (e.keyCode == 13){
+                    //código do enter
+                    let txt = $(e.target).val() //-> input#tecla
+                    $('#resultTecla').html(txt)
+                    $(e.target).val('')
+                }
+            } )
+
+        } )
+	</script>
+</head>
+
+<body>
+    <div id="topo">
+		<h1>Eventos do Teclado</h1>
+    </div>
+    
+    <div>
+		<span>Nome: </span>
+		<input type="text" id="tecla"/>
+		<span id="resultTecla">Resultado do evento sobre o input</span>
+	</div>
+</body>
+
+</html>
